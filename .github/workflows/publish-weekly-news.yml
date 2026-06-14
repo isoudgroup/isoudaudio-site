@@ -1,0 +1,47 @@
+name: Publish weekly iSoud Enterprise News
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 2,5"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate two weekly RSS articles and build site
+        run: npm run generate:weekly
+
+      - name: Commit generated articles
+        run: |
+          git config user.name "iSoud News Automation"
+          git config user.email "actions@github.com"
+          git add content/news
+          if git diff --cached --quiet; then
+            echo "No new article changes to commit."
+          else
+            git commit -m "Publish weekly iSoud enterprise news"
+            git push
+          fi
+
+      - name: Wait for Cloudflare Pages deployment
+        run: sleep 180
+
+      - name: Submit sitemap to Google Search Console
+        run: npm run submit:sitemap
+        env:
+          GOOGLE_CLIENT_EMAIL: ${{ secrets.GOOGLE_CLIENT_EMAIL }}
+          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          SITEMAP_URL: https://isoudaudio.com/sitemap.xml

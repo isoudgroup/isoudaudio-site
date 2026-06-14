@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+fr/
+index.html
+robots.txt
+rss.xml
+sitemap.xml
+assets/css/
+*.zip
+*.log
+.env
+.env.*
+!.env.example
