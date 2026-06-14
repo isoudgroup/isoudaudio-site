@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node tools/build-site.mjs",
     "generate:weekly": "node tools/create-scheduled-articles.mjs && npm run build",
+    "generate:weekly:ai": "node tools/create-ai-researched-articles.mjs && npm run build",
     "submit:sitemap": "node tools/submit-sitemap-google.mjs"
   }
 }

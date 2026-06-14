@@ -20,8 +20,12 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Generate two weekly RSS articles and build site
-        run: npm run generate:weekly
+      - name: Generate two AI-researched RSS articles and build site
+        run: npm run generate:weekly:ai
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          ARTICLES_PER_RUN: 2
 
       - name: Commit generated articles
         run: |

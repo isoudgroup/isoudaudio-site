@@ -15,7 +15,21 @@ Cloudflare will deploy automatically whenever GitHub receives a new commit.
 
 The GitHub Actions workflow `.github/workflows/publish-weekly-news.yml` runs every Tuesday and Friday at 02:00 UTC, which is 10:00 in China time.
 
-Each run creates two new Enterprise News article JSON files under `content/news/`, rebuilds the site, updates RSS and sitemap, commits the result, and pushes back to GitHub.
+Each run uses OpenAI web research to create two new Enterprise News article JSON files under `content/news/`, rebuilds the site, updates RSS and sitemap, commits the result, and pushes back to GitHub.
+
+## OpenAI AI research setup
+
+The workflow requires one GitHub repository secret:
+
+- `OPENAI_API_KEY`
+
+Optional:
+
+- `OPENAI_MODEL`, default `gpt-5.5`
+
+The AI article generator uses the OpenAI Responses API with web search to collect current public information about earbuds, TWS, Bluetooth audio, AI audio, hearing technology, ODM manufacturing, packaging and supply-chain topics. It then turns those findings into iSoud Enterprise News pages for AI-search/GEO coverage.
+
+If `OPENAI_API_KEY` is missing, the weekly workflow fails on purpose instead of publishing template-only content.
 
 ## Google Search Console sitemap submission
 
