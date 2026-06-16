@@ -11,11 +11,21 @@ Use a new Cloudflare Pages project connected to GitHub.
 
 Cloudflare will deploy automatically whenever GitHub receives a new commit.
 
-## Weekly publishing schedule
+## Manual publishing mode
 
-The GitHub Actions workflow `.github/workflows/publish-weekly-news.yml` runs every Tuesday and Friday at 02:00 UTC, which is 10:00 in China time.
+The site is currently set up for manual AI-assisted publishing instead of paid OpenAI Platform automation.
 
-Each run uses OpenAI web research to create two new Enterprise News article JSON files under `content/news/`, rebuilds the site, updates RSS and sitemap, commits the result, and pushes back to GitHub.
+Recommended weekly workflow:
+
+1. Ask Codex to research current earbud, TWS, AI audio, Bluetooth, packaging or OEM/ODM manufacturing trends.
+2. Codex writes two iSoud Enterprise News article JSON files under `content/news/`.
+3. Commit and push the files to GitHub.
+4. Cloudflare Pages automatically rebuilds and deploys the site.
+5. The updated `rss.xml` and `sitemap.xml` are generated during the build.
+
+The GitHub Actions workflow `.github/workflows/publish-weekly-news.yml` is kept as a manual-only workflow. It is not scheduled because OpenAI Platform quota is not enabled.
+
+If OpenAI Platform billing is enabled later, the workflow can be run manually to create two AI-researched Enterprise News article JSON files under `content/news/`, rebuild the site, update RSS and sitemap, commit the result, and push back to GitHub.
 
 ## OpenAI AI research setup
 
