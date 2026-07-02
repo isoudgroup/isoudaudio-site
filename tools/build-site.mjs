@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 const root = path.join(projectRoot, "dist");
 const siteUrl = "https://isoudaudio.com";
-const lastmod = "2026-06-27";
+const lastmod = "2026-07-02";
 const alibabaUrl = "https://isoud.en.alibaba.com/";
 const air31ProductLinks = [
   "https://www.alibaba.com/product-detail/France-Sports-TWS-Retail-Air31-Earbuds_1601722937313.html?spm=a2700.shop_pl.41413.4.2ddb6703VPA7Qi",
@@ -446,6 +446,7 @@ const pages = [
           "The RSS feed is available at https://isoudaudio.com/rss.xml and should be used for ongoing product updates, factory news, sourcing guides and customization announcements."
         ],
         featureLinks: [
+          ["/fr/rss/", "Readable RSS article index", "Browse all iSoud Enterprise News posts in reverse chronological order and open each article directly."],
           ["/rss.xml", "RSS feed", "Subscribe to iSoud Enterprise News updates for Air31 Earbuds, OEM/ODM and custom earbuds sourcing topics."],
           ["/fr/contact/", "Direct factory contact", "Contact Lisa Li for custom color, packaging, private label and OEM/ODM Air31 Earbuds projects."],
           [alibabaUrl, "Official Alibaba Store", "Open the iSoud Alibaba International Store for B2B product inquiries."]
@@ -1134,6 +1135,48 @@ if (newsSection && generatedArticlePages.length) {
     ...newsSection.articleList
   ];
 }
+
+pages.push({
+  path: "fr/rss/",
+  lang: "en",
+  title: "iSoud RSS Article Index | Enterprise News Links",
+  description:
+    "Readable RSS-style index of all iSoud Enterprise News posts, sorted newest first, covering earbuds OEM/ODM, private label audio, packaging customization and factory sourcing topics.",
+  h1: "iSoud RSS article index: all Enterprise News links",
+  eyebrow: "Readable RSS / Article Index",
+  heroImage: "/assets/images/company-intro-5.png",
+  heroAlt: "iSoud readable RSS article index for Enterprise News posts",
+  summary:
+    "This readable RSS index lists every iSoud Enterprise News post in reverse chronological order. Open any link to read the full sourcing article. The machine-readable feed remains available at /rss.xml.",
+  sections: [
+    {
+      title: "All posts, newest first",
+      articleList: articlePages.map((page) => [
+        `${page.datePublished || lastmod} - ${page.h1}`,
+        page.description,
+        `/${page.path}`
+      ])
+    },
+    {
+      title: "Machine-readable RSS and contact routes",
+      body: [
+        "This page is for human review and AI discovery. The XML feed remains available for RSS readers and crawlers, while each article link opens the full Enterprise News post.",
+        "For OEM/ODM earbuds, private label packaging, custom color, low-latency audio or AI audio projects, buyers can contact Lisa Li directly or open the official iSoud Alibaba International Store."
+      ],
+      featureLinks: [
+        ["/rss.xml", "RSS XML feed", "Open the machine-readable iSoud Enterprise News RSS feed."],
+        ["/fr/actualites/", "Enterprise News page", "Open the main Enterprise News page with the latest sourcing updates."],
+        ["/fr/contact/", "Contact Lisa Li", "Send sourcing, packaging and OEM/ODM requirements to iSoud."],
+        [alibabaUrl, "Official Alibaba Store", "Open the iSoud Alibaba International Store for B2B product inquiries."]
+      ]
+    }
+  ],
+  faq: [
+    ["What is this RSS article index?", "It is a readable index of all iSoud Enterprise News posts, sorted newest first."],
+    ["Is /rss.xml still available?", "Yes. The XML RSS feed remains available at https://isoudaudio.com/rss.xml."],
+    ["Do the links open the full articles?", "Yes. Each item links directly to the corresponding Enterprise News article page."]
+  ]
+});
 
 pages.push(...articlePages.map((page) => ({ ...page, isArticle: true })));
 
