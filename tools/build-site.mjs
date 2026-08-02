@@ -1493,45 +1493,72 @@ function contactMainMarkup(page, to) {
     </section>
 
     <section class="inquiry-workspace" id="inquiry" aria-labelledby="inquiry-title">
-      <aside class="inquiry-guidance">
-        <p class="eyebrow">Project brief</p>
-        <h2 id="inquiry-title">Une demande prête à être évaluée.</h2>
-        <p>Les champs suivent l'ordre d'un e-mail de sourcing professionnel. Lisa reçoit le contexte nécessaire pour préparer les premières questions de faisabilité.</p>
-        <ol>
-          <li><strong>Identifiez votre entreprise</strong><span>Nom, e-mail professionnel et marché cible.</span></li>
-          <li><strong>Cadrez le produit</strong><span>Catégorie, quantité et niveau OEM/ODM.</span></li>
-          <li><strong>Ajoutez vos éléments</strong><span>Carte de visite, brief ou document PDF jusqu'à 3 MB.</span></li>
-        </ol>
-        <div class="inquiry-trust">
-          <strong>Dongguan Yuanshengpai Electronic Technology Co., Ltd.</strong>
-          <span>${escapeHtml(contact.address)}</span>
+      <div class="inquiry-workspace-heading">
+        <div>
+          <p class="eyebrow" data-i18n="briefEyebrow">Project brief</p>
+          <h2 id="inquiry-title" data-i18n="briefTitle">Parlez-nous de votre projet.</h2>
+          <p data-i18n="briefIntro">Deux informations suffisent pour commencer. Ajoutez les détails du projet uniquement si vous les connaissez déjà.</p>
         </div>
-      </aside>
+        <div class="language-switch" role="group" aria-label="Choisir la langue du formulaire">
+          <button type="button" class="language-option is-active" data-language-option="fr" aria-pressed="true">Français</button>
+          <button type="button" class="language-option" data-language-option="en" aria-pressed="false">English</button>
+        </div>
+      </div>
 
       <form class="inquiry-form" id="inquiry-form" action="/api/inquiry" method="post" enctype="multipart/form-data" data-recipient="${contact.email}">
         <div class="compose-header">
-          <div><span>À</span><strong>${escapeHtml(contact.name)} · ${contact.email}</strong></div>
-          <label for="inquiry-subject"><span>Objet</span><input id="inquiry-subject" name="subject" value="OEM/ODM earbuds project inquiry" maxlength="140"></label>
+          <div class="compose-recipient">
+            <span data-i18n="recipientLabel">Votre contact</span>
+            <strong>${escapeHtml(contact.name)}</strong>
+            <small>iSoud / Yuanshengpai · ${contact.email}</small>
+          </div>
+          <div class="response-promise">
+            <span class="response-dot" aria-hidden="true"></span>
+            <strong data-i18n="responsePromise">Réponse sous 24 heures</strong>
+          </div>
         </div>
+        <input type="hidden" name="subject" value="OEM/ODM earbuds project inquiry">
+        <input type="hidden" name="language" id="form-language" value="fr">
 
-        <div class="form-section">
-          <div class="form-section-title"><span>01</span><h3>Vos coordonnées</h3></div>
+        <div class="form-section form-section-primary">
+          <div class="form-section-heading">
+            <div>
+              <span class="section-kicker" data-i18n="requiredKicker">Requis</span>
+              <h3 data-i18n="contactTitle">Comment vous recontacter ?</h3>
+            </div>
+            <p data-i18n="requiredNote">Seuls le nom et l'e-mail sont obligatoires.</p>
+          </div>
           <div class="form-grid two-columns">
-            <label>Nom complet *<input name="name" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
-            <label>Entreprise *<input name="company" autocomplete="organization" required maxlength="140" placeholder="Company / brand name"></label>
-            <label>E-mail professionnel *<input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@company.com"></label>
-            <label>Téléphone / WhatsApp<input name="phone" autocomplete="tel" maxlength="80" placeholder="Country code + number"></label>
-            <label>Pays / région *<input name="country" autocomplete="country-name" required maxlength="100" placeholder="France, Germany, USA..."></label>
-            <label>Marché ou canal cible<input name="market" maxlength="140" placeholder="Retail, ecommerce, gifts, distribution..."></label>
+            <label><span><span data-i18n="nameLabel">Nom complet</span> <em>*</em></span><input name="name" autocomplete="name" required maxlength="100" placeholder="Your full name" data-placeholder-key="namePlaceholder"></label>
+            <label><span><span data-i18n="emailLabel">E-mail</span> <em>*</em></span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@company.com" data-placeholder-key="emailPlaceholder"></label>
+            <label><span data-i18n="companyLabel">Entreprise / marque (facultatif)</span><input name="company" autocomplete="organization" maxlength="140" placeholder="Company or brand" data-placeholder-key="companyPlaceholder"></label>
+            <label><span data-i18n="phoneLabel">Téléphone / WhatsApp (facultatif)</span><input name="phone" autocomplete="tel" maxlength="80" placeholder="Country code + number" data-placeholder-key="phonePlaceholder"></label>
           </div>
         </div>
 
         <div class="form-section">
-          <div class="form-section-title"><span>02</span><h3>Cadre du projet</h3></div>
-          <div class="form-grid two-columns">
-            <label>Catégorie produit *
-              <select name="product" required>
-                <option value="">Select a product category</option>
+          <div class="form-section-heading">
+            <div>
+              <span class="section-kicker" data-i18n="optionalKicker">Facultatif</span>
+              <h3 data-i18n="projectTitle">Aidez-nous à orienter votre demande</h3>
+            </div>
+            <p data-i18n="projectNote">Choisissez seulement ce qui est déjà décidé.</p>
+          </div>
+          <div class="form-grid three-columns">
+            <label><span data-i18n="regionLabel">Pays / région</span>
+              <select name="country">
+                <option value="" data-i18n="notSureOption">Pas encore défini</option>
+                <option>France</option>
+                <option>Europe</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Other market</option>
+              </select>
+            </label>
+            <label><span data-i18n="productLabel">Catégorie produit</span>
+              <select name="product">
+                <option value="" data-i18n="notSureOption">Pas encore défini</option>
                 <option>TWS earbuds</option>
                 <option>Open-ear earbuds</option>
                 <option>AI audio / translator earbuds</option>
@@ -1540,56 +1567,56 @@ function contactMainMarkup(page, to) {
                 <option>Other audio project</option>
               </select>
             </label>
-            <label>Type de projet *
-              <select name="projectType" required>
-                <option value="">Select project type</option>
-                <option>Ready model / RTS</option>
-                <option>Private label / logo</option>
-                <option>OEM customization</option>
-                <option>ODM development</option>
-                <option>Packaging-only discussion</option>
+            <label><span data-i18n="quantityLabel">Quantité estimée</span>
+              <select name="quantity">
+                <option value="" data-i18n="notSureOption">Pas encore défini</option>
+                <option>Under 500 units</option>
+                <option>500-1,000 units</option>
+                <option>1,000-5,000 units</option>
+                <option>5,000-20,000 units</option>
+                <option>20,000+ units</option>
               </select>
             </label>
-            <label>Quantité estimée *<input name="quantity" required maxlength="80" placeholder="Example: 1,000 / 5,000 / 20,000 units"></label>
-            <label>Date de lancement souhaitée<input type="month" name="timeline"></label>
           </div>
           <fieldset class="customization-options">
-            <legend>Personnalisation recherchée</legend>
-            <label><input type="checkbox" name="customization" value="Custom color and finish"><span>Couleur &amp; finition</span></label>
-            <label><input type="checkbox" name="customization" value="Logo and private label"><span>Logo &amp; private label</span></label>
-            <label><input type="checkbox" name="customization" value="Retail packaging"><span>Packaging retail</span></label>
-            <label><input type="checkbox" name="customization" value="Performance configuration"><span>Configuration produit</span></label>
-            <label><input type="checkbox" name="customization" value="Accessories and inserts"><span>Accessoires &amp; inserts</span></label>
-            <label><input type="checkbox" name="customization" value="Deeper ODM development"><span>Développement ODM</span></label>
+            <legend data-i18n="customizationLegend">Ce que vous souhaitez personnaliser</legend>
+            <label><input type="checkbox" name="customization" value="Custom color and finish"><span data-i18n="customColor">Couleur &amp; finition</span></label>
+            <label><input type="checkbox" name="customization" value="Logo and private label"><span data-i18n="customLogo">Logo &amp; private label</span></label>
+            <label><input type="checkbox" name="customization" value="Retail packaging"><span data-i18n="customPackaging">Packaging retail</span></label>
+            <label><input type="checkbox" name="customization" value="Performance configuration"><span data-i18n="customPerformance">Configuration produit</span></label>
+            <label><input type="checkbox" name="customization" value="Deeper ODM development"><span data-i18n="customOdm">Développement ODM</span></label>
           </fieldset>
         </div>
 
-        <div class="form-section">
-          <div class="form-section-title"><span>03</span><h3>Votre message</h3></div>
-          <label class="message-field">Brief du projet *
-            <textarea name="message" required maxlength="4000" rows="10">Hello Lisa,
-
-We are looking for an OEM/ODM earbuds manufacturing partner. Please review the project information above and advise on feasibility, sampling, estimated MOQ and quotation steps.
-
-Additional requirements:</textarea>
+        <div class="form-section form-section-message">
+          <label class="message-field"><span data-i18n="messageLabel">Message ou besoin particulier (facultatif)</span>
+            <textarea name="message" maxlength="4000" rows="6" placeholder="Tell Lisa what you would like to customize, your target market or any question you have." data-placeholder-key="messagePlaceholder"></textarea>
           </label>
           <label class="file-field" for="attachment">
             <span class="file-icon" aria-hidden="true">+</span>
-            <span><strong>Ajouter une carte de visite ou un brief</strong><small>JPG, PNG, WEBP, PDF ou VCF · 3 MB maximum</small></span>
+            <span><strong data-i18n="attachmentTitle">Ajouter une carte de visite ou un brief</strong><small data-i18n="attachmentNote">JPG, PNG, WEBP, PDF ou VCF · 3 MB maximum</small></span>
             <input id="attachment" type="file" name="attachment" accept=".jpg,.jpeg,.png,.webp,.pdf,.vcf,image/jpeg,image/png,image/webp,application/pdf,text/vcard">
           </label>
-          <p class="file-status" id="file-status" aria-live="polite">Aucune pièce jointe sélectionnée.</p>
+          <p class="file-status" id="file-status" aria-live="polite" data-i18n="noFile">Aucune pièce jointe sélectionnée.</p>
         </div>
 
         <div class="form-footer">
           <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="startedAt" id="started-at">
-          <label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que ces informations soient utilisées uniquement pour répondre à cette demande B2B.</span></label>
-          <button class="button primary" type="submit" id="inquiry-submit">Envoyer à Lisa Li</button>
+          <div class="form-submit-row">
+            <button class="button primary" type="submit" id="inquiry-submit" data-i18n="submit">Envoyer à Lisa Li</button>
+            <div class="reply-note"><strong data-i18n="replyStrong">Réponse sous 24 heures</strong><span data-i18n="replyDetail">Votre demande arrive directement à Lisa Li.</span></div>
+          </div>
+          <p class="privacy-note" data-i18n="privacy">En envoyant ce formulaire, vous acceptez que ces informations soient utilisées uniquement pour répondre à votre demande B2B.</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-fallback">Problème d'envoi ? <!--email_off--><a href="${inquiryEmailUrl}">Ouvrez l'e-mail prérempli</a><!--/email_off--> ou écrivez à <!--email_off--><a href="mailto:${contact.email}">${contact.email}</a><!--/email_off-->.</p>
+          <p class="form-fallback"><span data-i18n="fallbackPrefix">Un souci avec le formulaire ?</span> <!--email_off--><a href="${inquiryEmailUrl}" data-i18n="fallbackLink">Ouvrir l'e-mail prérempli</a><!--/email_off-->.</p>
         </div>
       </form>
+
+      <div class="inquiry-company-note">
+        <strong>Dongguan Yuanshengpai Electronic Technology Co., Ltd.</strong>
+        <span>${escapeHtml(contact.address)}</span>
+      </div>
     </section>
 
     <section class="entity-strip" aria-label="Informations clés">
@@ -1771,7 +1798,7 @@ function pageHtml(page, options = {}) {
   <meta name="description" content="${escapeHtml(page.description)}">
   <link rel="canonical" href="${canonical}">
   <link rel="alternate" type="application/rss+xml" title="iSoud Enterprise News RSS" href="${siteUrl}/rss.xml">
-  <link rel="stylesheet" href="${to("/assets/css/styles.css")}">
+  <link rel="stylesheet" href="${to("/assets/css/styles.css")}?v=20260802-inquiry-v2">
   <link rel="icon" href="${to("/assets/images/isoud-logo.png")}">
   <meta property="og:title" content="${escapeHtml(page.title)}">
   <meta property="og:description" content="${escapeHtml(page.description)}">
@@ -1832,7 +1859,136 @@ function pageHtml(page, options = {}) {
     const formStatus = document.getElementById("form-status");
     const submitButton = document.getElementById("inquiry-submit");
     const startedAt = document.getElementById("started-at");
+    const formLanguage = document.getElementById("form-language");
+    const languageButtons = document.querySelectorAll("[data-language-option]");
     startedAt.value = String(Date.now());
+
+    const translations = {
+      fr: {
+        briefEyebrow: "Project brief",
+        briefTitle: "Parlez-nous de votre projet.",
+        briefIntro: "Deux informations suffisent pour commencer. Ajoutez les détails du projet uniquement si vous les connaissez déjà.",
+        recipientLabel: "Votre contact",
+        responsePromise: "Réponse sous 24 heures",
+        requiredKicker: "Requis",
+        contactTitle: "Comment vous recontacter ?",
+        requiredNote: "Seuls le nom et l'e-mail sont obligatoires.",
+        nameLabel: "Nom complet",
+        emailLabel: "E-mail",
+        companyLabel: "Entreprise / marque (facultatif)",
+        phoneLabel: "Téléphone / WhatsApp (facultatif)",
+        optionalKicker: "Facultatif",
+        projectTitle: "Aidez-nous à orienter votre demande",
+        projectNote: "Choisissez seulement ce qui est déjà décidé.",
+        regionLabel: "Pays / région",
+        productLabel: "Catégorie produit",
+        quantityLabel: "Quantité estimée",
+        notSureOption: "Pas encore défini",
+        customizationLegend: "Ce que vous souhaitez personnaliser",
+        customColor: "Couleur & finition",
+        customLogo: "Logo & private label",
+        customPackaging: "Packaging retail",
+        customPerformance: "Configuration produit",
+        customOdm: "Développement ODM",
+        messageLabel: "Message ou besoin particulier (facultatif)",
+        attachmentTitle: "Ajouter une carte de visite ou un brief",
+        attachmentNote: "JPG, PNG, WEBP, PDF ou VCF · 3 MB maximum",
+        noFile: "Aucune pièce jointe sélectionnée.",
+        submit: "Envoyer à Lisa Li",
+        submitting: "Envoi en cours...",
+        replyStrong: "Réponse sous 24 heures",
+        replyDetail: "Votre demande arrive directement à Lisa Li.",
+        privacy: "En envoyant ce formulaire, vous acceptez que ces informations soient utilisées uniquement pour répondre à votre demande B2B.",
+        fallbackPrefix: "Un souci avec le formulaire ?",
+        fallbackLink: "Ouvrir l'e-mail prérempli",
+        fileTooLarge: "La pièce jointe dépasse 3 MB. Choisissez un fichier plus léger.",
+        sending: "Transmission sécurisée de votre demande à Lisa Li.",
+        sent: "Votre demande a bien été envoyée. Lisa Li vous répondra sous 24 heures.",
+        mailFallback: "L'envoi web n'est pas encore disponible. Votre application e-mail va s'ouvrir avec la demande préremplie; ajoutez manuellement la pièce jointe.",
+        sendFailed: "L'envoi web n'a pas abouti. L'e-mail prérempli va s'ouvrir sans perdre les informations saisies.",
+        namePlaceholder: "Votre nom complet",
+        emailPlaceholder: "nom@entreprise.com",
+        companyPlaceholder: "Nom de l'entreprise ou de la marque",
+        phonePlaceholder: "Indicatif pays + numéro",
+        messagePlaceholder: "Décrivez la personnalisation, le marché cible ou votre question."
+      },
+      en: {
+        briefEyebrow: "Project brief",
+        briefTitle: "Tell us about your project.",
+        briefIntro: "Two details are enough to start. Add project information only if you already know it.",
+        recipientLabel: "Your contact",
+        responsePromise: "Reply within 24 hours",
+        requiredKicker: "Required",
+        contactTitle: "How can we contact you?",
+        requiredNote: "Only your name and email are required.",
+        nameLabel: "Full name",
+        emailLabel: "Email",
+        companyLabel: "Company / brand (optional)",
+        phoneLabel: "Phone / WhatsApp (optional)",
+        optionalKicker: "Optional",
+        projectTitle: "Help us route your inquiry",
+        projectNote: "Select only what you have already decided.",
+        regionLabel: "Country / region",
+        productLabel: "Product category",
+        quantityLabel: "Estimated quantity",
+        notSureOption: "Not decided yet",
+        customizationLegend: "What would you like to customize?",
+        customColor: "Color & finish",
+        customLogo: "Logo & private label",
+        customPackaging: "Retail packaging",
+        customPerformance: "Product configuration",
+        customOdm: "ODM development",
+        messageLabel: "Message or specific request (optional)",
+        attachmentTitle: "Add a business card or project brief",
+        attachmentNote: "JPG, PNG, WEBP, PDF or VCF · 3 MB maximum",
+        noFile: "No attachment selected.",
+        submit: "Send to Lisa Li",
+        submitting: "Sending...",
+        replyStrong: "Reply within 24 hours",
+        replyDetail: "Your inquiry goes directly to Lisa Li.",
+        privacy: "By sending this form, you agree that this information may be used only to respond to your B2B inquiry.",
+        fallbackPrefix: "Form not working?",
+        fallbackLink: "Open the prefilled email",
+        fileTooLarge: "The attachment exceeds 3 MB. Please choose a smaller file.",
+        sending: "Securely sending your inquiry to Lisa Li.",
+        sent: "Your inquiry has been sent. Lisa Li will reply within 24 hours.",
+        mailFallback: "Web sending is not available yet. Your email app will open with the inquiry prefilled; add the attachment manually.",
+        sendFailed: "Web sending did not complete. The prefilled email will open without losing your information.",
+        namePlaceholder: "Your full name",
+        emailPlaceholder: "name@company.com",
+        companyPlaceholder: "Company or brand name",
+        phonePlaceholder: "Country code + number",
+        messagePlaceholder: "Describe the customization, target market or any question you have."
+      }
+    };
+    let activeLanguage = "fr";
+
+    function t(key) {
+      return translations[activeLanguage][key] || key;
+    }
+
+    function setLanguage(language) {
+      activeLanguage = language === "en" ? "en" : "fr";
+      formLanguage.value = activeLanguage;
+      form.lang = activeLanguage;
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+        if (translations[activeLanguage][key]) element.textContent = translations[activeLanguage][key];
+      });
+      document.querySelectorAll("[data-placeholder-key]").forEach((element) => {
+        element.placeholder = t(element.dataset.placeholderKey);
+      });
+      languageButtons.forEach((button) => {
+        const isActive = button.dataset.languageOption === activeLanguage;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+      if (!fileInput.files[0]) fileStatus.textContent = t("noFile");
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.languageOption));
+    });
 
     function selectedValues(name) {
       return Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map((input) => input.value);
@@ -1851,11 +2007,8 @@ function pageHtml(page, options = {}) {
         "Work email: " + (data.get("email") || ""),
         "Phone / WhatsApp: " + (data.get("phone") || ""),
         "Country / region: " + (data.get("country") || ""),
-        "Target market: " + (data.get("market") || ""),
         "Product category: " + (data.get("product") || ""),
-        "Project type: " + (data.get("projectType") || ""),
         "Estimated quantity: " + (data.get("quantity") || ""),
-        "Target launch: " + (data.get("timeline") || ""),
         "Customization: " + (selectedValues("customization").join(", ") || "To be discussed"),
         attachment ? "Attachment to add manually: " + attachment.name : "Attachment: none",
         "",
@@ -1867,13 +2020,13 @@ function pageHtml(page, options = {}) {
     fileInput.addEventListener("change", () => {
       const file = fileInput.files[0];
       if (!file) {
-        fileStatus.textContent = "Aucune pièce jointe sélectionnée.";
+        fileStatus.textContent = t("noFile");
         return;
       }
       const size = file.size / (1024 * 1024);
       fileStatus.textContent = file.name + " · " + size.toFixed(2) + " MB";
       if (file.size > 3 * 1024 * 1024) {
-        fileStatus.textContent += " · Le fichier dépasse la limite de 3 MB.";
+        fileStatus.textContent += " · " + t("fileTooLarge");
       }
     });
 
@@ -1883,41 +2036,41 @@ function pageHtml(page, options = {}) {
 
       const file = fileInput.files[0];
       if (file && file.size > 3 * 1024 * 1024) {
-        formStatus.textContent = "La pièce jointe dépasse 3 MB. Choisissez un fichier plus léger.";
+        formStatus.textContent = t("fileTooLarge");
         formStatus.dataset.state = "error";
         return;
       }
 
       submitButton.disabled = true;
-      submitButton.textContent = "Envoi en cours...";
-      formStatus.textContent = "Transmission sécurisée de votre demande à Lisa Li.";
+      submitButton.textContent = t("submitting");
+      formStatus.textContent = t("sending");
       formStatus.dataset.state = "pending";
 
       try {
         const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
         const result = await response.json();
         if (response.ok && result.success) {
-          formStatus.textContent = "Votre demande a bien été envoyée à Lisa Li. Nous vous répondrons par e-mail.";
+          formStatus.textContent = t("sent");
           formStatus.dataset.state = "success";
           form.reset();
           startedAt.value = String(Date.now());
-          fileStatus.textContent = "Aucune pièce jointe sélectionnée.";
+          setLanguage(activeLanguage);
           return;
         }
         if (result.fallback === "mailto") {
-          formStatus.textContent = "L'envoi web n'est pas encore disponible. Votre application e-mail va s'ouvrir avec la demande préremplie; ajoutez manuellement la pièce jointe.";
+          formStatus.textContent = t("mailFallback");
           formStatus.dataset.state = "pending";
           window.location.href = buildFallbackEmail();
           return;
         }
         throw new Error(result.error || "Unable to send inquiry");
       } catch (error) {
-        formStatus.textContent = "L'envoi web n'a pas abouti. Ouvrez l'e-mail prérempli pour envoyer la demande sans perdre les informations saisies.";
+        formStatus.textContent = t("sendFailed");
         formStatus.dataset.state = "error";
         window.location.href = buildFallbackEmail();
       } finally {
         submitButton.disabled = false;
-        submitButton.textContent = "Envoyer à Lisa Li";
+        submitButton.textContent = t("submit");
       }
     });
   </script>` : ""}
@@ -2363,9 +2516,9 @@ tr:last-child td {
 .inquiry-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: clamp(36px, 7vw, 100px);
-  align-items: end;
-  padding: clamp(64px, 9vw, 120px) clamp(18px, 6vw, 88px);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 104px) clamp(18px, 6vw, 88px);
   background: #f1f2f4;
   border-bottom: 1px solid var(--line);
 }
@@ -2374,7 +2527,6 @@ tr:last-child td {
 .inquiry-hero,
 .inquiry-hero-copy,
 .inquiry-workspace,
-.inquiry-guidance,
 .inquiry-form,
 .form-section,
 .form-grid label,
@@ -2440,145 +2592,197 @@ tr:last-child td {
 }
 
 .inquiry-workspace {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
-  gap: clamp(30px, 6vw, 88px);
-  align-items: start;
-  padding: clamp(54px, 8vw, 112px) clamp(18px, 6vw, 88px);
-  background: #fff;
+  padding: clamp(52px, 7vw, 92px) clamp(18px, 6vw, 88px);
+  background: #f7f7f8;
   scroll-margin-top: 110px;
 }
 
-.inquiry-guidance {
-  position: sticky;
-  top: 112px;
+.inquiry-workspace-heading,
+.inquiry-form,
+.inquiry-company-note {
+  width: min(1120px, 100%);
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.inquiry-guidance > p:not(.eyebrow) {
-  color: #50545a;
+.inquiry-workspace-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.inquiry-workspace-heading h2 {
+  max-width: 720px;
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.inquiry-workspace-heading > div:first-child > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: #555a60;
   font-size: 17px;
 }
 
-.inquiry-guidance ol {
-  display: grid;
-  gap: 0;
-  padding: 0;
-  margin: 34px 0;
-  list-style: none;
-  counter-reset: inquiry-steps;
-  border-top: 1px solid var(--line);
+.language-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(88px, 1fr));
+  min-height: 44px;
+  padding: 3px;
+  border: 1px solid #cfd2d6;
+  border-radius: 6px;
+  background: #fff;
 }
 
-.inquiry-guidance li {
-  display: grid;
-  grid-template-columns: 36px minmax(0, 1fr);
-  gap: 4px 12px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-  counter-increment: inquiry-steps;
-}
-
-.inquiry-guidance li::before {
-  grid-row: 1 / span 2;
-  color: var(--red);
-  content: "0" counter(inquiry-steps);
+.language-option {
+  min-width: 0;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #555a60;
+  cursor: pointer;
+  font: inherit;
   font-size: 13px;
   font-weight: 800;
 }
 
-.inquiry-guidance li span,
-.inquiry-trust span {
-  color: var(--muted);
-}
-
-.inquiry-trust {
-  display: grid;
-  gap: 8px;
-  padding-top: 22px;
-  border-top: 3px solid var(--ink);
-  font-size: 14px;
-}
-
-.inquiry-form {
-  overflow: hidden;
-  border: 1px solid #d9dcdf;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 24px 60px rgba(19, 21, 24, 0.08);
-}
-
-.compose-header {
-  padding: 18px 24px;
+.language-option.is-active {
   background: var(--charcoal);
   color: #fff;
 }
 
-.compose-header > div,
-.compose-header > label {
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 12px;
+.inquiry-form {
+  overflow: hidden;
+  border: 1px solid #d4d7da;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 20px 52px rgba(19, 21, 24, 0.09);
+}
+
+.compose-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
   align-items: center;
-  min-height: 42px;
-}
-
-.compose-header > div {
-  border-bottom: 1px solid #464a50;
-}
-
-.compose-header span {
-  color: #aeb4bb;
-}
-
-.compose-header input {
-  width: 100%;
-  padding: 9px 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
+  min-height: 108px;
+  padding: 22px clamp(22px, 4vw, 42px);
+  background: var(--charcoal);
   color: #fff;
-  font: inherit;
-  font-weight: 700;
+}
+
+.compose-recipient {
+  display: grid;
+  gap: 3px;
+}
+
+.compose-recipient > span {
+  color: #aeb4bb;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.compose-recipient strong {
+  font-size: 22px;
+}
+
+.compose-recipient small {
+  color: #cdd1d5;
+  overflow-wrap: anywhere;
+}
+
+.response-promise {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 10px 13px;
+  border: 1px solid #51565c;
+  border-radius: 5px;
+  background: #30343a;
+  color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.response-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #48c97c;
+  box-shadow: 0 0 0 4px rgba(72, 201, 124, 0.12);
 }
 
 .form-section {
-  padding: clamp(24px, 4vw, 42px);
+  padding: clamp(26px, 4vw, 42px);
   border-bottom: 1px solid var(--line);
 }
 
-.form-section-title {
+.form-section-primary {
+  background: #fff;
+}
+
+.form-section-heading {
   display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 22px;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 24px;
 }
 
-.form-section-title span {
-  color: var(--red);
-  font-size: 13px;
-  font-weight: 800;
+.form-section-heading h3 {
+  margin: 4px 0 0;
+  font-size: 22px;
 }
 
-.form-section-title h3 {
+.form-section-heading p {
+  max-width: 330px;
   margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: right;
+}
+
+.section-kicker {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .form-grid {
   display: grid;
-  gap: 18px;
+  gap: 18px 20px;
 }
 
 .form-grid.two-columns {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.form-grid.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .form-grid label,
 .message-field {
   display: grid;
-  gap: 7px;
+  gap: 8px;
   color: #33373c;
   font-size: 14px;
   font-weight: 800;
+}
+
+.form-grid label > span,
+.message-field > span {
+  min-height: 20px;
+}
+
+.form-grid em {
+  color: var(--red);
+  font-style: normal;
 }
 
 .form-grid input,
@@ -2586,8 +2790,8 @@ tr:last-child td {
 .message-field textarea {
   width: 100%;
   min-width: 0;
-  min-height: 46px;
-  padding: 11px 12px;
+  min-height: 48px;
+  padding: 12px 13px;
   border: 1px solid #cfd3d7;
   border-radius: 5px;
   outline: 0;
@@ -2597,7 +2801,7 @@ tr:last-child td {
 }
 
 .message-field textarea {
-  min-height: 230px;
+  min-height: 150px;
   resize: vertical;
   line-height: 1.55;
 }
@@ -2605,17 +2809,17 @@ tr:last-child td {
 .form-grid input:focus,
 .form-grid select:focus,
 .message-field textarea:focus,
-.compose-header input:focus {
+.language-option:focus-visible {
   border-color: var(--red);
   box-shadow: 0 0 0 3px rgba(237, 28, 36, 0.1);
 }
 
 .customization-options {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
   padding: 0;
-  margin: 24px 0 0;
+  margin: 26px 0 0;
   border: 0;
 }
 
@@ -2631,21 +2835,31 @@ tr:last-child td {
   display: flex;
   gap: 9px;
   align-items: center;
-  min-height: 50px;
-  padding: 10px 12px;
+  min-height: 54px;
+  padding: 11px 12px;
   border: 1px solid var(--line);
   border-radius: 5px;
-  background: var(--soft);
+  background: #fafafa;
+  cursor: pointer;
   font-size: 13px;
   font-weight: 700;
 }
 
-.customization-options input,
-.consent input {
+.customization-options label:has(input:checked) {
+  border-color: var(--red);
+  background: #fff6f6;
+  color: #a80f16;
+}
+
+.customization-options input {
   width: 17px;
   height: 17px;
   flex: 0 0 auto;
   accent-color: var(--red);
+}
+
+.form-section-message {
+  background: #fcfcfc;
 }
 
 .file-field {
@@ -2684,7 +2898,8 @@ tr:last-child td {
 
 .file-field small,
 .file-status,
-.form-fallback {
+.form-fallback,
+.privacy-note {
   color: var(--muted);
 }
 
@@ -2704,16 +2919,36 @@ tr:last-child td {
 
 .form-footer {
   padding: clamp(24px, 4vw, 42px);
-  background: #f4f5f6;
+  background: #f1f2f3;
 }
 
-.consent {
+.form-submit-row {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  color: #4e5358;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-submit-row .button {
+  min-width: 210px;
+}
+
+.reply-note {
+  display: grid;
+  gap: 2px;
+  color: #30343a;
   font-size: 13px;
+}
+
+.reply-note strong {
+  color: #167444;
+  font-size: 15px;
+}
+
+.privacy-note {
+  max-width: 780px;
+  margin: 18px 0 0;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .form-status {
@@ -2734,6 +2969,19 @@ tr:last-child td {
 .form-fallback a {
   color: var(--ink);
   font-weight: 800;
+}
+
+.inquiry-company-note {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.45fr) minmax(0, 0.55fr);
+  gap: 24px;
+  padding: 24px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.inquiry-company-note strong {
+  color: var(--ink);
 }
 
 .honeypot {
@@ -3353,8 +3601,13 @@ details p {
     grid-template-columns: 1fr;
   }
 
-  .inquiry-guidance {
-    position: static;
+  .inquiry-workspace-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .form-grid.three-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero {
@@ -3435,6 +3688,7 @@ details p {
   .article-list,
   .contact-route-grid,
   .form-grid.two-columns,
+  .form-grid.three-columns,
   .customization-options {
     grid-template-columns: 1fr;
   }
@@ -3454,6 +3708,34 @@ details p {
   .form-footer {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .compose-header,
+  .form-section-heading,
+  .form-submit-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .compose-header {
+    min-height: 0;
+  }
+
+  .response-promise {
+    white-space: normal;
+  }
+
+  .form-section-heading p {
+    text-align: left;
+  }
+
+  .language-switch {
+    width: 100%;
+  }
+
+  .inquiry-company-note {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .button {

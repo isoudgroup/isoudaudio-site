@@ -97,26 +97,23 @@ export async function onRequestPost(context) {
   }
 
   const fields = {
+    Language: clean(form.get("language"), 10),
     Name: clean(form.get("name"), 100),
     Company: clean(form.get("company"), 140),
     "Work email": clean(form.get("email"), 160),
     "Phone / WhatsApp": clean(form.get("phone"), 80),
     "Country / region": clean(form.get("country"), 100),
-    "Target market": clean(form.get("market"), 140),
     "Product category": clean(form.get("product"), 120),
-    "Project type": clean(form.get("projectType"), 120),
     "Estimated quantity": clean(form.get("quantity"), 80),
-    "Target launch": clean(form.get("timeline"), 40),
     Customization: valueList(form, "customization").join(", ")
   };
   const subject = clean(form.get("subject"), 140) || "OEM/ODM earbuds project inquiry";
   const message = clean(form.get("message"), 4000);
 
-  if (!fields.Name || !fields.Company || !fields["Work email"] || !fields["Country / region"] || !fields["Product category"] || !fields["Project type"] || !fields["Estimated quantity"] || !message) {
-    return json({ success: false, error: "Please complete all required fields" }, 400);
+  if (!fields.Name || !fields["Work email"]) {
+    return json({ success: false, error: "Please enter your name and email" }, 400);
   }
   if (!validEmail(fields["Work email"])) return json({ success: false, error: "Please enter a valid work email" }, 400);
-  if (form.get("consent") !== "on") return json({ success: false, error: "Consent is required" }, 400);
 
   const attachments = [];
   const attachment = form.get("attachment");
