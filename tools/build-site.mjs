@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 const root = path.join(projectRoot, "dist");
 const siteUrl = "https://isoudaudio.com";
-const lastmod = "2026-08-01";
+const lastmod = "2026-08-02";
 const alibabaUrl = "https://isoud.en.alibaba.com/";
 const air31ProductLinks = [
   "https://www.alibaba.com/product-detail/France-Sports-TWS-Retail-Air31-Earbuds_1601722937313.html?spm=a2700.shop_pl.41413.4.2ddb6703VPA7Qi",
@@ -23,6 +23,7 @@ const contact = {
   company: "Dongguan Yuanshengpai Electronic Technology Co., Ltd.",
   legacyWebsite: "https://www.rawisoud.com/"
 };
+const inquiryEmailUrl = `mailto:${contact.email}?subject=${encodeURIComponent("OEM/ODM earbuds project inquiry")}&body=${encodeURIComponent(`Hello Lisa,\n\nWe are looking for an OEM/ODM earbuds manufacturing partner.\n\nCompany:\nTarget market:\nProduct category:\nEstimated quantity:\nCustomization requirements:\nTarget launch date:\n\nPlease contact us to discuss feasibility, sampling and quotation.\n\nBest regards,`)}`;
 
 const pages = [
   {
@@ -461,15 +462,15 @@ const pages = [
   },
   {
     path: "fr/contact/",
-    title: "Contact iSoud | Dongguan Yuanshengpai earphone factory",
+    title: "Demande OEM/ODM iSoud | Formulaire direct pour Lisa Li",
     description:
-      "Contactez iSoud / Dongguan Yuanshengpai Electronic Technology Co., Ltd. pour projets OEM/ODM d'ecouteurs TWS, air earbuds, AI audio et smart wearables.",
-    h1: "Contacter iSoud pour un projet OEM/ODM audio ou smart wearable",
-    eyebrow: "Inquiry and company identity",
+      "Envoyez directement a Lisa Li une demande OEM/ODM d'ecouteurs TWS avec coordonnees, quantite, personnalisation, calendrier et carte de visite en piece jointe.",
+    h1: "Présentez votre projet. Lisa reçoit un brief exploitable.",
+    eyebrow: "Direct OEM/ODM inquiry",
     heroImage: "/assets/images/logo-card.png",
     heroAlt: "Logo iSoud contact pour Dongguan Yuanshengpai Electronic Technology Co Ltd",
     summary:
-      "Contactez iSoud pour discuter d'un projet d'ecouteurs TWS, air earbuds, AI audio, ecouteurs traducteurs IA, open-ear earbuds ou smart wearables.",
+      "Un seul formulaire pour les projets TWS, open-ear, AI audio, private label et packaging sur mesure. Votre demande est structurée comme un e-mail professionnel et adressée directement à Lisa Li.",
     sections: [
       {
         title: "Contact direct",
@@ -1188,7 +1189,7 @@ const nav = [
   ["/fr/a-propos-isoud/", "Factory"],
   ["/fr/oem-odm-earbuds/", "Customization"],
   ["/fr/produits/", "Products"],
-  ["/fr/actualites/", "Enterprise News"]
+  ["/fr/actualites/", "News / RSS"]
 ];
 
 function ensureDir(filePath) {
@@ -1215,12 +1216,15 @@ function attrs(obj) {
 }
 
 function localUrl(href, fromPath) {
-  if (/^https?:\/\//.test(href)) return href;
+  if (/^(https?:\/\/|mailto:|tel:|#)/.test(href)) return href;
   if (!href.startsWith("/")) return href;
 
-  const rawTarget = href.slice(1);
-  const target = href.endsWith("/") ? `${rawTarget}index.html` : rawTarget;
-  return path.posix.relative(fromPath, target) || "index.html";
+  const normalizedHref = href === "/fr/contact/" ? "/fr/contact/#inquiry" : href;
+  const [pathname, fragment] = normalizedHref.split("#");
+  const rawTarget = pathname.slice(1);
+  const target = pathname.endsWith("/") ? `${rawTarget}index.html` : rawTarget;
+  const relative = path.posix.relative(fromPath, target) || "index.html";
+  return fragment ? `${relative}#${fragment}` : relative;
 }
 
 function sectionMarkup(section, page) {
@@ -1414,25 +1418,28 @@ function articleJson(page) {
 function contactPanelMarkup() {
   return `<section class="contact-panel">
       <div class="section-heading">
-        <span>Direct factory contact</span>
-        <h2>Contactez Lisa Li pour un projet OEM/ODM</h2>
+        <span>One clear contact route</span>
+        <h2>Un projet, un brief, une interlocutrice.</h2>
+        <p>Le formulaire regroupe les informations utiles à l'évaluation du projet. Pour un message libre, ouvrez directement votre application e-mail.</p>
       </div>
-      <div class="contact-cards">
+      <div class="contact-route-grid">
+        <article class="contact-route-primary">
+          <span>Project inquiry</span>
+          <strong>Envoyer un brief OEM/ODM structuré</strong>
+          <p>Produit, quantité, marché, personnalisation, calendrier et carte de visite dans une seule demande.</p>
+          <a class="button primary" href="/fr/contact/#inquiry">Ouvrir le formulaire</a>
+        </article>
         <article>
           <strong>${escapeHtml(contact.name)}</strong>
           <span>${escapeHtml(contact.role)}</span>
-          <a href="mailto:${contact.email}">${contact.email}</a>
+          <a href="${inquiryEmailUrl}">${contact.email}</a>
           <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a>
+          <a class="text-link" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
         </article>
         <article>
           <strong>Official Alibaba Store</strong>
-          <span>iSoud verified B2B storefront and product inquiry channel.</span>
-          <a href="${alibabaUrl}">${alibabaUrl.replace("https://", "")}</a>
-        </article>
-        <article>
-          <strong>Factory Address</strong>
-          <span>${escapeHtml(contact.company)}</span>
-          <span>${escapeHtml(contact.address)}</span>
+          <span>Consultez les modèles et fiches produit, puis revenez au même formulaire pour transmettre votre brief.</span>
+          <a class="text-link" href="${alibabaUrl}">Voir la boutique iSoud</a>
         </article>
       </div>
     </section>`;
@@ -1456,10 +1463,144 @@ function ctaMarkup(to) {
       <h2>Construire un projet audio OEM/ODM avec une usine identifiable</h2>
       <p>Parlez-nous de votre catégorie, quantité, marché cible et besoin de personnalisation. Lisa Li répond aux demandes OEM/ODM avec un canal direct et un lien vers la boutique Alibaba officielle iSoud.</p>
       <div class="hero-actions">
-        <a class="button primary" href="${to("/fr/contact/")}">Contacter Lisa Li</a>
+        <a class="button primary" href="${to("/fr/contact/#inquiry")}">Envoyer un brief projet</a>
+        <a class="button light" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
         <a class="button light" href="${alibabaUrl}">Voir Alibaba Store</a>
       </div>
     </section>`;
+}
+
+function contactMainMarkup(page, to) {
+  return `<main id="main" class="inquiry-page">
+    <section class="inquiry-hero">
+      <div class="inquiry-hero-copy">
+        <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
+        <h1>${escapeHtml(page.h1)}</h1>
+        <p class="lead">${escapeHtml(page.summary)}</p>
+        <div class="inquiry-direct-actions">
+          <a class="button secondary" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
+          <a class="text-link" href="${alibabaUrl}">Consulter Alibaba Store</a>
+        </div>
+      </div>
+      <div class="inquiry-contact-summary" aria-label="Contact direct iSoud">
+        <span>To</span>
+        <strong>${escapeHtml(contact.name)}</strong>
+        <p>${escapeHtml(contact.role)} · iSoud / Yuanshengpai</p>
+        <a href="mailto:${contact.email}">${contact.email}</a>
+        <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a>
+        <small>Réponse commerciale habituelle sous 24 heures ouvrées.</small>
+      </div>
+    </section>
+
+    <section class="inquiry-workspace" id="inquiry" aria-labelledby="inquiry-title">
+      <aside class="inquiry-guidance">
+        <p class="eyebrow">Project brief</p>
+        <h2 id="inquiry-title">Une demande prête à être évaluée.</h2>
+        <p>Les champs suivent l'ordre d'un e-mail de sourcing professionnel. Lisa reçoit le contexte nécessaire pour préparer les premières questions de faisabilité.</p>
+        <ol>
+          <li><strong>Identifiez votre entreprise</strong><span>Nom, e-mail professionnel et marché cible.</span></li>
+          <li><strong>Cadrez le produit</strong><span>Catégorie, quantité et niveau OEM/ODM.</span></li>
+          <li><strong>Ajoutez vos éléments</strong><span>Carte de visite, brief ou document PDF jusqu'à 3 MB.</span></li>
+        </ol>
+        <div class="inquiry-trust">
+          <strong>Dongguan Yuanshengpai Electronic Technology Co., Ltd.</strong>
+          <span>${escapeHtml(contact.address)}</span>
+        </div>
+      </aside>
+
+      <form class="inquiry-form" id="inquiry-form" action="/api/inquiry" method="post" enctype="multipart/form-data" data-recipient="${contact.email}">
+        <div class="compose-header">
+          <div><span>À</span><strong>${escapeHtml(contact.name)} · ${contact.email}</strong></div>
+          <label for="inquiry-subject"><span>Objet</span><input id="inquiry-subject" name="subject" value="OEM/ODM earbuds project inquiry" maxlength="140"></label>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title"><span>01</span><h3>Vos coordonnées</h3></div>
+          <div class="form-grid two-columns">
+            <label>Nom complet *<input name="name" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
+            <label>Entreprise *<input name="company" autocomplete="organization" required maxlength="140" placeholder="Company / brand name"></label>
+            <label>E-mail professionnel *<input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="name@company.com"></label>
+            <label>Téléphone / WhatsApp<input name="phone" autocomplete="tel" maxlength="80" placeholder="Country code + number"></label>
+            <label>Pays / région *<input name="country" autocomplete="country-name" required maxlength="100" placeholder="France, Germany, USA..."></label>
+            <label>Marché ou canal cible<input name="market" maxlength="140" placeholder="Retail, ecommerce, gifts, distribution..."></label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title"><span>02</span><h3>Cadre du projet</h3></div>
+          <div class="form-grid two-columns">
+            <label>Catégorie produit *
+              <select name="product" required>
+                <option value="">Select a product category</option>
+                <option>TWS earbuds</option>
+                <option>Open-ear earbuds</option>
+                <option>AI audio / translator earbuds</option>
+                <option>Air31-style earbuds</option>
+                <option>Smart wearables</option>
+                <option>Other audio project</option>
+              </select>
+            </label>
+            <label>Type de projet *
+              <select name="projectType" required>
+                <option value="">Select project type</option>
+                <option>Ready model / RTS</option>
+                <option>Private label / logo</option>
+                <option>OEM customization</option>
+                <option>ODM development</option>
+                <option>Packaging-only discussion</option>
+              </select>
+            </label>
+            <label>Quantité estimée *<input name="quantity" required maxlength="80" placeholder="Example: 1,000 / 5,000 / 20,000 units"></label>
+            <label>Date de lancement souhaitée<input type="month" name="timeline"></label>
+          </div>
+          <fieldset class="customization-options">
+            <legend>Personnalisation recherchée</legend>
+            <label><input type="checkbox" name="customization" value="Custom color and finish"><span>Couleur &amp; finition</span></label>
+            <label><input type="checkbox" name="customization" value="Logo and private label"><span>Logo &amp; private label</span></label>
+            <label><input type="checkbox" name="customization" value="Retail packaging"><span>Packaging retail</span></label>
+            <label><input type="checkbox" name="customization" value="Performance configuration"><span>Configuration produit</span></label>
+            <label><input type="checkbox" name="customization" value="Accessories and inserts"><span>Accessoires &amp; inserts</span></label>
+            <label><input type="checkbox" name="customization" value="Deeper ODM development"><span>Développement ODM</span></label>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title"><span>03</span><h3>Votre message</h3></div>
+          <label class="message-field">Brief du projet *
+            <textarea name="message" required maxlength="4000" rows="10">Hello Lisa,
+
+We are looking for an OEM/ODM earbuds manufacturing partner. Please review the project information above and advise on feasibility, sampling, estimated MOQ and quotation steps.
+
+Additional requirements:</textarea>
+          </label>
+          <label class="file-field" for="attachment">
+            <span class="file-icon" aria-hidden="true">+</span>
+            <span><strong>Ajouter une carte de visite ou un brief</strong><small>JPG, PNG, WEBP, PDF ou VCF · 3 MB maximum</small></span>
+            <input id="attachment" type="file" name="attachment" accept=".jpg,.jpeg,.png,.webp,.pdf,.vcf,image/jpeg,image/png,image/webp,application/pdf,text/vcard">
+          </label>
+          <p class="file-status" id="file-status" aria-live="polite">Aucune pièce jointe sélectionnée.</p>
+        </div>
+
+        <div class="form-footer">
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="startedAt" id="started-at">
+          <label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que ces informations soient utilisées uniquement pour répondre à cette demande B2B.</span></label>
+          <button class="button primary" type="submit" id="inquiry-submit">Envoyer à Lisa Li</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-fallback">Problème d'envoi ? <a href="${inquiryEmailUrl}">Ouvrez l'e-mail prérempli</a> ou écrivez à <a href="mailto:${contact.email}">${contact.email}</a>.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="entity-strip" aria-label="Informations clés">
+      <div><span>Brand</span><strong>iSoud / isoud</strong></div>
+      <div><span>Company</span><strong>Dongguan Yuanshengpai Electronic Technology Co., Ltd.</strong></div>
+      <div><span>Business</span><strong>OEM/ODM earphone factory</strong></div>
+      <div><span>Markets</span><strong>Europe / United States / Global B2B</strong></div>
+    </section>
+
+    ${faqMarkup(page)}
+  </main>`;
 }
 
 function standardMainMarkup(page, to) {
@@ -1470,7 +1611,7 @@ function standardMainMarkup(page, to) {
         <h1>${escapeHtml(page.h1)}</h1>
         <p class="lead">${escapeHtml(page.summary)}</p>
         <div class="hero-actions">
-          <a class="button primary" href="${to("/fr/contact/")}">Demander un projet OEM/ODM</a>
+          <a class="button primary" href="${to("/fr/contact/#inquiry")}">Demander un projet OEM/ODM</a>
           <a class="button secondary" href="${to("/fr/usine-fabrication-ecouteurs/")}">Voir l'usine</a>
           <a class="button secondary" href="${alibabaUrl}">Voir Alibaba Store</a>
         </div>
@@ -1511,7 +1652,7 @@ function homeMainMarkup(page, to) {
         <h1 id="home-title">${escapeHtml(page.h1)}</h1>
         <p class="lead">${escapeHtml(page.summary)}</p>
         <div class="hero-actions">
-          <a class="button primary" href="${to("/fr/contact/")}">Démarrer un projet</a>
+          <a class="button primary" href="${to("/fr/contact/#inquiry")}">Démarrer un projet</a>
           <a class="button hero-outline" href="${alibabaUrl}">Alibaba Store</a>
         </div>
       </div>
@@ -1605,6 +1746,7 @@ function homeMainMarkup(page, to) {
 
 function pageHtml(page, options = {}) {
   const isHome = page.path === "fr/";
+  const isContact = page.path === "fr/contact/";
   const renderPath = options.renderPath ?? page.path;
   const canonical = isHome ? `${siteUrl}/` : `${siteUrl}/${page.path}`;
   const schema = [organizationJson(), breadcrumbJson(page), productJson(page), articleJson(page)].filter(Boolean);
@@ -1655,7 +1797,7 @@ function pageHtml(page, options = {}) {
     <nav aria-label="Navigation principale">${navHtml}</nav>
   </header>
 
-  ${isHome ? homeMainMarkup(page, to) : standardMainMarkup(page, to)}
+  ${isHome ? homeMainMarkup(page, to) : isContact ? contactMainMarkup(page, to) : standardMainMarkup(page, to)}
 
   <footer class="site-footer">
     <div>
@@ -1667,7 +1809,7 @@ function pageHtml(page, options = {}) {
       <a href="${to("/fr/a-propos-isoud/")}">A propos</a>
       <a href="${to("/fr/usine-fabrication-ecouteurs/")}">Usine</a>
       <a href="${to("/fr/oem-odm-earbuds/")}">OEM/ODM</a>
-      <a href="${to("/fr/contact/")}">Contact</a>
+      <a href="${to("/fr/contact/#inquiry")}">Contact</a>
       <a href="${alibabaUrl}">Alibaba Store</a>
     </div>
   </footer>
@@ -1683,6 +1825,101 @@ function pageHtml(page, options = {}) {
       }
     }, { threshold: 0.12 });
     revealItems.forEach((item) => revealObserver.observe(item));
+  </script>` : isContact ? `<script>
+    const form = document.getElementById("inquiry-form");
+    const fileInput = document.getElementById("attachment");
+    const fileStatus = document.getElementById("file-status");
+    const formStatus = document.getElementById("form-status");
+    const submitButton = document.getElementById("inquiry-submit");
+    const startedAt = document.getElementById("started-at");
+    startedAt.value = String(Date.now());
+
+    function selectedValues(name) {
+      return Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map((input) => input.value);
+    }
+
+    function buildFallbackEmail() {
+      const data = new FormData(form);
+      const attachment = fileInput.files[0];
+      const lines = [
+        "Hello Lisa,",
+        "",
+        "We are looking for an OEM/ODM earbuds manufacturing partner.",
+        "",
+        "Name: " + (data.get("name") || ""),
+        "Company: " + (data.get("company") || ""),
+        "Work email: " + (data.get("email") || ""),
+        "Phone / WhatsApp: " + (data.get("phone") || ""),
+        "Country / region: " + (data.get("country") || ""),
+        "Target market: " + (data.get("market") || ""),
+        "Product category: " + (data.get("product") || ""),
+        "Project type: " + (data.get("projectType") || ""),
+        "Estimated quantity: " + (data.get("quantity") || ""),
+        "Target launch: " + (data.get("timeline") || ""),
+        "Customization: " + (selectedValues("customization").join(", ") || "To be discussed"),
+        attachment ? "Attachment to add manually: " + attachment.name : "Attachment: none",
+        "",
+        String(data.get("message") || "")
+      ];
+      return "mailto:${contact.email}?subject=" + encodeURIComponent(String(data.get("subject") || "OEM/ODM earbuds project inquiry")) + "&body=" + encodeURIComponent(lines.join("\\n"));
+    }
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (!file) {
+        fileStatus.textContent = "Aucune pièce jointe sélectionnée.";
+        return;
+      }
+      const size = file.size / (1024 * 1024);
+      fileStatus.textContent = file.name + " · " + size.toFixed(2) + " MB";
+      if (file.size > 3 * 1024 * 1024) {
+        fileStatus.textContent += " · Le fichier dépasse la limite de 3 MB.";
+      }
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const file = fileInput.files[0];
+      if (file && file.size > 3 * 1024 * 1024) {
+        formStatus.textContent = "La pièce jointe dépasse 3 MB. Choisissez un fichier plus léger.";
+        formStatus.dataset.state = "error";
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Envoi en cours...";
+      formStatus.textContent = "Transmission sécurisée de votre demande à Lisa Li.";
+      formStatus.dataset.state = "pending";
+
+      try {
+        const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        const result = await response.json();
+        if (response.ok && result.success) {
+          formStatus.textContent = "Votre demande a bien été envoyée à Lisa Li. Nous vous répondrons par e-mail.";
+          formStatus.dataset.state = "success";
+          form.reset();
+          startedAt.value = String(Date.now());
+          fileStatus.textContent = "Aucune pièce jointe sélectionnée.";
+          return;
+        }
+        if (result.fallback === "mailto") {
+          formStatus.textContent = "L'envoi web n'est pas encore disponible. Votre application e-mail va s'ouvrir avec la demande préremplie; ajoutez manuellement la pièce jointe.";
+          formStatus.dataset.state = "pending";
+          window.location.href = buildFallbackEmail();
+          return;
+        }
+        throw new Error(result.error || "Unable to send inquiry");
+      } catch (error) {
+        formStatus.textContent = "L'envoi web n'a pas abouti. Ouvrez l'e-mail prérempli pour envoyer la demande sans perdre les informations saisies.";
+        formStatus.dataset.state = "error";
+        window.location.href = buildFallbackEmail();
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Envoyer à Lisa Li";
+      }
+    });
   </script>` : ""}
 </body>
 </html>
@@ -1743,6 +1980,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -1899,7 +2137,14 @@ h3 {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 800;
+  font-family: inherit;
   line-height: 1.2;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.62;
 }
 
 .button.primary {
@@ -2115,6 +2360,387 @@ tr:last-child td {
   color: var(--red);
 }
 
+.inquiry-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: clamp(36px, 7vw, 100px);
+  align-items: end;
+  padding: clamp(64px, 9vw, 120px) clamp(18px, 6vw, 88px);
+  background: #f1f2f4;
+  border-bottom: 1px solid var(--line);
+}
+
+.inquiry-page,
+.inquiry-hero,
+.inquiry-hero-copy,
+.inquiry-workspace,
+.inquiry-guidance,
+.inquiry-form,
+.form-section,
+.form-grid label,
+.customization-options {
+  min-width: 0;
+}
+
+.inquiry-hero-copy {
+  max-width: 920px;
+}
+
+.inquiry-hero h1 {
+  max-width: 880px;
+  font-size: clamp(44px, 6vw, 82px);
+  overflow-wrap: anywhere;
+}
+
+.inquiry-direct-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.inquiry-contact-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 28px 0;
+  border-top: 3px solid var(--red);
+  border-bottom: 1px solid #cdd0d4;
+}
+
+.inquiry-contact-summary > span,
+.compose-header span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.inquiry-contact-summary > strong {
+  font-size: 26px;
+}
+
+.inquiry-contact-summary p {
+  margin-bottom: 6px;
+  color: #4d5156;
+}
+
+.inquiry-contact-summary a {
+  color: var(--red);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.inquiry-contact-summary small {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.inquiry-workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(30px, 6vw, 88px);
+  align-items: start;
+  padding: clamp(54px, 8vw, 112px) clamp(18px, 6vw, 88px);
+  background: #fff;
+  scroll-margin-top: 110px;
+}
+
+.inquiry-guidance {
+  position: sticky;
+  top: 112px;
+}
+
+.inquiry-guidance > p:not(.eyebrow) {
+  color: #50545a;
+  font-size: 17px;
+}
+
+.inquiry-guidance ol {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 34px 0;
+  list-style: none;
+  counter-reset: inquiry-steps;
+  border-top: 1px solid var(--line);
+}
+
+.inquiry-guidance li {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 4px 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  counter-increment: inquiry-steps;
+}
+
+.inquiry-guidance li::before {
+  grid-row: 1 / span 2;
+  color: var(--red);
+  content: "0" counter(inquiry-steps);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.inquiry-guidance li span,
+.inquiry-trust span {
+  color: var(--muted);
+}
+
+.inquiry-trust {
+  display: grid;
+  gap: 8px;
+  padding-top: 22px;
+  border-top: 3px solid var(--ink);
+  font-size: 14px;
+}
+
+.inquiry-form {
+  overflow: hidden;
+  border: 1px solid #d9dcdf;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(19, 21, 24, 0.08);
+}
+
+.compose-header {
+  padding: 18px 24px;
+  background: var(--charcoal);
+  color: #fff;
+}
+
+.compose-header > div,
+.compose-header > label {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+}
+
+.compose-header > div {
+  border-bottom: 1px solid #464a50;
+}
+
+.compose-header span {
+  color: #aeb4bb;
+}
+
+.compose-header input {
+  width: 100%;
+  padding: 9px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+}
+
+.form-section {
+  padding: clamp(24px, 4vw, 42px);
+  border-bottom: 1px solid var(--line);
+}
+
+.form-section-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.form-section-title span {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.form-section-title h3 {
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.form-grid.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid label,
+.message-field {
+  display: grid;
+  gap: 7px;
+  color: #33373c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.form-grid input,
+.form-grid select,
+.message-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid #cfd3d7;
+  border-radius: 5px;
+  outline: 0;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.message-field textarea {
+  min-height: 230px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.message-field textarea:focus,
+.compose-header input:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(237, 28, 36, 0.1);
+}
+
+.customization-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 24px 0 0;
+  border: 0;
+}
+
+.customization-options legend {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #33373c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.customization-options label {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.customization-options input,
+.consent input {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  accent-color: var(--red);
+}
+
+.file-field {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px dashed #aeb3b9;
+  border-radius: 5px;
+  background: var(--soft);
+  cursor: pointer;
+}
+
+.file-field:hover {
+  border-color: var(--red);
+}
+
+.file-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.file-field > span:nth-child(2) {
+  display: grid;
+  gap: 2px;
+}
+
+.file-field small,
+.file-status,
+.form-fallback {
+  color: var(--muted);
+}
+
+.file-field input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.file-status {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+.form-footer {
+  padding: clamp(24px, 4vw, 42px);
+  background: #f4f5f6;
+}
+
+.consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  color: #4e5358;
+  font-size: 13px;
+}
+
+.form-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+  font-weight: 800;
+}
+
+.form-status[data-state="success"] { color: #167444; }
+.form-status[data-state="error"] { color: #b31219; }
+.form-status[data-state="pending"] { color: #575d64; }
+
+.form-fallback {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+.form-fallback a {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
 .contact-panel {
   display: grid;
   grid-template-columns: minmax(220px, 0.35fr) minmax(0, 0.65fr);
@@ -2124,13 +2750,13 @@ tr:last-child td {
   background: #fff;
 }
 
-.contact-cards {
+.contact-route-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
-.contact-cards article {
+.contact-route-grid article {
   min-height: 190px;
   display: flex;
   flex-direction: column;
@@ -2141,20 +2767,30 @@ tr:last-child td {
   background: var(--soft);
 }
 
-.contact-cards strong {
+.contact-route-grid strong {
   font-size: 20px;
   line-height: 1.2;
 }
 
-.contact-cards span {
+.contact-route-grid span,
+.contact-route-grid p {
   color: #4f545a;
 }
 
-.contact-cards a {
+.contact-route-grid a:not(.button) {
   color: var(--red);
   font-weight: 800;
   overflow-wrap: anywhere;
   text-decoration: none;
+}
+
+.contact-route-grid .button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.contact-route-primary {
+  border-top: 3px solid var(--red) !important;
 }
 
 .faq {
@@ -2711,8 +3347,14 @@ details p {
 @media (max-width: 980px) {
   .hero,
   .content-section,
-  .contact-panel {
+  .contact-panel,
+  .inquiry-hero,
+  .inquiry-workspace {
     grid-template-columns: 1fr;
+  }
+
+  .inquiry-guidance {
+    position: static;
   }
 
   .hero {
@@ -2724,7 +3366,11 @@ details p {
   .feature-grid,
   .image-grid,
   .article-list,
-  .contact-cards {
+  .contact-route-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .customization-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2787,8 +3433,27 @@ details p {
   .feature-grid,
   .image-grid,
   .article-list,
-  .contact-cards {
+  .contact-route-grid,
+  .form-grid.two-columns,
+  .customization-options {
     grid-template-columns: 1fr;
+  }
+
+  .inquiry-hero,
+  .inquiry-workspace {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .inquiry-hero h1 {
+    font-size: 36px;
+  }
+
+  .compose-header,
+  .form-section,
+  .form-footer {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .button {
@@ -2810,8 +3475,10 @@ details p {
     width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    gap: 8px;
     overflow-x: auto;
     padding-bottom: 3px;
+    font-size: 13px;
     scrollbar-width: none;
   }
 
