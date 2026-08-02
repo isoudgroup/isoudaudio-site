@@ -1432,9 +1432,9 @@ function contactPanelMarkup() {
         <article>
           <strong>${escapeHtml(contact.name)}</strong>
           <span>${escapeHtml(contact.role)}</span>
-          <a href="${inquiryEmailUrl}">${contact.email}</a>
+          <!--email_off--><a href="${inquiryEmailUrl}">${contact.email}</a><!--/email_off-->
           <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a>
-          <a class="text-link" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
+          <!--email_off--><a class="text-link" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a><!--/email_off-->
         </article>
         <article>
           <strong>Official Alibaba Store</strong>
@@ -1464,7 +1464,7 @@ function ctaMarkup(to) {
       <p>Parlez-nous de votre catégorie, quantité, marché cible et besoin de personnalisation. Lisa Li répond aux demandes OEM/ODM avec un canal direct et un lien vers la boutique Alibaba officielle iSoud.</p>
       <div class="hero-actions">
         <a class="button primary" href="${to("/fr/contact/#inquiry")}">Envoyer un brief projet</a>
-        <a class="button light" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
+        <!--email_off--><a class="button light" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a><!--/email_off-->
         <a class="button light" href="${alibabaUrl}">Voir Alibaba Store</a>
       </div>
     </section>`;
@@ -1478,7 +1478,7 @@ function contactMainMarkup(page, to) {
         <h1>${escapeHtml(page.h1)}</h1>
         <p class="lead">${escapeHtml(page.summary)}</p>
         <div class="inquiry-direct-actions">
-          <a class="button secondary" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a>
+          <!--email_off--><a class="button secondary" href="${inquiryEmailUrl}">Ouvrir mon e-mail</a><!--/email_off-->
           <a class="text-link" href="${alibabaUrl}">Consulter Alibaba Store</a>
         </div>
       </div>
@@ -1486,7 +1486,7 @@ function contactMainMarkup(page, to) {
         <span>To</span>
         <strong>${escapeHtml(contact.name)}</strong>
         <p>${escapeHtml(contact.role)} · iSoud / Yuanshengpai</p>
-        <a href="mailto:${contact.email}">${contact.email}</a>
+        <!--email_off--><a href="mailto:${contact.email}">${contact.email}</a><!--/email_off-->
         <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a>
         <small>Réponse commerciale habituelle sous 24 heures ouvrées.</small>
       </div>
@@ -1587,7 +1587,7 @@ Additional requirements:</textarea>
           <label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que ces informations soient utilisées uniquement pour répondre à cette demande B2B.</span></label>
           <button class="button primary" type="submit" id="inquiry-submit">Envoyer à Lisa Li</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-fallback">Problème d'envoi ? <a href="${inquiryEmailUrl}">Ouvrez l'e-mail prérempli</a> ou écrivez à <a href="mailto:${contact.email}">${contact.email}</a>.</p>
+          <p class="form-fallback">Problème d'envoi ? <!--email_off--><a href="${inquiryEmailUrl}">Ouvrez l'e-mail prérempli</a><!--/email_off--> ou écrivez à <!--email_off--><a href="mailto:${contact.email}">${contact.email}</a><!--/email_off-->.</p>
         </div>
       </form>
     </section>
@@ -1785,7 +1785,7 @@ function pageHtml(page, options = {}) {
   <a class="skip-link" href="#main">Aller au contenu</a>
   <div class="contact-bar">
     <span>${escapeHtml(contact.name)}, ${escapeHtml(contact.role)}</span>
-    <a href="mailto:${contact.email}">${contact.email}</a>
+    <!--email_off--><a href="mailto:${contact.email}">${contact.email}</a><!--/email_off-->
     <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a>
     <a href="${alibabaUrl}">Alibaba Store</a>
   </div>
@@ -1803,7 +1803,7 @@ function pageHtml(page, options = {}) {
     <div>
       <strong>iSoud</strong>
       <p>Dongguan Yuanshengpai Electronic Technology Co., Ltd. Fabricant OEM/ODM pour ecouteurs TWS, AI audio, air earbuds et smart wearables.</p>
-      <p>Contact: ${escapeHtml(contact.name)}, ${escapeHtml(contact.role)} · <a href="mailto:${contact.email}">${contact.email}</a> · <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a></p>
+      <p>Contact: ${escapeHtml(contact.name)}, ${escapeHtml(contact.role)} · <!--email_off--><a href="mailto:${contact.email}">${contact.email}</a><!--/email_off--> · <a href="tel:${contact.phoneHref}">${contact.phoneDisplay}</a></p>
     </div>
     <div class="footer-links">
       <a href="${to("/fr/a-propos-isoud/")}">A propos</a>
@@ -3601,6 +3601,13 @@ function writeRootHome() {
   writeFile("index.html", pageHtml(homePage, { renderPath: "" }));
 }
 
+function writeHeaders() {
+  writeFile(
+    "_headers",
+    `/*\n  Cache-Control: public, max-age=0, must-revalidate, no-transform\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n`
+  );
+}
+
 function writeRobotsAndSitemap() {
   writeFile("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
   const urls = ["", ...pages.filter((page) => page.path !== "fr/").map((page) => page.path)]
@@ -3654,6 +3661,7 @@ function prepareOutput() {
 prepareOutput();
 copyAssets();
 writeCss();
+writeHeaders();
 writeRootHome();
 writeRobotsAndSitemap();
 writeRssFeed();
