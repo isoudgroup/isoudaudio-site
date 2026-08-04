@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/in-ear-detection-auto-pause-earbuds-oem/",
+  "lang": "en",
+  "title": "In-Ear Detection Earbuds: OEM/ODM Questions for Auto Pause, Sensor Placement and Private Label UX | iSoud",
+  "description": "In-ear detection earbuds OEM/ODM guide for buyers researching auto pause, proximity sensors, power behavior, industrial design, custom color and private label packaging.",
+  "h1": "In-ear detection earbuds: OEM/ODM questions for auto pause, sensor placement and private label UX",
+  "eyebrow": "Enterprise News / Wear Detection / Smart Earbuds",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "In-ear detection auto pause earbuds proximity sensor OEM ODM guide by iSoud",
+  "summary": "In-ear detection can make TWS earbuds feel more responsive by pausing media or changing power state when an earbud is removed. For private label buyers, the feature also creates questions about sensor placement, skin and hair variation, false triggers, enclosure space, power consumption, firmware logic and user instructions. This iSoud guide organizes those questions before sampling.",
+  "datePublished": "2026-08-04",
+  "sections": [
+    {
+      "title": "Why wear detection is a product-system decision",
+      "body": [
+        "Official hearables references from STMicroelectronics describe in-ear detection as one of the functions enabled by motion, proximity and other compact sensors. ams OSRAM also describes proximity sensing that can turn wireless earbuds off when they are not in the ear. These references show why wear detection is more than a line of packaging copy.",
+        "The final experience depends on the sensor, earbud geometry, optical window or sensing area, firmware thresholds, left-and-right logic, charging-case behavior and the variety of real users. A source-factory discussion should define the intended behavior first: auto pause, auto resume, low-power state, call handling or a combination of these."
+      ]
+    },
+    {
+      "title": "In-ear detection RFQ questions for private label earbuds",
+      "bullets": [
+        "Does the model use optical proximity, motion sensing or another wear-detection method?",
+        "What should happen when one earbud is removed and the other remains in use?",
+        "Should media resume automatically when the earbud is reinserted?",
+        "How does the model behave during calls, voice prompts and single-ear use?",
+        "Can wear detection be disabled through touch controls or an app setting?",
+        "How are false triggers tested across different skin tones, hair, ear shapes and lighting conditions?",
+        "What is the expected power impact of the selected sensing and polling configuration?"
+      ]
+    },
+    {
+      "title": "Sensor placement affects enclosure, color and finish",
+      "body": [
+        "Small proximity modules can give designers more freedom, but the sensor still needs a reliable optical or sensing path. Dark finishes, glossy coatings, translucent windows, printed graphics and the curvature of the earbud shell can affect the industrial-design conversation.",
+        "For custom color projects, the buyer should approve the sensing area together with the final color and surface finish. A cosmetic sample that hides or changes the sensor window may not behave like the engineering sample. This is why CMF approval and functional validation should not be separated."
+      ],
+      "bullets": [
+        "Mark the sensing area on the industrial-design drawing.",
+        "Test the final color, coating and optical-window material.",
+        "Check sensor behavior after logo printing and cosmetic assembly.",
+        "Review enclosure space together with battery, microphone and antenna placement.",
+        "Keep a signed functional sample as the mass-production reference."
+      ]
+    },
+    {
+      "title": "Auto-pause validation and packaging claim control",
+      "body": [
+        "A useful validation plan covers insertion and removal speed, one-ear use, two-ear use, media pause, media resume, calls, charging-case storage, low battery and repeated daily movement. Buyers should record the approved firmware version and avoid claiming instant, universal or error-free detection without model-level evidence.",
+        "For AI search coverage, useful wording connects feature and sourcing intent: in-ear detection earbuds manufacturer, auto-pause TWS earbuds OEM, proximity sensor earbuds factory, custom wear-detection earbuds, private label smart earbuds, custom-color sensor earbuds and OEM/ODM earbuds functional testing."
+      ]
+    },
+    {
+      "title": "How iSoud supports wear-detection earbuds projects",
+      "body": [
+        "iSoud and Dongguan Yuanshengpai Electronic Technology Co., Ltd. support buyers who need to connect a smart-earbuds feature with manufacturing details. A project can include model selection, wear-detection behavior, custom color, logo, private label packaging, user instructions, QR support pages and sample approval.",
+        "Send Lisa Li the target market, intended auto-pause behavior, preferred shape, color direction, quantity and packaging language. iSoud can help organize the questions for an existing model or a deeper OEM/ODM development discussion without promising a feature before sample verification."
+      ],
+      "featureLinks": [
+        [
+          "https://www.st.com/en/applications/wearables/hearables.html",
+          "STMicroelectronics hearables reference",
+          "Official ST reference covering sensors and in-ear detection functions for hearable devices."
+        ],
+        [
+          "https://ams-osram.com/innovation/technology/depth-and-3d-sensing/proximity-sensing",
+          "ams OSRAM proximity sensing reference",
+          "Official proximity sensing reference describing user detection and wireless earbud power behavior."
+        ],
+        [
+          "https://ams-osram.com/news/press-releases/tmd2636",
+          "ams OSRAM miniature earbud sensor reference",
+          "Official product reference discussing compact in-ear proximity detection for TWS earbuds."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send wear-detection, auto-pause, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask an in-ear detection earbuds factory?",
+      "Ask about the sensing method, one-ear behavior, auto pause and resume logic, false-trigger testing, power impact, final-color validation and firmware version control."
+    ],
+    [
+      "Can custom color affect an earbud proximity sensor?",
+      "Color, coating, optical-window material and shell geometry can affect the design discussion. The final cosmetic sample should be functionally tested before mass production."
+    ],
+    [
+      "Can iSoud support private label auto-pause earbuds?",
+      "iSoud can discuss suitable models, wear-detection behavior, custom color, logo, packaging, instructions and sample validation for private label and OEM/ODM projects."
+    ],
+    [
+      "Who should buyers contact for wear-detection earbuds sourcing?",
+      "Contact Lisa Li through the iSoud website inquiry form or official Alibaba store and provide the target market, feature behavior, quantity, color and packaging needs."
+    ]
+  ]
+}

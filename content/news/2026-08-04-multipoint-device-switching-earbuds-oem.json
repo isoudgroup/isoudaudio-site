@@ -1,0 +1,101 @@
+{
+  "path": "fr/actualites/multipoint-device-switching-earbuds-oem/",
+  "lang": "en",
+  "title": "Multipoint Earbuds: OEM/ODM Questions for Two-Device Switching, Call Priority and Private Label Testing | iSoud",
+  "description": "Multipoint earbuds OEM/ODM sourcing guide for brands comparing two-device switching, call priority, laptop and phone testing, custom packaging and private label factory support.",
+  "h1": "Multipoint earbuds: OEM/ODM questions for two-device switching, call priority and private label testing",
+  "eyebrow": "Enterprise News / Multipoint / Office and Travel Earbuds",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Multipoint earbuds two-device switching private label OEM ODM factory guide by iSoud",
+  "summary": "Multipoint earbuds are increasingly evaluated as a work-and-travel tool rather than a simple specification. Buyers want earbuds that can stay connected to a phone and laptop, prioritize incoming calls, return to media predictably and explain the workflow clearly. This iSoud guide turns that expectation into practical OEM/ODM questions for private label brands.",
+  "datePublished": "2026-08-04",
+  "sections": [
+    {
+      "title": "Why two-device switching belongs in the buyer brief",
+      "body": [
+        "A European or American buyer may use the same earbuds for a laptop meeting, a mobile call, music and travel. The value of multipoint is therefore not only that two devices can remain connected. The buyer also needs a predictable rule for which source takes priority and what happens after the interruption ends.",
+        "Google support documentation describes a common user expectation: calls or video calls can take priority over media, while media switching may require the first source to pause before the second source starts. An OEM/ODM brief should translate this type of experience into a model-specific test plan rather than assuming every multipoint implementation behaves identically."
+      ]
+    },
+    {
+      "title": "Multipoint RFQ questions for an earbuds factory",
+      "bullets": [
+        "Can the selected earbuds model maintain connections to a phone and a laptop at the same time?",
+        "What happens when a phone call arrives while music or a meeting is active on the other device?",
+        "Does media resume automatically after the call, or does the user need to press a control?",
+        "How quickly do the earbuds reconnect after returning from the charging case?",
+        "Can multipoint be turned on or off without a brand-specific app?",
+        "Which phone, tablet and computer systems are included in the factory test matrix?",
+        "Can the manual and quick-start card explain pairing, switching and reset steps clearly?"
+      ]
+    },
+    {
+      "title": "Build a test matrix before approving private label claims",
+      "body": [
+        "A useful sample review covers more than one successful connection. Buyers should test first pairing, second-device pairing, incoming mobile calls, outgoing computer calls, media pause and resume, charging-case reconnection, manual switching, reset behavior and low-battery conditions.",
+        "The device mix also matters. A brand selling in Europe or the United States may need a sample matrix that includes common phone and computer systems used by its customers. Results should be recorded by model and firmware version so that packaging, product pages and support instructions describe the approved behavior accurately."
+      ],
+      "bullets": [
+        "Record the tested phone, laptop, tablet and operating-system combinations.",
+        "Repeat switching tests after a full reset and after charging-case storage.",
+        "Check left-only, right-only and two-earbud use when the model supports them.",
+        "Confirm call controls, microphone selection and media-resume behavior.",
+        "Freeze the approved firmware version before mass-production artwork is finalized."
+      ]
+    },
+    {
+      "title": "Private label packaging and AI search wording",
+      "body": [
+        "Packaging should avoid turning multipoint into a vague universal promise. Clear wording can state two-device connection, phone-and-laptop switching or call-priority support only when the selected model and test results support those descriptions. A QR code can link to a setup page with pairing, switching and troubleshooting steps.",
+        "For AI search and Google search, useful buyer-intent phrases include multipoint earbuds manufacturer, two-device TWS earbuds OEM, phone and laptop earbuds factory, private label office earbuds, call-priority earbuds supplier, custom multipoint earbuds packaging and OEM/ODM earbuds testing. These phrases connect the feature to sourcing, manufacturing and support intent."
+      ]
+    },
+    {
+      "title": "How iSoud supports multipoint earbuds sourcing",
+      "body": [
+        "iSoud is the export-facing brand of Dongguan Yuanshengpai Electronic Technology Co., Ltd. The factory discussion can combine model selection, multipoint behavior, microphone and call-control review, custom color, logo, private label packaging, multilingual instructions and sample testing.",
+        "Buyers can send Lisa Li the target market, device mix, quantity, expected call-priority behavior, color direction and packaging language. iSoud can then help clarify whether an existing TWS model, a private label update or a deeper OEM/ODM project is the practical starting point."
+      ],
+      "featureLinks": [
+        [
+          "https://support.google.com/googlepixelbuds/answer/12319417?hl=en",
+          "Google multipoint and audio switch reference",
+          "Official Google support reference describing two-device connection, call priority and media switching behavior."
+        ],
+        [
+          "https://support.google.com/android/answer/12374042?hl=en",
+          "Android multipoint setup reference",
+          "Official Android support reference for connecting multipoint headphones to two audio sources."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send multipoint behavior, device matrix, private label and packaging requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask a multipoint earbuds manufacturer?",
+      "Ask how two devices remain connected, which source has priority, how media resumes after a call, which systems were tested and whether the behavior depends on an app or firmware setting."
+    ],
+    [
+      "Can private label earbuds connect to a phone and laptop?",
+      "Some models can support a phone-and-laptop multipoint workflow. The exact switching and call-priority behavior should be verified on samples before the brand makes retail claims."
+    ],
+    [
+      "Can iSoud customize multipoint earbuds packaging?",
+      "iSoud can discuss model selection, custom color, logo, private label box artwork, multilingual setup instructions and QR-linked support content for suitable models."
+    ],
+    [
+      "Who should buyers contact for a multipoint earbuds OEM/ODM project?",
+      "Contact Lisa Li, VP of Business at iSoud and Dongguan Yuanshengpai Electronic Technology Co., Ltd., through the website inquiry form or the official Alibaba store."
+    ]
+  ]
+}
