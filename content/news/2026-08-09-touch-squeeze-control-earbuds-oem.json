@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/touch-squeeze-control-earbuds-oem/",
+  "lang": "en",
+  "title": "Touch and Squeeze Control Earbuds: OEM/ODM Questions for Gesture Mapping, False Touches and Private Label UX | iSoud",
+  "description": "Touch and squeeze control earbuds OEM/ODM guide for buyers comparing gesture mapping, false-touch prevention, control feedback, custom color, manuals and private label factory support.",
+  "h1": "Touch and squeeze control earbuds: OEM/ODM questions for gesture mapping, false touches and private label UX",
+  "eyebrow": "Enterprise News / Earbud Controls / User Experience",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Touch squeeze control earbuds gesture mapping private label OEM ODM guide by iSoud",
+  "summary": "Earbud controls shape everyday product experience. A tap, double tap, press, squeeze, swipe or long hold may answer calls, control media, change volume or switch modes, but the same control can also create false touches and confusing instructions. This iSoud guide helps private label buyers define gesture mapping, feedback and sample testing before mass production.",
+  "datePublished": "2026-08-09",
+  "sections": [
+    {
+      "title": "Why control architecture belongs in the product brief",
+      "body": [
+        "Official Google and Apple support pages show how modern earbuds use combinations of tap, double tap, triple tap, swipe, press and hold for media, calls, volume and mode changes. They also show that some controls can be customized or disabled. These examples make the buyer expectation clear: the control map should be predictable and documented.",
+        "A private label project should not leave gesture mapping until the manual is written. The control technology, sensor area, stem shape, feedback sound, left-and-right logic and firmware all affect what the user can do and how often accidental actions occur."
+      ]
+    },
+    {
+      "title": "Control-mapping questions for an earbuds OEM/ODM factory",
+      "bullets": [
+        "Does the selected model use capacitive touch, press, squeeze, swipe or a mixed control system?",
+        "Which actions are assigned to single, double and triple input on each earbud?",
+        "How are answer, reject, end-call, mute, play, pause, volume and mode actions separated?",
+        "Can a control be disabled or reassigned through firmware or an app?",
+        "What sound, tone or physical feedback confirms that the input was recognized?",
+        "How does the product avoid false touches during insertion, adjustment, exercise or hair contact?",
+        "Can left-only, right-only and two-earbud use share a consistent control map?"
+      ]
+    },
+    {
+      "title": "False-touch prevention needs real-use testing",
+      "body": [
+        "A control that works on a bench may behave differently when the user adjusts the earbud, wears a hat, has wet fingers, moves quickly or presses the stem while answering a call. Buyers should define real-use scenarios and compare sensitivity, delay and feedback across several users.",
+        "The test record should identify the sample, firmware version, control map and any sensitivity setting. If the control behavior changes during development, the manual, quick-start card, packaging icons, Alibaba listing and website description should be updated together."
+      ],
+      "bullets": [
+        "Test insertion and fit adjustment without unintended commands.",
+        "Compare light touch, normal touch and deliberate press behavior.",
+        "Verify call controls separately from music controls.",
+        "Check response with different finger sizes and common daily movement.",
+        "Confirm reset and recovery steps when the user changes settings."
+      ]
+    },
+    {
+      "title": "Shell finish, printed icons and instruction design",
+      "body": [
+        "The active control area is also a visual design element. Custom color, glossy or matte finish, metallic coating, printed symbols and stem geometry can affect how users find the control. Buyers should approve the final CMF sample together with the control-area location and user instructions.",
+        "For AI search coverage, useful wording connects the control style to sourcing intent: touch control earbuds manufacturer, squeeze control TWS earbuds OEM, false-touch prevention earbuds factory, custom gesture earbuds, private label stem earbuds, custom color touch earbuds and OEM/ODM earbud control testing."
+      ]
+    },
+    {
+      "title": "How iSoud supports custom-control earbuds projects",
+      "body": [
+        "iSoud and Dongguan Yuanshengpai Electronic Technology Co., Ltd. support buyers who need to connect product controls with model selection, custom color, logo, private label packaging, multilingual manuals and sample approval. The practical starting point is an agreed control map for the target user and channel.",
+        "Send Lisa Li the preferred earbud shape, control style, call and media actions, target market, quantity, color direction and packaging language. iSoud can help clarify which requirements fit an existing model and which may require deeper OEM/ODM firmware or industrial-design work."
+      ],
+      "featureLinks": [
+        [
+          "https://support.google.com/googlepixelbuds/answer/7560934?hl=en-CA",
+          "Google Pixel Buds controls reference",
+          "Official Google support reference describing touch gestures, call controls, media actions and the option to disable controls."
+        ],
+        [
+          "https://support.apple.com/en-lamr/guide/airpods/devb2c431317/web",
+          "Apple earbud controls and gestures reference",
+          "Official Apple support reference describing press, double press, triple press, swipe and press-and-hold interactions."
+        ],
+        [
+          "https://www.st.com/resource/en/datasheet/lsm6dsv16bx.pdf",
+          "STMicroelectronics hearable sensor reference",
+          "Official sensor reference covering touch, long-press and swipe possibilities for hearable user interfaces."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send control mapping, false-touch, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask a touch-control earbuds factory?",
+      "Ask about control technology, gesture mapping, left-and-right logic, call controls, false-touch testing, feedback, firmware settings and how the final behavior will be documented."
+    ],
+    [
+      "Are touch and squeeze controls the same?",
+      "No. They can use different sensing methods and physical interactions. Buyers should define the preferred user action and test the selected model rather than treating the terms as interchangeable."
+    ],
+    [
+      "Can custom color and printing affect the control area?",
+      "The final finish, printed icon and shell geometry can affect how users locate and understand the control, so CMF and control-area approval should happen together."
+    ],
+    [
+      "Can iSoud customize earbud controls and packaging?",
+      "iSoud can discuss suitable models, control mapping, custom color, logo, packaging, multilingual instructions and whether deeper firmware or industrial-design work is needed."
+    ]
+  ]
+}

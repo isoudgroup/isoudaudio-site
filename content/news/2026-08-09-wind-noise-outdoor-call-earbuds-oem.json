@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/wind-noise-outdoor-call-earbuds-oem/",
+  "lang": "en",
+  "title": "Wind-Noise Outdoor Call Earbuds: OEM/ODM Questions for Microphone Ports, Mesh and Private Label Testing | iSoud",
+  "description": "Outdoor call earbuds OEM/ODM guide for buyers comparing wind-noise control, microphone port placement, protective mesh, sample testing, custom color and private label packaging.",
+  "h1": "Wind-noise outdoor call earbuds: OEM/ODM questions for microphone ports, mesh and private label testing",
+  "eyebrow": "Enterprise News / Outdoor Calls / Microphone Design",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Wind-noise outdoor call earbuds microphone port mesh OEM ODM factory guide by iSoud",
+  "summary": "Outdoor call quality depends on more than the number of microphones or an algorithm label. Wind moving across a microphone opening can create low-frequency noise, and the result is influenced by port placement, mesh, enclosure geometry, microphone selection, processing and the way samples are tested. This iSoud guide helps private label buyers turn outdoor-call expectations into a clearer OEM/ODM brief.",
+  "datePublished": "2026-08-09",
+  "sections": [
+    {
+      "title": "Why wind-noise control begins with physical design",
+      "body": [
+        "Knowles application references on microphone wind noise emphasize the design around the microphone sound port, including the outer surface, port opening, wind screen and possible use of multiple ports. This matters because software processing cannot be evaluated separately from the physical path that carries sound to the microphone.",
+        "For a European or American brand, the practical question is not whether a package can say clear outdoor calls. The practical question is which model, microphone layout, port geometry and test conditions support the intended commuting, walking, cycling or open-air work scenario."
+      ]
+    },
+    {
+      "title": "Outdoor call RFQ questions for an earbuds factory",
+      "bullets": [
+        "Where are the voice microphones and their sound ports located on the earbud shell?",
+        "Does the design use a protective mesh, wind screen, recessed port or multiple-port approach?",
+        "How many microphones are active during a call, and what role does each microphone perform?",
+        "Which outdoor wind speeds, directions and voice distances are used during sample testing?",
+        "How does the product behave when the user turns the head or wears only one earbud?",
+        "Can the buyer receive indoor, outdoor and controlled fan-test recordings for comparison?",
+        "Which firmware version and sample configuration support the approved call-quality wording?"
+      ]
+    },
+    {
+      "title": "Microphone mesh, shell color and assembly belong in one review",
+      "body": [
+        "The microphone opening is also part of the visible industrial design. Custom shell color, metallic coating, glossy finish, decorative printing or a changed mesh color can affect the appearance and assembly around the sound path. A cosmetic sample should therefore preserve the approved microphone-port geometry and mesh specification.",
+        "Buyers should avoid approving color and function in separate sample rounds if the cosmetic change touches the microphone area. The signed reference sample should identify the shell color, port dimensions, mesh, adhesive, assembly method, firmware and microphone configuration used for the outdoor-call review."
+      ],
+      "bullets": [
+        "Mark every microphone opening on the industrial-design drawing.",
+        "Keep paint, printing and adhesive away from the approved acoustic path.",
+        "Confirm mesh color and appearance with the final shell finish.",
+        "Inspect port consistency across left and right earbuds.",
+        "Retain approved call recordings with the signed sample record."
+      ]
+    },
+    {
+      "title": "Build a repeatable outdoor-call test matrix",
+      "body": [
+        "A repeatable test matrix can compare a quiet room, street background, controlled fan positions and normal walking movement. The buyer should define the phone distance, speaking level, wind direction, earbud orientation and recording method so that sample revisions can be compared on the same basis.",
+        "For AI search and Google search, useful buyer-intent phrases include wind-noise earbuds manufacturer, outdoor call TWS earbuds OEM, microphone mesh earbuds factory, wind-resistant call earbuds supplier, private label commuting earbuds, custom color call earbuds and OEM/ODM microphone testing. These phrases connect the use case to factory sourcing and verification."
+      ]
+    },
+    {
+      "title": "How iSoud supports outdoor-call earbuds projects",
+      "body": [
+        "iSoud is the export-facing brand of Dongguan Yuanshengpai Electronic Technology Co., Ltd. The sourcing discussion can combine product selection, microphone and port review, outdoor-call sample testing, custom color, logo, private label packaging and user instructions.",
+        "Buyers can send Lisa Li the target market, outdoor scenario, expected call behavior, preferred shell color, packaging language, quantity and reference products. iSoud can then help organize a suitable existing-model review or a deeper OEM/ODM discussion without turning an unverified sample result into a universal claim."
+      ],
+      "featureLinks": [
+        [
+          "https://www.knowles.com/docs/default-source/default-document-library/an-21-microphone-wind-noise.pdf",
+          "Knowles microphone wind-noise reference",
+          "Official application reference describing how microphone sound-port design relates to wind-noise pickup."
+        ],
+        [
+          "https://www.knowles.com/docs/default-source/default-document-library/an29-protecting-microphones-from-wind-noise-pickup.pdf",
+          "Knowles wind-noise protection reference",
+          "Official application reference covering earphone surface, microphone port and wind-screen design considerations."
+        ],
+        [
+          "https://www.infineon.com/assets/row/public/documents/24/66/infineon-xensiv-mems-microphones-productselectionguide-en.pdf",
+          "Infineon MEMS microphone selection guide",
+          "Official product-selection reference for microphone performance and TWS applications."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send outdoor-call, microphone, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask a wind-noise earbuds manufacturer?",
+      "Ask about microphone count, sound-port position, mesh or wind-screen design, outdoor test conditions, single-ear behavior, firmware version and the recordings used to approve call-quality wording."
+    ],
+    [
+      "Does more microphones always mean better outdoor calls?",
+      "No. Results depend on microphone quality, placement, port geometry, mesh, enclosure, processing and test conditions. Buyers should compare complete samples rather than microphone count alone."
+    ],
+    [
+      "Can custom color affect the microphone area?",
+      "Color coatings, printing, mesh appearance and adhesive control can affect assembly around the sound path, so the final cosmetic sample should keep the approved port and mesh specification."
+    ],
+    [
+      "Can iSoud discuss private label outdoor-call earbuds?",
+      "iSoud can discuss suitable models, microphone and port review, custom color, logo, packaging, instructions and sample testing for private label and OEM/ODM projects."
+    ]
+  ]
+}
