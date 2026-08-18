@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/charging-contact-reliability-earbuds-oem/",
+  "lang": "en",
+  "title": "Earbuds Charging Contact Reliability: OEM/ODM Questions for Case Alignment, Spring Pins and Factory Testing | iSoud",
+  "description": "Earbuds charging contact OEM/ODM guide for buyers comparing spring-pin travel, magnetic alignment, case fit, contamination checks, custom color and private label testing.",
+  "h1": "Earbuds charging contact reliability: OEM/ODM questions for case alignment, spring pins and factory testing",
+  "eyebrow": "Enterprise News / Charging Contacts / Factory Testing",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Earbuds charging contact spring pins case alignment private label OEM ODM guide by iSoud",
+  "summary": "An earbud can have a capable charging case and still fail to charge consistently if the contacts do not meet with the intended position and pressure. Spring-pin travel, magnetic alignment, ear tip or ear-fin interference, contact cleanliness, shell tolerances and end-of-line checks all influence the result. This iSoud guide helps private label buyers convert charging reliability into practical OEM/ODM questions.",
+  "datePublished": "2026-08-18",
+  "sections": [
+    {
+      "title": "Why charging reliability is a mechanical and electrical system",
+      "body": [
+        "Recent Sennheiser charging guidance asks users to confirm that earbuds are correctly positioned, that ear adapters do not prevent contact and that case spring pins move freely. JBL support guidance also identifies contamination on metal charging contacts as a common cause of interrupted charging. These user-facing examples point back to decisions that should be reviewed during product development.",
+        "A private label buyer should evaluate the complete docking system: earbud shell, case pocket, magnets, charging pads, spring pins, ear tips, ear fins, status indication and firmware response. Contact material alone cannot compensate for poor alignment or insufficient working travel."
+      ]
+    },
+    {
+      "title": "Charging-contact RFQ questions for an earbuds factory",
+      "bullets": [
+        "How do the case pocket and magnets guide each earbud onto the charging contacts?",
+        "What spring-pin working travel and compression range are used in the assembled case?",
+        "Can the largest supplied ear tip or ear fin prevent the earbud from seating fully?",
+        "How does the indicator confirm that both left and right earbuds have started charging?",
+        "Which shell, magnet and contact-position tolerances are controlled during assembly?",
+        "How are contact contamination, stuck pins and incomplete seating checked at end of line?",
+        "Can the buyer review repeated docking results across several production-intent samples?"
+      ]
+    },
+    {
+      "title": "Alignment, working travel and accessories must be tested together",
+      "body": [
+        "A spring contact needs enough usable travel to accommodate normal part variation without being over-compressed. Connector design guidance also emphasizes mating-surface design, spring force, alignment and environmental reliability. In an earbuds project, these points should be checked inside the final molded case rather than on a connector drawing alone.",
+        "The signed sample should include the approved ear tips, ear fins, shell finish and magnets. A cosmetic or accessory change can alter how the earbud sits in the pocket, so the factory should repeat docking and charge-start checks when those parts change."
+      ],
+      "bullets": [
+        "Dock each earbud from slightly different natural insertion angles.",
+        "Check left-only, right-only and two-earbud charging indication.",
+        "Verify that the lid closes without forcing the earbuds onto the pins.",
+        "Inspect pin return movement and contact-pad marks after repeated cycles.",
+        "Include clean-contact and controlled-contamination comparisons in troubleshooting samples."
+      ]
+    },
+    {
+      "title": "Private label instructions should explain contact care clearly",
+      "body": [
+        "The quick-start guide can show correct case placement, indicator behavior and a conservative dry-cleaning method approved for the selected product. Packaging diagrams should match the actual ear tip and ear-fin configuration so that users do not install an accessory in a way that prevents docking.",
+        "Useful sourcing phrases include earbuds charging contact manufacturer, TWS charging case spring pin factory, private label earbuds charging test, earbud case alignment OEM, charging contact contamination test, custom color charging case and OEM/ODM earbuds docking reliability."
+      ]
+    },
+    {
+      "title": "How iSoud supports charging-case reliability reviews",
+      "body": [
+        "iSoud is the export-facing brand of Dongguan Yuanshengpai Electronic Technology Co., Ltd. Buyers can connect model selection with charging-case fit, accessory compatibility, custom shell color, logo, packaging, instructions and production sample approval.",
+        "Send Lisa Li the target earbuds shape, preferred case style, ear tip or ear-fin set, quantity, color direction, indicator expectations and any reference failure pattern. iSoud can help organize a suitable sample review and clarify which requests fit an existing model or require deeper OEM/ODM work."
+      ],
+      "featureLinks": [
+        [
+          "https://support.sennheiser-hearing.com/hc/en-us/articles/37614112756381-True-Wireless-Charge-Troubleshooting",
+          "Sennheiser charging troubleshooting reference",
+          "Official support guidance covering case seating, accessory interference, contact cleaning and spring-pin movement."
+        ],
+        [
+          "https://support.jbl.com/us/en/howto/true-wireless-headphones-cleaning-instructions-for-re-establishing-charging-us/000016909.html",
+          "JBL charging-contact cleaning reference",
+          "Official support guidance describing contamination at earbud and case charging contacts."
+        ],
+        [
+          "https://promaxpogopin.com/blog/pogo-pin/pogo-pin-design/",
+          "Spring-contact design reference",
+          "First-party connector guidance covering working travel, spring force, mating surfaces and alignment."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send charging-case alignment, accessories, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask an earbuds charging-case factory?",
+      "Ask about magnetic alignment, case-pocket tolerances, spring-pin travel, accessory interference, charge-start indication, repeated docking tests and end-of-line inspection."
+    ],
+    [
+      "Can ear tips or ear fins affect charging in the case?",
+      "They can affect how an earbud seats in some case designs, so the largest approved accessories should be included in the final docking and charging review."
+    ],
+    [
+      "Does gold-colored contact plating prevent all charging problems?",
+      "No. Contact performance also depends on cleanliness, alignment, spring travel, pressure, shell tolerances and the complete docking design."
+    ],
+    [
+      "Can iSoud support private label charging-case testing?",
+      "iSoud can discuss suitable models, case fit, accessory compatibility, custom color, packaging, instructions and production-intent sample checks for OEM/ODM projects."
+    ]
+  ]
+}
