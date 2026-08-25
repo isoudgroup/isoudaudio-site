@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/left-right-acoustic-matching-earbuds-oem/",
+  "lang": "en",
+  "title": "Left-Right Acoustic Matching for Earbuds: OEM/ODM Questions for Frequency Response, Fixtures and Production Limits | iSoud",
+  "description": "Earbuds left-right acoustic matching OEM/ODM guide for buyers comparing frequency response, distortion, test fixtures, repeated placement and private label production limits.",
+  "h1": "Left-right acoustic matching for earbuds: OEM/ODM questions for frequency response, fixtures and production limits",
+  "eyebrow": "Enterprise News / Acoustic Matching / Production Testing",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Left right acoustic matching earbuds frequency response production test OEM ODM guide by iSoud",
+  "summary": "A stereo earbuds pair should be reviewed as two related acoustic products, not only as two units that produce sound. Driver variation, mesh, vents, adhesive, shell assembly, ear-tip seal and test positioning can create differences between left and right. This iSoud guide helps private label buyers define practical acoustic matching questions for samples and mass production.",
+  "datePublished": "2026-08-25",
+  "sections": [
+    {
+      "title": "Why left-right tracking belongs in the buyer brief",
+      "body": [
+        "Audio Precision identifies left-right tracking as a useful stereo-headphone metric derived by comparing the frequency responses measured at two ear simulators. Listen's basic headphone sequence likewise measures frequency response, distortion, sensitivity and left-right tracking while emphasizing calibrated left and right ear simulators.",
+        "For an OEM/ODM earbuds buyer, the main question is not whether a factory owns an acoustic fixture. The buyer should ask what the fixture measures, how the earbuds are positioned, which limits are applied and how the approved engineering sample becomes a production reference."
+      ]
+    },
+    {
+      "title": "Acoustic-matching RFQ questions for an earbuds factory",
+      "bullets": [
+        "Which frequency-response, sensitivity and distortion checks are applied to left and right earbuds?",
+        "Does the production test compare each unit to a target curve and also compare the paired earbuds to each other?",
+        "What coupler, ear simulator, fixture and ear-tip size are used for the approved measurement?",
+        "How is repeatable insertion depth and seal controlled when an earbud is placed in the fixture?",
+        "Which frequency bands have pair-matching limits, and how were those limits established?",
+        "How are rub, buzz, blocked mesh or abnormal vent results separated from driver variation?",
+        "Can the buyer receive representative measurement plots from pilot and mass-production samples?"
+      ]
+    },
+    {
+      "title": "Fixture positioning and seal can change the result",
+      "body": [
+        "Audio Precision notes that fit and leakage can materially affect measured bass response and recommends repeated removal and replacement when studying positioning effects. ITU-T headset measurement guidance also treats positioning against or inside an ear simulator as part of the defined test arrangement.",
+        "The signed acoustic sample should therefore record the fixture, coupler, ear tip, insertion method, signal level, software configuration and firmware version. A plot without this context is difficult to compare across development rounds or suppliers."
+      ],
+      "bullets": [
+        "Repeat placement checks before setting production limits.",
+        "Use the same approved ear-tip configuration for comparison samples.",
+        "Confirm that left and right fixture channels are calibrated.",
+        "Keep measurement settings and sample identity with every report.",
+        "Recheck limits after driver, mesh, vent, adhesive or shell changes."
+      ]
+    },
+    {
+      "title": "Golden samples need traceable production limits",
+      "body": [
+        "A listening-approved pair is useful, but it should not be the only definition of acceptable production. The factory and buyer can connect the signed pair to measurable upper and lower limits, a fixture reference and a sample-retention record. This makes later color, component or assembly changes easier to evaluate.",
+        "Useful AI and Google search phrases include earbuds acoustic matching factory, left-right earbuds balance OEM, TWS frequency response production test, private label earbuds acoustic QC, earphone driver matching manufacturer, earbuds golden sample testing and OEM/ODM acoustic measurement."
+      ]
+    },
+    {
+      "title": "How iSoud supports private label acoustic review",
+      "body": [
+        "iSoud is the export-facing brand of Dongguan Yuanshengpai Electronic Technology Co., Ltd. Buyers can connect model selection with acoustic sample comparison, custom shell color, logo, mesh and vent review, packaging and production approval records.",
+        "Send Lisa Li the target sound direction, reference model, intended ear-tip configuration, quantity, custom color and any left-right consistency concern. iSoud can help structure a suitable sample discussion and clarify which acoustic checks can support the selected OEM/ODM project."
+      ],
+      "featureLinks": [
+        [
+          "https://www.ap.com/blog/headphone-testing-tips",
+          "Audio Precision headphone testing reference",
+          "First-party measurement guidance covering frequency response, distortion, positioning and left-right tracking."
+        ],
+        [
+          "https://www.listeninc.com/headphones-test-sequence/",
+          "Listen headphone measurement sequence",
+          "First-party test guidance covering calibrated ear simulators, frequency response, distortion, sensitivity and left-right tracking."
+        ],
+        [
+          "https://www.itu.int/epublications/publication/itu-t-p-380-2022-07-electro-acoustic-measurements-on-headsets",
+          "ITU-T headset measurement reference",
+          "Official measurement guidance addressing repeatable positioning of headset receivers and microphones."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send acoustic target, matching, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask an earbuds acoustic testing factory?",
+      "Ask about frequency response, distortion, sensitivity, left-right matching, fixture calibration, placement control, production limits and traceable sample reports."
+    ],
+    [
+      "Can earbud positioning affect an acoustic measurement?",
+      "Yes. Insertion depth, ear-tip seal and fixture placement can affect results, so the approved method should be documented and repeated consistently."
+    ],
+    [
+      "Is a listening-approved golden sample enough for mass production?",
+      "It is a useful reference, but measurable production limits and a documented fixture method make the approval clearer and easier to reproduce."
+    ],
+    [
+      "Can iSoud discuss left-right acoustic matching for private label earbuds?",
+      "iSoud can discuss suitable models, acoustic samples, custom color, mesh and vent review, packaging and production approval records for OEM/ODM projects."
+    ]
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/charging-case-lid-hinge-earbuds-oem/",
+  "lang": "en",
+  "title": "Earbuds Charging-Case Lid and Hinge: OEM/ODM Questions for Gap, Magnet Feel and Cycle Testing | iSoud",
+  "description": "Earbuds charging-case lid and hinge OEM/ODM guide for buyers comparing hinge gap, opening feel, magnetic closure, shell tolerances, custom finishes and cycle testing.",
+  "h1": "Earbuds charging-case lid and hinge: OEM/ODM questions for gap, magnet feel and cycle testing",
+  "eyebrow": "Enterprise News / Charging Case / Mechanical Experience",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Earbuds charging case lid hinge gap magnet feel cycle testing OEM ODM guide by iSoud",
+  "summary": "The charging-case lid is one of the most frequently handled parts of a TWS product. Hinge clearance, magnet placement, shell flatness, opening angle, sound and surface finish shape the perceived quality before the earbuds are even used. This iSoud guide helps private label buyers define charging-case lid and hinge expectations without relying on vague premium-feel language.",
+  "datePublished": "2026-08-25",
+  "sections": [
+    {
+      "title": "Why a small hinge gap is not the only quality measure",
+      "body": [
+        "Huawei support guidance explains that charging-case lids are connected by a hinge and that slight movement or sound can occur during opening, closing or pressing. Xiaomi support guidance similarly notes that a reasonable hinge gap can be needed for smooth opening and closing. These examples show why buyers should define function and allowable variation rather than demand a visually zero gap.",
+        "A private label project should review hinge geometry, lid-to-body alignment, magnet closure, opening force, maximum angle, side play, sound and surface appearance as one system. Tightening one dimension without reviewing the full assembly can create rubbing, poor closure or inconsistent feel."
+      ]
+    },
+    {
+      "title": "Charging-case hinge RFQ questions for an OEM/ODM factory",
+      "bullets": [
+        "What hinge structure, pin material and assembly method are used in the selected case?",
+        "Which lid-to-body gaps and alignment differences are visually acceptable?",
+        "How are opening force, closing force, magnet pull and maximum opening angle checked?",
+        "Does the lid remain stable in the intended open position during normal earbud removal?",
+        "Which sounds, looseness, rubbing marks or surface defects cause rejection?",
+        "How many open-close cycles are used for development or production validation?",
+        "Are hinge and lid checks repeated after custom paint, coating, printing or shell changes?"
+      ]
+    },
+    {
+      "title": "Magnet feel, shell tolerances and hinge alignment interact",
+      "body": [
+        "Sennheiser's charging-case overview identifies magnetic earbud holders, charging compartments and charging contacts as integrated case features. In a compact case, the lid magnets, earbud magnets, hinge and molded pockets all compete for space and must remain aligned with the final shell parts.",
+        "The signed sample should record the hinge parts, magnets, shell material, coating, assembly method and approved feel. A custom finish can change friction or reveal rubbing at the split line, while altered magnet position can change closure behavior."
+      ],
+      "bullets": [
+        "Inspect the split line from front, side and rear views.",
+        "Compare opening and closing with earbuds present and removed.",
+        "Check lid stability at normal one-handed opening angles.",
+        "Look for coating wear near hinge and magnet-contact areas.",
+        "Retain approved sound and feel references with dimensional samples."
+      ]
+    },
+    {
+      "title": "Cycle testing needs buyer-defined acceptance criteria",
+      "body": [
+        "A cycle count has little value without before-and-after checks. Buyers can define acceptable changes in side play, closing force, lid alignment, magnet retention, cracking, squeak, coating wear and charging behavior. The test record should identify the case version, cycle speed, opening angle and inspection intervals.",
+        "Relevant sourcing phrases include earbuds charging case hinge manufacturer, TWS case lid gap OEM, private label earbuds case magnet, charging case open close cycle test, custom color earbuds case factory, earbud case hinge quality control and OEM/ODM charging-case design."
+      ]
+    },
+    {
+      "title": "How iSoud supports charging-case customization",
+      "body": [
+        "iSoud and Dongguan Yuanshengpai Electronic Technology Co., Ltd. support buyers who need to connect earbuds model selection with charging-case structure, custom shell color, logo, surface finish, packaging and production sample approval.",
+        "Send Lisa Li the preferred case shape, opening style, finish, color reference, logo position, quantity and any hinge or magnet concern from a reference product. iSoud can help organize a suitable sample review and distinguish existing-model customization from deeper OEM/ODM structural work."
+      ],
+      "featureLinks": [
+        [
+          "https://consumer.huawei.com/ca/support/content/en-us00769598/",
+          "Huawei charging-case lid reference",
+          "Official support guidance discussing hinge connection, slight movement and opening or closing sound."
+        ],
+        [
+          "https://www.mi.com/global/support/faq/details/KA-311050/",
+          "Xiaomi charging-case hinge-gap reference",
+          "Official support guidance explaining functional clearance for smooth lid opening and closing."
+        ],
+        [
+          "https://cdn.sennheiser-cloud.com/help/products/m3tw2/en/manual/MOMTENTUM-TW2_EN/M3IETW2_Manual_EN/topic_M3IETW2_Manual_EN3-.htm",
+          "Sennheiser charging-case architecture reference",
+          "Official product overview identifying magnetic holders, charging compartments, contacts and case status elements."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send charging-case hinge, magnet, custom finish and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask an earbuds charging-case hinge factory?",
+      "Ask about hinge structure, lid gap, alignment, opening and closing force, magnet feel, cycle testing, rejection criteria and changes after custom finishing."
+    ],
+    [
+      "Does every visible hinge gap mean the charging case is defective?",
+      "Not necessarily. Some functional clearance may support smooth movement, so the buyer should define allowable appearance and functional limits for the selected structure."
+    ],
+    [
+      "Can custom coating affect charging-case lid feel?",
+      "A finish can change friction, reveal rubbing or alter visible split lines, so the final coated sample should be reviewed with the approved hinge and magnets."
+    ],
+    [
+      "Can iSoud support custom charging-case color and hinge review?",
+      "iSoud can discuss suitable case structures, custom color, logo, surface finish, packaging and production-intent sample checks for private label and OEM/ODM projects."
+    ]
+  ]
+}
