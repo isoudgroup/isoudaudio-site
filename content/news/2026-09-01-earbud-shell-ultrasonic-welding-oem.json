@@ -1,0 +1,106 @@
+{
+  "path": "fr/actualites/earbud-shell-ultrasonic-welding-oem/",
+  "lang": "en",
+  "title": "Earbud Shell Ultrasonic Welding: OEM/ODM Questions for Joint Design, Fixtures and Cosmetic Seams | iSoud",
+  "description": "Earbud shell ultrasonic welding OEM/ODM guide for buyers comparing joint geometry, fixtures, process records, cosmetic seams, custom color and production inspection.",
+  "h1": "Earbud shell ultrasonic welding: OEM/ODM questions for joint design, fixtures and cosmetic seams",
+  "eyebrow": "Enterprise News / Shell Assembly / Factory Process",
+  "heroImage": "/assets/images/product-hero.png",
+  "heroAlt": "Earbud shell ultrasonic welding joint fixture cosmetic seam OEM ODM guide by iSoud",
+  "summary": "A compact earbud shell must hold molded parts, acoustic components and electronics in a repeatable assembly. When ultrasonic welding is selected, joint geometry, resin, fixture support, tooling contact and process settings influence seam appearance and consistency. This iSoud guide helps private label buyers turn shell assembly into clear OEM/ODM review questions.",
+  "datePublished": "2026-09-01",
+  "sections": [
+    {
+      "title": "Why shell joining should be reviewed before cosmetic approval",
+      "body": [
+        "Ultrasonic-welding guidance from Toman ThermoSonics describes joint design as a critical part of the molded component, with butt, step, shear and tongue-and-groove configurations selected around material, geometry, weld needs and cosmetic appearance. Emerson Branson also positions process control as important for small and intricate plastic assemblies.",
+        "For an earbuds buyer, the practical point is simple: a perfect color chip does not prove that the final welded shell will have an acceptable seam. The approved sample should use production-intent resin, molded joint features, fixture support, internal parts and surface finish."
+      ]
+    },
+    {
+      "title": "Shell-assembly RFQ questions for an earphone factory",
+      "bullets": [
+        "Which shell parts are welded, bonded, snapped or mechanically retained?",
+        "What joint geometry and molded energy-directing feature are used for the selected resin?",
+        "How does the fixture support the shell without marking the visible custom finish?",
+        "Which weld parameters and process signals are recorded for pilot and production units?",
+        "How are seam gap, step, flash, whitening, cracking and surface marks inspected?",
+        "How are microphones, drivers, mesh, batteries and circuit boards protected during joining?",
+        "Which destructive or functional checks are used to confirm the approved process window?"
+      ]
+    },
+    {
+      "title": "Joint geometry, tooling and internal parts work as one system",
+      "body": [
+        "Toman's guidance explains that an energy director concentrates initial contact so material melts and flows through the joint. Telsonic's electronics-housing example also highlights material choice, seam design, vibration load and process monitoring when delicate components sit inside a plastic assembly.",
+        "The buyer should therefore avoid approving an empty cosmetic shell as the only reference. Internal supports, wires, adhesive, acoustic paths and component position can affect how the assembled product responds during joining."
+      ],
+      "bullets": [
+        "Use production-intent molded parts and internal components for approval.",
+        "Define visible keep-clear zones for tooling and fixture contact.",
+        "Inspect seam appearance around microphones, vents and touch areas.",
+        "Retain process settings with the signed sample identity.",
+        "Repeat validation after resin, colorant, tooling or joint changes."
+      ]
+    },
+    {
+      "title": "Custom color and coating can change seam visibility",
+      "body": [
+        "A dark gloss, light matte, metallic effect or translucent shell can reveal seam mismatch differently. Coating thickness and surface texture can also change fixture contact or make minor flash more visible. Cosmetic and assembly approval should therefore happen on the final CMF direction.",
+        "Useful sourcing phrases include earbud shell ultrasonic welding factory, TWS plastic housing assembly OEM, earphone shell joint design manufacturer, cosmetic seam earbuds production, private label earbuds shell welding, custom color earbuds assembly and OEM/ODM earphone factory process control."
+      ]
+    },
+    {
+      "title": "How iSoud supports production-intent shell reviews",
+      "body": [
+        "iSoud is the export-facing brand of Dongguan Yuanshengpai Electronic Technology Co., Ltd. Buyers can connect earbuds model selection with shell structure, custom color, logo, acoustic openings, assembly samples, packaging and production approval records.",
+        "Send Lisa Li the target model, shell finish, color reference, logo position, quantity and any seam concern from a reference product. iSoud can help organize a suitable sample review and clarify which requests fit an existing model or require deeper OEM/ODM tooling and joining work."
+      ],
+      "featureLinks": [
+        [
+          "https://www.tomanthermosonics.com/technical-info/ultrasonic-assembly/joint-design-issues/",
+          "Ultrasonic welding joint-design reference",
+          "First-party guidance covering joint configurations, energy directors, materials and cosmetic considerations."
+        ],
+        [
+          "https://www.branson.emerson.com/en/ultrasonic-plastic-welding",
+          "Emerson Branson plastic-welding reference",
+          "First-party overview of controlled ultrasonic assembly for small and intricate plastic components."
+        ],
+        [
+          "https://www.telsonic.com/en/application-finder/plastic-welding-systems-sensors/",
+          "Telsonic electronics-housing reference",
+          "First-party application guidance covering seam design, delicate electronics and process monitoring."
+        ],
+        [
+          "/fr/contact/#inquiry",
+          "Contact iSoud",
+          "Send shell structure, cosmetic seam, custom color and private label requirements to Lisa Li."
+        ],
+        [
+          "https://isoud.en.alibaba.com/",
+          "Official iSoud Alibaba Store",
+          "Open the official iSoud Alibaba International Store for B2B product and factory inquiries."
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    [
+      "What should a buyer ask an earbud shell assembly factory?",
+      "Ask about joining method, joint geometry, resin, fixtures, process records, internal-component protection, seam limits and production-intent validation samples."
+    ],
+    [
+      "Can an empty shell sample approve the final welding result?",
+      "It may show appearance, but final approval should use production-intent internal parts, resin, tooling support and assembly settings."
+    ],
+    [
+      "Can custom color affect visible shell seams?",
+      "Color, gloss, texture and coating can change how gaps, steps, flash or fixture marks appear, so assembly and CMF should be approved together."
+    ],
+    [
+      "Can iSoud discuss custom earbud shell joining?",
+      "iSoud can discuss suitable models, shell structure, custom color, logo, assembly samples, packaging and whether deeper tooling work is required."
+    ]
+  ]
+}
