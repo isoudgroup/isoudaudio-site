@@ -434,7 +434,7 @@ const pages = [
           ["Packaging personnalise pour ecouteurs : options et checklist B2B", "Logo, boite cadeau, eco packaging, manuel, code-barres et experience d'ouverture.", "/fr/actualites/packaging-personnalise-ecouteurs-b2b/"],
           ["Low MOQ earbuds : quand choisir stock, logo custom ou ODM complet ?", "Aider les acheteurs a comparer faible MOQ, RTS, OEM simple et developpement ODM.", "/fr/actualites/low-moq-earbuds-logo-custom/"],
           ["Ecouteurs cadeaux d'entreprise : personnalisation, emballage et delai", "Couvrir les besoins corporate gifts, promotional earbuds et packaging pret a offrir.", "/fr/actualites/ecouteurs-cadeaux-entreprise-personnalisation/"],
-          ["Comment decrire une demande a une usine d'ecouteurs OEM/ODM ?", "Une grille de brief pour AI search, acheteurs B2B et projets custom earphones.", "/fr/actualites/brief-usine-ecouteurs-oem-odm/"],
+          ["Devis écouteurs OEM/ODM : préparer un brief usine comparable", "Modèle de demande, options de couleur/Logo/packaging et points à confirmer avant les échantillons.", "/fr/actualites/brief-usine-ecouteurs-oem-odm/"],
           ["AI travel earbuds : personnalisation pour voyage, tourisme et reunion", "Capitaliser sur le signal Search Console autour de IA, travel, tourisme et personnalisation.", "/fr/actualites/ai-travel-earbuds-personnalisation/"],
           ["Private label earbuds : questions frequentes avant de contacter une usine", "Reponses directes aux questions d'IA sur marque privee, fournisseur et fabricant.", "/fr/actualites/private-label-earbuds-faq/"],
           ["Earbuds packaging design : ce qu'une marque doit preparer", "Dimensions, dieline, visuels, claims, certificats, langues et exigences retail.", "/fr/actualites/earbuds-packaging-design-checklist/"]
@@ -464,13 +464,14 @@ const pages = [
     path: "fr/contact/",
     title: "Demande OEM/ODM iSoud | Formulaire direct pour Lisa Li",
     description:
-      "Envoyez directement a Lisa Li une demande OEM/ODM d'ecouteurs TWS avec coordonnees, quantite, personnalisation, calendrier et carte de visite en piece jointe.",
-    h1: "Présentez votre projet. Lisa reçoit un brief exploitable.",
+      "Préparez votre demande OEM/ODM d'écouteurs TWS pour Lisa Li : seuls le nom et l'e-mail sont requis. Brief, personnalisation et pièce jointe facultatifs.",
+    h1: "Présentez votre projet à Lisa Li.",
     eyebrow: "Direct OEM/ODM inquiry",
     heroImage: "/assets/images/logo-card.png",
     heroAlt: "Logo iSoud contact pour Dongguan Yuanshengpai Electronic Technology Co Ltd",
     summary:
-      "Un seul formulaire pour les projets TWS, open-ear, AI audio, private label et packaging sur mesure. Votre demande est structurée comme un e-mail professionnel et adressée directement à Lisa Li.",
+      "Préparez un brief pour vos écouteurs TWS, votre marque ou votre packaging sur mesure. Deux informations suffisent pour commencer ; l'e-mail prérempli reste disponible si l'envoi web ne l'est pas.",
+    dateModified: "2026-10-06",
     sections: [
       {
         title: "Contact direct",
@@ -952,45 +953,93 @@ const articlePages = [
   },
   {
     path: "fr/actualites/brief-usine-ecouteurs-oem-odm/",
-    title: "Comment briefer une usine d'ecouteurs OEM/ODM ? | iSoud",
+    title: "Devis écouteurs OEM/ODM : modèle de brief usine | iSoud",
     description:
-      "Modele de brief pour usine d'ecouteurs OEM/ODM : produit, quantite, pays, logo, packaging, budget, delai, certifications et custom earphones.",
-    h1: "Comment decrire une demande a une usine d'ecouteurs OEM/ODM ?",
-    eyebrow: "OEM/ODM inquiry brief",
+      "Demandez un devis d'écouteurs OEM/ODM : modèle de brief, couleur, Logo, packaging, quantité et validation des échantillons avec Lisa Li chez iSoud.",
+    h1: "Devis écouteurs OEM/ODM : préparer un brief usine comparable",
+    eyebrow: "Guide d'achat OEM/ODM",
     heroImage: "/assets/images/company-detail.png",
-    heroAlt: "Brief iSoud pour usine d'ecouteurs OEM ODM et projets custom earphones",
+    heroAlt: "Présentation iSoud pour préparer une demande d'écouteurs OEM/ODM",
     summary:
-      "Un brief clair permet a une usine d'ecouteurs de repondre plus vite et plus precisement. Cette page sert de modele pour les acheteurs qui utilisent Google ou l'IA pour preparer une demande de custom earphones.",
+      "Vous recherchez une usine d'écouteurs personnalisés pour une marque européenne ou américaine ? Séparez le modèle de base, les options de marque et les points à valider sur échantillon. Vous pourrez comparer des offres portant sur le même projet, sans confondre prix du produit et coût de personnalisation.",
     datePublished: "2026-06-09",
+    dateModified: "2026-10-06",
     sections: [
       {
-        title: "Les informations essentielles",
+        title: "Commencer simplement, puis préciser le besoin",
+        body: [
+          "Chez iSoud, marque de Dongguan Yuanshengpai Electronic Technology Co., Ltd., Lisa Li est l'interlocutrice pour les demandes OEM/ODM. Le formulaire demande seulement un nom et un e-mail ; les détails ci-dessous sont facultatifs au premier contact.",
+          "Si une quantité, une configuration ou un calendrier reste inconnu, indiquez « à discuter ». Une première demande n'est ni une commande ferme ni une confirmation de faisabilité."
+        ],
         bullets: [
-          "Categorie : TWS earbuds, open-ear, AI translator earbuds, wired earphones ou wearable.",
-          "Usage : voyage, sport, bureau, cadeau, retail, wholesale ou promotion.",
-          "Personnalisation : logo, couleur, packaging, application, tuning ou structure.",
-          "Quantite cible, budget et delai.",
-          "Pays de vente et exigences de certification."
+          "Produit : référence ou lien du modèle, par exemple Air31 TWS Earbuds, et usage prévu.",
+          "Marché : pays de vente et canal, par exemple retail, boutique en ligne ou cadeau de marque.",
+          "Volumes : quantité du premier lot et réassort envisagé, sans supposer un minimum de commande.",
+          "Personnalisation : couleur, emplacement du Logo, boîte et notice ; distinguez les éléments indispensables des options.",
+          "Planning : date cible de lancement, temps disponible pour les échantillons et adresse de livraison envisagée."
         ]
       },
       {
-        title: "Exemple de demande courte",
+        title: "Couleur, Logo, packaging : demander des lignes de devis séparées",
         body: [
-          "Nous cherchons une usine OEM/ODM pour des ecouteurs TWS private label avec logo, packaging cadeau, manuel en francais et anglais, quantite initiale faible, puis production recurrente si test marche positif.",
-          "Ce type de demande aide iSoud a recommander la voie adaptee : modele existant, logo custom, packaging personnalise ou developpement ODM."
+          "Un même nom de modèle ne suffit pas à comparer deux offres. Demandez quelle configuration sert de base au devis et quelles options modifient le prix, la quantité minimale ou le délai. Les possibilités dépendent du modèle et du projet ; elles doivent être confirmées par écrit."
+        ],
+        bullets: [
+          "Couleur : teinte de référence, finition et pièces concernées ; demander comment la couleur sera approuvée sur un échantillon physique.",
+          "Logo : fichier vectoriel, zone et dimensions ; demander un aperçu de placement avant validation.",
+          "Packaging : format, insert, accessoires, fichiers d'impression et langues de la notice ; demander ce qui est inclus dans le prix.",
+          "Configuration produit : décrire l'usage attendu et demander la fiche du modèle exact, les options réalisables et la méthode de vérification proposée.",
+          "Coûts : séparer produit, personnalisation, échantillons, éventuels frais de préparation et transport ; demander la durée de validité de l'offre."
+        ],
+        featureLinks: [
+          ["/fr/oem-odm-earbuds/", "Options OEM/ODM", "Comparer personnalisation d'un modèle existant et développement spécifique."],
+          ["/fr/actualites/packaging-personnalise-ecouteurs-b2b/", "Préparer le packaging", "Compléter le brief avec les éléments de la boîte et de la notice."]
         ]
       },
       {
-        title: "Pourquoi cela aide aussi l'AI search",
+        title: "Modèle de demande à reprendre dans votre message",
         body: [
-          "Les assistants IA repondent mieux quand une page contient des exemples concrets de demandes. Cette page associe iSoud aux requetes custom earphones manufacturer, OEM earbuds inquiry, earbuds packaging customization et private label audio."
+          "Bonjour Lisa, nous préparons une gamme d'écouteurs pour notre marque. Modèle ou lien : [à préciser]. Pays de vente : [pays]. Premier lot envisagé : [quantité ou à discuter].",
+          "Nous souhaitons étudier [couleur], [Logo] et [packaging]. Merci de distinguer le produit de base, les options et les frais d'échantillonnage, puis de préciser les quantités minimales et délais proposés pour chaque option.",
+          "Avant production, nous souhaitons convenir du modèle d'échantillon, des éléments à approuver et de la fiche produit retenue. Notre date cible est [date ou à discuter]. Vous pouvez me recontacter à [e-mail]."
+        ],
+        featureLinks: [
+          ["/fr/contact/#inquiry", "Préparer ma demande pour Lisa Li", "Formulaire français/anglais : nom et e-mail obligatoires, détails et brief facultatifs."]
+        ]
+      },
+      {
+        title: "Avant le lot : figer ce que l'échantillon doit valider",
+        body: [
+          "Demandez si l'échantillon proposé montre uniquement le modèle standard ou inclut déjà votre couleur, votre Logo et votre boîte. Un échantillon standard ne constitue pas une validation du packaging final ou d'une configuration différente.",
+          "La documentation officielle Alibaba recommande de consigner des spécifications mesurables et les validations dans la commande. Les points ci-dessous sont une checklist de préparation ; ils ne constituent pas une promesse de performance ou de protection pour une commande particulière."
+        ],
+        bullets: [
+          "Identifier le modèle et la version de configuration retenus, puis noter les écarts encore ouverts.",
+          "Approuver couleur, placement du Logo, boîte, insert, notice et accessoires concernés.",
+          "Convenir des contrôles et critères d'acceptation applicables au projet avec le fournisseur.",
+          "Faire confirmer par écrit prix, quantité, délai et changements avant de lancer le lot."
+        ],
+        featureLinks: [
+          ["https://seller.alibaba.com/id/trade-on-alibaba", "Référence : documenter les exigences d'une commande", "Guide officiel Alibaba, publié le 31 juillet 2026 ; vérifier les conditions de la commande concernée."]
+        ]
+      },
+      {
+        title: "Relier votre brief au bon produit iSoud",
+        body: [
+          "Pour un projet Air31, envoyez le lien de la fiche que vous avez consultée à Lisa Li : cela évite de discuter de variantes différentes sous le même nom. Les prix, caractéristiques et options de personnalisation affichés doivent être reconfirmés pour votre quantité et votre configuration."
+        ],
+        featureLinks: [
+          [air31ProductLinks[0], "Air31 : fiche Alibaba 1601722937313", "Référence produit à joindre à votre demande de couleur, Logo ou packaging."],
+          [air31ProductLinks[1], "Air31 TWS : fiche Alibaba 1601661382307", "Autre fiche Air31 ; préciser laquelle correspond à votre projet."],
+          [alibabaUrl, "Boutique officielle iSoud sur Alibaba", "Consulter les modèles et poursuivre la discussion produit sur le canal officiel."]
         ]
       }
     ],
     faq: [
-      ["Faut-il envoyer un cahier des charges complet ?", "Pas au debut. Un brief clair avec categorie, quantite, pays, personnalisation et delai suffit pour une premiere orientation."],
-      ["Que faire si je ne connais pas les specifications ?", "Decrire l'usage et le marche cible. L'usine peut ensuite proposer des options techniques."],
-      ["Ou envoyer la demande ?", `Vous pouvez contacter ${contact.name} a ${contact.email} ou via la boutique Alibaba officielle iSoud.`]
+      ["Faut-il connaître toutes les spécifications avant de contacter l'usine ?", "Non. Un nom et un e-mail suffisent pour commencer chez iSoud. Ajoutez le modèle, le pays et les personnalisations déjà décidées ; les autres points peuvent rester à discuter."],
+      ["La couleur, le Logo et le packaging ont-ils la même quantité minimale ?", "Pas nécessairement. Demandez une confirmation distincte pour chaque option et pour la combinaison retenue ; aucun minimum universel n'est annoncé dans ce guide."],
+      ["Un échantillon standard valide-t-il ma version personnalisée ?", "Non. Faites préciser les éléments effectivement représentés, puis approuvez séparément les changements de couleur, de Logo, de boîte ou de configuration."],
+      ["Où envoyer mon brief OEM/ODM ?", `Utilisez le formulaire français/anglais de la page Contact ou l'e-mail prérempli vers ${contact.email}. Si l'envoi web est indisponible, l'e-mail doit être envoyé depuis votre application. Lisa Li est également joignable via la boutique Alibaba officielle iSoud.`]
     ]
   },
   {
@@ -1132,6 +1181,7 @@ const generatedArticlePages = loadGeneratedArticlePages();
 articlePages.unshift(...generatedArticlePages);
 
 const newsPage = pages.find((page) => page.path === "fr/actualites/");
+newsPage.dateModified = "2026-10-06";
 const newsSection = newsPage?.sections.find((section) => section.articleList);
 if (newsSection && generatedArticlePages.length) {
   newsSection.articleList = [
@@ -1142,6 +1192,7 @@ if (newsSection && generatedArticlePages.length) {
 
 pages.push({
   path: "fr/rss/",
+  dateModified: "2026-10-06",
   lang: "en",
   title: "iSoud RSS Article Index | Enterprise News Links",
   description:
@@ -1388,7 +1439,7 @@ function articleJson(page) {
     headline: page.h1,
     description: page.description,
     datePublished: page.datePublished || "2026-06-07",
-    dateModified: lastmod,
+    ...(page.dateModified ? { dateModified: page.dateModified } : {}),
     inLanguage: page.lang || "fr",
     mainEntityOfPage: `${siteUrl}/${page.path}`,
     image: `${siteUrl}${page.heroImage}`,
@@ -1605,11 +1656,11 @@ function contactMainMarkup(page, to) {
           <input type="hidden" name="startedAt" id="started-at">
           <div class="form-submit-row">
             <button class="button primary" type="submit" id="inquiry-submit" data-i18n="submit">Envoyer à Lisa Li</button>
-            <div class="reply-note"><strong data-i18n="replyStrong">Réponse sous 24 heures</strong><span data-i18n="replyDetail">Votre demande arrive directement à Lisa Li.</span></div>
+            <div class="reply-note"><strong data-i18n="replyStrong">Réponse sous 24 heures ouvrées</strong><span data-i18n="replyDetail">Après réception de votre demande par Lisa Li.</span></div>
           </div>
           <p class="privacy-note" data-i18n="privacy">En envoyant ce formulaire, vous acceptez que ces informations soient utilisées uniquement pour répondre à votre demande B2B.</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-fallback"><span data-i18n="fallbackPrefix">Un souci avec le formulaire ?</span> <!--email_off--><a href="${inquiryEmailUrl}" data-i18n="fallbackLink">Ouvrir l'e-mail prérempli</a><!--/email_off-->.</p>
+          <p class="form-fallback"><span data-i18n="fallbackPrefix">Vous préférez votre messagerie ?</span> <!--email_off--><a id="inquiry-email-fallback" href="${inquiryEmailUrl}" data-i18n="fallbackLink">Ouvrir l'e-mail prérempli</a><!--/email_off-->.</p>
         </div>
       </form>
 
@@ -1858,6 +1909,7 @@ function pageHtml(page, options = {}) {
     const fileStatus = document.getElementById("file-status");
     const formStatus = document.getElementById("form-status");
     const submitButton = document.getElementById("inquiry-submit");
+    const fallbackLink = document.getElementById("inquiry-email-fallback");
     const startedAt = document.getElementById("started-at");
     const formLanguage = document.getElementById("form-language");
     const languageButtons = document.querySelectorAll("[data-language-option]");
@@ -1869,7 +1921,7 @@ function pageHtml(page, options = {}) {
         briefTitle: "Parlez-nous de votre projet.",
         briefIntro: "Deux informations suffisent pour commencer. Ajoutez les détails du projet uniquement si vous les connaissez déjà.",
         recipientLabel: "Votre contact",
-        responsePromise: "Réponse sous 24 heures",
+        responsePromise: "Réponse sous 24 heures ouvrées",
         requiredKicker: "Requis",
         contactTitle: "Comment vous recontacter ?",
         requiredNote: "Seuls le nom et l'e-mail sont obligatoires.",
@@ -1895,17 +1947,19 @@ function pageHtml(page, options = {}) {
         attachmentNote: "JPG, PNG, WEBP, PDF ou VCF · 3 MB maximum",
         noFile: "Aucune pièce jointe sélectionnée.",
         submit: "Envoyer à Lisa Li",
+        emailSubmit: "Préparer l'e-mail pour Lisa Li",
         submitting: "Envoi en cours...",
-        replyStrong: "Réponse sous 24 heures",
-        replyDetail: "Votre demande arrive directement à Lisa Li.",
+        replyStrong: "Réponse sous 24 heures ouvrées",
+        replyDetail: "Après réception de votre demande par Lisa Li.",
         privacy: "En envoyant ce formulaire, vous acceptez que ces informations soient utilisées uniquement pour répondre à votre demande B2B.",
-        fallbackPrefix: "Un souci avec le formulaire ?",
+        fallbackPrefix: "Vous préférez votre messagerie ?",
         fallbackLink: "Ouvrir l'e-mail prérempli",
         fileTooLarge: "La pièce jointe dépasse 3 MB. Choisissez un fichier plus léger.",
         sending: "Transmission sécurisée de votre demande à Lisa Li.",
-        sent: "Votre demande a bien été envoyée. Lisa Li vous répondra sous 24 heures.",
-        mailFallback: "L'envoi web n'est pas encore disponible. Votre application e-mail va s'ouvrir avec la demande préremplie; ajoutez manuellement la pièce jointe.",
-        sendFailed: "L'envoi web n'a pas abouti. L'e-mail prérempli va s'ouvrir sans perdre les informations saisies.",
+        sent: "Le service d'envoi a accepté votre demande pour Lisa Li. Si vous n'avez pas de réponse sous 24 heures ouvrées, contactez lisa_li@rawisoud.com.",
+        mailFallback: "L'envoi web est indisponible. Préparez l'e-mail ci-dessous, puis envoyez-le dans votre messagerie. Vos informations restent dans le formulaire.",
+        emailDraft: "Aucune demande n'a été envoyée depuis le site. Envoyez l'e-mail dans votre messagerie et ajoutez la pièce jointe manuellement. Si aucune application ne s'ouvre, écrivez à lisa_li@rawisoud.com ou contactez-nous sur Alibaba.",
+        sendFailed: "L'envoi web n'a pas pu être confirmé. Vos informations sont conservées : utilisez le lien d'e-mail prérempli ci-dessous. Si vous réessayez, évitez d'envoyer une demande en double.",
         namePlaceholder: "Votre nom complet",
         emailPlaceholder: "nom@entreprise.com",
         companyPlaceholder: "Nom de l'entreprise ou de la marque",
@@ -1917,7 +1971,7 @@ function pageHtml(page, options = {}) {
         briefTitle: "Tell us about your project.",
         briefIntro: "Two details are enough to start. Add project information only if you already know it.",
         recipientLabel: "Your contact",
-        responsePromise: "Reply within 24 hours",
+        responsePromise: "Reply within 24 business hours",
         requiredKicker: "Required",
         contactTitle: "How can we contact you?",
         requiredNote: "Only your name and email are required.",
@@ -1943,17 +1997,19 @@ function pageHtml(page, options = {}) {
         attachmentNote: "JPG, PNG, WEBP, PDF or VCF · 3 MB maximum",
         noFile: "No attachment selected.",
         submit: "Send to Lisa Li",
+        emailSubmit: "Prepare email for Lisa Li",
         submitting: "Sending...",
-        replyStrong: "Reply within 24 hours",
-        replyDetail: "Your inquiry goes directly to Lisa Li.",
+        replyStrong: "Reply within 24 business hours",
+        replyDetail: "After Lisa Li receives your inquiry.",
         privacy: "By sending this form, you agree that this information may be used only to respond to your B2B inquiry.",
-        fallbackPrefix: "Form not working?",
+        fallbackPrefix: "Prefer your own email app?",
         fallbackLink: "Open the prefilled email",
         fileTooLarge: "The attachment exceeds 3 MB. Please choose a smaller file.",
         sending: "Securely sending your inquiry to Lisa Li.",
-        sent: "Your inquiry has been sent. Lisa Li will reply within 24 hours.",
-        mailFallback: "Web sending is not available yet. Your email app will open with the inquiry prefilled; add the attachment manually.",
-        sendFailed: "Web sending did not complete. The prefilled email will open without losing your information.",
+        sent: "The sending service accepted your inquiry for Lisa Li. If you have no reply within 24 business hours, contact lisa_li@rawisoud.com.",
+        mailFallback: "Web sending is unavailable. Prepare the email below and send it in your email app. Your details stay in the form.",
+        emailDraft: "No inquiry has been sent from the website. Send the email in your email app and add the attachment manually. If no app opens, write to lisa_li@rawisoud.com or contact us on Alibaba.",
+        sendFailed: "Web sending could not be confirmed. Your details are preserved: use the prefilled email link below. If you retry, avoid sending a duplicate inquiry.",
         namePlaceholder: "Your full name",
         emailPlaceholder: "name@company.com",
         companyPlaceholder: "Company or brand name",
@@ -1962,9 +2018,22 @@ function pageHtml(page, options = {}) {
       }
     };
     let activeLanguage = "fr";
+    let emailAvailable = null;
+    let statusKey = null;
+    let isSubmitting = false;
 
     function t(key) {
       return translations[activeLanguage][key] || key;
+    }
+
+    function showStatus(key, state) {
+      statusKey = key;
+      formStatus.textContent = t(key);
+      formStatus.dataset.state = state;
+    }
+
+    function updateSubmitLabel() {
+      submitButton.textContent = t(isSubmitting ? "submitting" : emailAvailable === false ? "emailSubmit" : "submit");
     }
 
     function setLanguage(language) {
@@ -1983,7 +2052,10 @@ function pageHtml(page, options = {}) {
         button.classList.toggle("is-active", isActive);
         button.setAttribute("aria-pressed", String(isActive));
       });
-      if (!fileInput.files[0]) fileStatus.textContent = t("noFile");
+      updateFileStatus();
+      if (statusKey) formStatus.textContent = t(statusKey);
+      updateSubmitLabel();
+      updateFallbackLink();
     }
 
     languageButtons.forEach((button) => {
@@ -2017,7 +2089,18 @@ function pageHtml(page, options = {}) {
       return "mailto:${contact.email}?subject=" + encodeURIComponent(String(data.get("subject") || "OEM/ODM earbuds project inquiry")) + "&body=" + encodeURIComponent(lines.join("\\n"));
     }
 
-    fileInput.addEventListener("change", () => {
+    function updateFallbackLink() {
+      fallbackLink.href = buildFallbackEmail();
+    }
+
+    form.addEventListener("input", updateFallbackLink);
+    form.addEventListener("change", updateFallbackLink);
+    fallbackLink.addEventListener("click", () => {
+      updateFallbackLink();
+      showStatus("emailDraft", "pending");
+    });
+
+    function updateFileStatus() {
       const file = fileInput.files[0];
       if (!file) {
         fileStatus.textContent = t("noFile");
@@ -2028,51 +2111,68 @@ function pageHtml(page, options = {}) {
       if (file.size > 3 * 1024 * 1024) {
         fileStatus.textContent += " · " + t("fileTooLarge");
       }
-    });
+    }
+    fileInput.addEventListener("change", updateFileStatus);
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (isSubmitting) return;
       if (!form.reportValidity()) return;
 
       const file = fileInput.files[0];
       if (file && file.size > 3 * 1024 * 1024) {
-        formStatus.textContent = t("fileTooLarge");
-        formStatus.dataset.state = "error";
+        showStatus("fileTooLarge", "error");
         return;
       }
 
+      updateFallbackLink();
+      if (emailAvailable === false) {
+        showStatus("emailDraft", "pending");
+        window.location.href = fallbackLink.href;
+        return;
+      }
+
+      isSubmitting = true;
       submitButton.disabled = true;
-      submitButton.textContent = t("submitting");
-      formStatus.textContent = t("sending");
-      formStatus.dataset.state = "pending";
+      updateSubmitLabel();
+      showStatus("sending", "pending");
 
       try {
-        const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" }, signal: AbortSignal.timeout(15000) });
         const result = await response.json();
         if (response.ok && result.success) {
-          formStatus.textContent = t("sent");
-          formStatus.dataset.state = "success";
+          showStatus("sent", "success");
           form.reset();
           startedAt.value = String(Date.now());
           setLanguage(activeLanguage);
           return;
         }
         if (result.fallback === "mailto") {
-          formStatus.textContent = t("mailFallback");
-          formStatus.dataset.state = "pending";
-          window.location.href = buildFallbackEmail();
+          emailAvailable = false;
+          showStatus("mailFallback", "pending");
           return;
         }
         throw new Error(result.error || "Unable to send inquiry");
       } catch (error) {
-        formStatus.textContent = t("sendFailed");
-        formStatus.dataset.state = "error";
-        window.location.href = buildFallbackEmail();
+        showStatus("sendFailed", "error");
       } finally {
+        isSubmitting = false;
         submitButton.disabled = false;
-        submitButton.textContent = t("submit");
+        updateSubmitLabel();
       }
     });
+
+    setLanguage("fr");
+    fetch(form.action, { headers: { Accept: "application/json" }, cache: "no-store", signal: AbortSignal.timeout(8000) })
+      .then(async (response) => {
+        if (!response.ok) return;
+        const result = await response.json();
+        if (typeof result.available !== "boolean") return;
+        emailAvailable = result.available;
+        updateSubmitLabel();
+        if (emailAvailable === false && !statusKey) showStatus("mailFallback", "pending");
+      })
+      .catch(() => {});
   </script>` : ""}
 </body>
 </html>
@@ -3892,17 +3992,20 @@ function writeHeaders() {
 
 function writeRobotsAndSitemap() {
   writeFile("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
-  const urls = ["", ...pages.filter((page) => page.path !== "fr/").map((page) => page.path)]
-    .map((slug) => `${siteUrl}/${slug}`);
+  const entries = pages.map((page) => {
+    const url = `${siteUrl}/${page.path === "fr/" ? "" : page.path}`;
+    // Unknown update dates are omitted instead of refreshing the whole site.
+    const modified = page.dateModified ? `<lastmod>${escapeXml(page.dateModified)}</lastmod>` : "";
+    return `  <url><loc>${escapeXml(url)}</loc>${modified}</url>`;
+  });
   writeFile(
     "sitemap.xml",
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-      .map((url) => `  <url><loc>${url}</loc><lastmod>${lastmod}</lastmod></url>`)
-      .join("\n")}\n</urlset>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`
   );
 }
 
 function writeRssFeed() {
+  const latestContentDate = [...pages.map((page) => page.dateModified || page.datePublished || ""), lastmod].sort().at(-1);
   const items = articlePages
     .map((page) => {
       const url = `${siteUrl}/${page.path}`;
@@ -3926,8 +4029,8 @@ function writeRssFeed() {
     <link>${siteUrl}/fr/actualites/</link>
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
     <description>RSS updates from iSoud covering Air31 Earbuds, TWS earbuds, OEM/ODM customization, packaging customization, AI audio and source-factory news.</description>
-    <language>en</language>
-    <lastBuildDate>${new Date(`${lastmod}T00:00:00Z`).toUTCString()}</lastBuildDate>
+    <language>fr</language>
+    <lastBuildDate>${new Date(`${latestContentDate}T00:00:00Z`).toUTCString()}</lastBuildDate>
 ${items}
   </channel>
 </rss>
