@@ -157,45 +157,64 @@ const pages = [
   },
   {
     path: "fr/oem-odm-earbuds/",
-    title: "OEM/ODM earbuds iSoud | Fabricant d'ecouteurs personnalises",
+    title: "Écouteurs personnalisés OEM/ODM pour marques | iSoud",
     description:
-      "Solutions OEM/ODM pour ecouteurs TWS, air earbuds et AI audio : ID, CMF, tooling, acoustic tuning, packaging, logo et production scalable.",
-    h1: "Solutions OEM/ODM pour ecouteurs TWS, air earbuds et AI audio",
-    eyebrow: "Customization and development",
+      "Projet d'écouteurs TWS OEM/ODM : modèle existant, couleur, logo, packaging et configuration à confirmer. Préparez votre demande de devis avec Lisa Li.",
+    h1: "Écouteurs personnalisés OEM/ODM pour votre marque",
+    eyebrow: "Personnalisation / Projet de marque",
     heroImage: "/assets/images/company-intro-1.png",
-    heroAlt: "Capacites OEM ODM iSoud pour developpement d'ecouteurs TWS et AI audio",
+    heroAlt: "Présentation des activités OEM/ODM iSoud pour les marques d'écouteurs",
     summary:
-      "iSoud aide les marques et distributeurs a developper des ecouteurs personnalises, depuis l'idee produit jusqu'a l'emballage pret pour l'export. Les projets OEM/ODM peuvent inclure design, couleurs, tooling, acoustic tuning, logo, packaging et options applicatives.",
+      "iSoud, marque internationale de Dongguan Yuanshengpai Electronic Technology Co., Ltd., accompagne les demandes d'écouteurs TWS personnalisés pour marques et distributeurs. Le point de départ est un modèle identifié et un besoin commercial : logo, couleur, emballage ou développement spécifique. Lisa Li confirme les options réalisables pour votre référence, votre quantité et votre marché.",
+    dateModified: "2026-10-13",
     sections: [
       {
-        title: "Perimetre de personnalisation",
+        title: "Ce que votre projet doit préciser",
         bullets: [
-          "ID et apparence produit pour differenciation de marque.",
-          "CMF : couleurs, matieres, finitions et style de surface.",
-          "Tooling et structure mecanique selon le niveau de developpement.",
-          "Acoustic tuning pour adapter le rendu sonore au segment de marche.",
-          "Logo, emballage cadeau, eco packaging et documents export."
+          "Modèle : référence ou fiche produit, usage prévu et accessoires souhaités.",
+          "Couleur et finition : zones concernées, référence de couleur et échantillon physique à approuver.",
+          "Logo : fichier vectoriel, emplacement, dimensions et rendu attendu sur le produit et la boîte.",
+          "Packaging : canal de vente, langues, format, insert et éléments inclus dans chaque unité.",
+          "Configuration : liste des fonctions attendues ; disponibilité et tests à confirmer pour le modèle retenu."
         ]
       },
       {
-        title: "Trois types de projets",
-        cards: [
-          ["RTS / Low MOQ", "Stock, faible MOQ, expedition rapide, packaging cadeau."],
-          ["OEM volume models", "Modeles stables pour marques, distributeurs et programmes recurrentes."],
-          ["AI innovation", "AI translator earbuds, travel audio, office call et wearables intelligents."]
+        title: "Choisir le niveau de personnalisation",
+        table: [
+          ["Modèle existant + logo", "Vous souhaitez commencer par une référence identifiée. Demandez les zones de marquage, les frais de préparation et l'échantillon représentatif du logo."],
+          ["Modèle existant + couleur ou packaging", "Vous souhaitez un ensemble de marque. Séparez quantité par couleur, quantité par emballage, coût des inserts et validation de la boîte."],
+          ["Développement ODM", "Vous souhaitez modifier la forme, la structure ou la configuration. Demandez d'abord une étude de faisabilité, les étapes de développement et ce que chaque prototype permettra de vérifier."]
         ]
       },
       {
-        title: "Comment iSoud reduit le risque",
+        title: "Comparer le devis et l'échantillon avant de décider",
         body: [
-          "Un projet d'ecouteurs ne se limite pas a une fiche technique. iSoud relie choix industriel, experience utilisateur, exigences de qualite et contraintes de livraison afin que le produit soit pret pour la vente internationale."
+          "Un devis doit distinguer les unités produit, les options de couleur, le marquage, l'emballage, les éventuels frais de développement et le transport. Aucun MOQ, prix ou délai unique ne s'applique à tous les projets : demandez une confirmation pour chaque variante.",
+          "Précisez ce que l'échantillon approuve : produit, teinte, logo, configuration et boîte. Un échantillon standard ne valide pas automatiquement votre future couleur ou votre packaging. Conservez les références des versions approuvées et la liste des points encore ouverts."
+        ],
+        featureLinks: [
+          ["/fr/actualites/brief-usine-ecouteurs-oem-odm/", "Préparer un brief de devis", "Reprendre la trame de demande et les éléments nécessaires à une comparaison."],
+          ["/fr/actualites/packaging-personnalise-ecouteurs-b2b/", "Valider le packaging", "Distinguer fichier d'impression, échantillon de boîte et ensemble complet."]
+        ]
+      },
+      {
+        title: "Votre prochaine étape avec Lisa Li",
+        body: [
+          "Commencez avec le modèle souhaité, le pays de vente, une quantité estimée et les personnalisations prioritaires. Le formulaire français/anglais demande uniquement votre nom et votre e-mail ; les détails du projet peuvent être complétés ensuite. Nous prévoyons de répondre sous 24 heures.",
+          "Pour Air31 TWS Earbuds, joignez le lien exact de la fiche Alibaba consultée : les caractéristiques et options doivent être reconfirmées pour cette référence. Vous pouvez aussi adresser votre demande directement à la boutique officielle iSoud sur Alibaba."
+        ],
+        featureLinks: [
+          ["/fr/contact/#inquiry", "Présenter mon projet à Lisa Li", "Préparer une demande de couleur, logo, packaging ou développement spécifique."],
+          ["/fr/actualites/air31-earbuds-customization-source-factory/", "Identifier votre référence Air31", "Retrouver les deux fiches produits Alibaba liées au guide Air31."],
+          [alibabaUrl, "Contacter la boutique Alibaba iSoud", "Poser votre question sur la plateforme avec la référence du modèle."]
         ]
       }
     ],
     faq: [
-      ["Que signifie OEM/ODM pour les earbuds ?", "OEM/ODM signifie que iSoud peut fabriquer ou developper des ecouteurs selon les besoins d'une marque : design, couleur, son, emballage, logo et configuration."],
-      ["iSoud peut-elle aider avec le packaging ?", "Oui. iSoud met en avant des options de gift-ready packaging et eco packaging pour marques, distributeurs et programmes cadeaux."],
-      ["Quels acheteurs sont adaptes ?", "Les marques audio, grossistes, distributeurs, chaines cadeaux, acheteurs promotionnels et entreprises qui cherchent une production stable."]
+      ["Peut-on commencer avec un modèle existant ?", "Oui, vous pouvez demander l'ajout de logo, une couleur ou un packaging sur une référence existante. Lisa Li confirme la faisabilité, les quantités et les étapes de validation pour ce modèle."],
+      ["Quel MOQ et quel délai prévoir ?", "Ils dépendent de la référence, des variantes et du niveau de personnalisation. Demandez une confirmation écrite par option plutôt qu'un chiffre général."],
+      ["Faut-il avoir un dossier complet pour contacter iSoud ?", "Non. Votre nom et votre e-mail suffisent pour commencer. Une référence produit et une description courte du besoin aident Lisa Li à orienter la discussion."],
+      ["Une modification de performance est-elle toujours possible ?", "Non. Chaque fonction ou modification doit être examinée pour la configuration exacte. La validation du logo ou du packaging ne démontre pas une performance produit."]
     ]
   },
   {
@@ -431,7 +450,7 @@ const pages = [
           ["AI translator earbuds : guide pour marques et distributeurs", "Pourquoi les ecouteurs traducteurs IA deviennent une categorie B2B importante.", "/fr/actualites/ai-translator-earbuds-guide-b2b/"],
           ["Ecouteurs open-ear : pourquoi cette categorie progresse ?", "Confort, sport, mobilite et nouvelles attentes des utilisateurs.", "/fr/actualites/ecouteurs-open-ear-tendance/"],
           ["Ecouteurs personnalises OEM : comment lancer un projet de marque ?", "Repondre aux recherches AI sur custom earbuds, private label earbuds et fabricant OEM.", "/fr/actualites/ecouteurs-personnalises-oem-marque/"],
-          ["Packaging personnalise pour ecouteurs : options et checklist B2B", "Logo, boite cadeau, eco packaging, manuel, code-barres et experience d'ouverture.", "/fr/actualites/packaging-personnalise-ecouteurs-b2b/"],
+          ["Packaging d'écouteurs personnalisé : valider le BAT et l'échantillon", "Fichiers à préparer, validation de l'insert, codes imprimés et version finale avant production.", "/fr/actualites/packaging-personnalise-ecouteurs-b2b/"],
           ["Low MOQ earbuds : quand choisir stock, logo custom ou ODM complet ?", "Aider les acheteurs a comparer faible MOQ, RTS, OEM simple et developpement ODM.", "/fr/actualites/low-moq-earbuds-logo-custom/"],
           ["Ecouteurs cadeaux d'entreprise : personnalisation, emballage et delai", "Couvrir les besoins corporate gifts, promotional earbuds et packaging pret a offrir.", "/fr/actualites/ecouteurs-cadeaux-entreprise-personnalisation/"],
           ["Devis écouteurs OEM/ODM : préparer un brief usine comparable", "Modèle de demande, options de couleur/Logo/packaging et points à confirmer avant les échantillons.", "/fr/actualites/brief-usine-ecouteurs-oem-odm/"],
@@ -819,45 +838,86 @@ const articlePages = [
   },
   {
     path: "fr/actualites/packaging-personnalise-ecouteurs-b2b/",
-    title: "Packaging personnalise pour ecouteurs : options B2B | iSoud",
+    title: "Packaging d'écouteurs personnalisé : BAT et échantillon | iSoud",
     description:
-      "Options de packaging personnalise pour ecouteurs : boite cadeau, eco packaging, logo, manuel, dieline, code-barres, retail packaging et OEM/ODM.",
-    h1: "Packaging personnalise pour ecouteurs : options et checklist B2B",
-    eyebrow: "Custom earbuds packaging",
+      "Validez votre packaging d'écouteurs OEM : fichiers, BAT d'impression, insert, échantillon assemblé et codes. Checklist pour marques et acheteurs B2B.",
+    h1: "Packaging d'écouteurs personnalisé : valider le BAT et l'échantillon",
+    eyebrow: "Guide d'achat / Packaging personnalisé",
     heroImage: "/assets/images/brand-cases.png",
-    heroAlt: "Packaging personnalise iSoud pour ecouteurs OEM ODM et programmes cadeaux",
+    heroAlt: "Supports de présentation iSoud pour discuter d'un packaging d'écouteurs personnalisé",
     summary:
-      "Le packaging personnalise est souvent le premier signal de marque qu'un client voit. Pour les ecouteurs B2B, il influence la perception, la confiance, l'ouverture du produit et la preparation retail.",
+      "Avant d'approuver une boîte d'écouteurs personnalisée, une marque doit distinguer trois validations : le fichier d'impression, la boîte physique et l'ensemble produit-accessoires-emballage. Ce guide propose une fiche de validation à utiliser avec Lisa Li chez iSoud, marque internationale de Dongguan Yuanshengpai Electronic Technology Co., Ltd. Les matériaux, quantités et options restent à confirmer pour chaque projet OEM/ODM.",
     datePublished: "2026-06-09",
+    dateModified: "2026-10-13",
     sections: [
       {
-        title: "Options de packaging",
+        title: "Trois validations qui ne couvrent pas les mêmes points",
+        table: [
+          ["BAT d'impression", "Bon à tirer : contrôler textes, logo, langues, codes, placement et numéro de version sur le tracé de découpe. Un fichier affiché à l'écran ne démontre pas la teinte imprimée ni l'ajustement de l'insert."],
+          ["Échantillon de boîte", "Contrôler format, fermeture, matière, finition et rendu imprimé si l'échantillon les représente réellement. Lister les écarts entre ce spécimen et la version prévue."],
+          ["Ensemble assemblé", "Placer le boîtier de charge exact, les accessoires et la notice dans leur position finale. Vérifier maintien, retrait, fermeture et contenu. L'évaluation du transport relève d'un contrôle distinct, à définir selon votre circuit de distribution."]
+        ]
+      },
+      {
+        title: "Le dossier minimal à envoyer à l'usine",
+        body: [
+          "Commencez par la référence produit, le canal de vente et la liste de ce que la boîte doit contenir. Pour Air31, précisez la fiche Alibaba retenue : le nom de la famille seul ne suffit pas à identifier le produit ou ses dimensions."
+        ],
         bullets: [
-          "Boite cadeau pour corporate gifts et programmes promotionnels.",
-          "Eco packaging avec papier recyclable ou approche plus responsable.",
-          "Retail box avec code-barres, claims, pictogrammes et informations produit.",
-          "Manuel multilingue, carte garantie, insert de charge et notice rapide.",
-          "Dieline et visuels adaptes au canal de vente."
+          "Logo vectoriel, textes définitifs, langues et responsable chargé de les approuver.",
+          "Référence de couleur et finition attendue ; demander quel support physique servira de référence.",
+          "Tracé de découpe fourni ou confirmé par l'interlocuteur technique ; identifier zones de coupe, plis et zones réservées.",
+          "Dimensions du produit et liste des accessoires, de la notice et des cartes incluses.",
+          "Code commercial et QR code fournis par la marque, destination du lien et personne responsable de leur validation.",
+          "Quantité estimée par variante, pays de vente et objectif de lancement ; la faisabilité reste à confirmer."
+        ],
+        featureLinks: [
+          ["/fr/actualites/earbuds-packaging-design-checklist/", "Préparer les fichiers de design", "Compléter le dossier graphique avant le BAT."],
+          ["/fr/oem-odm-earbuds/", "Relier packaging et projet OEM/ODM", "Choisir les options de modèle, couleur et logo avec le même brief."]
         ]
       },
       {
-        title: "Informations a preparer",
+        title: "Fiche de validation à conserver avec chaque version",
+        table: [
+          ["Identification", "Référence produit, variante, nom du fichier, date et numéro de version du BAT."],
+          ["Contenu", "Texte, langues, logo, adresse et informations produit relus par la marque ; retirer les caractéristiques non démontrées pour cette référence."],
+          ["Impression", "Noter ce qui a été approuvé à l'écran et ce qui exige encore un échantillon imprimé."],
+          ["Insert et accessoires", "Référence du produit placé dans l'insert, liste des éléments inclus et photos de l'ensemble assemblé."],
+          ["Codes", "Données encodées, lien QR testé et contrôle du code imprimé selon les exigences du canal de vente."],
+          ["Décision", "Nom de la personne qui approuve, date, réserves et points restant à confirmer. Toute modification ultérieure doit avoir sa propre version."]
+        ],
         body: [
-          "Un acheteur doit preparer son logo, ses couleurs, le marche cible, les langues, les mentions obligatoires et les dimensions souhaitees. Si ces elements ne sont pas prets, iSoud peut aider a organiser le brief pour accelerer la validation.",
-          "Les recherches AI autour de earbuds packaging customization, custom earbud box, gift packaging earbuds et eco packaging doivent trouver une page qui explique clairement le processus."
+          "Utilisez des statuts simples : validé, à corriger, non représenté par cet échantillon. Une maquette de présentation ne doit pas être enregistrée comme un échantillon final approuvé. Le tableau ci-dessus est une méthode proposée aux acheteurs, pas une attestation de contrôle déjà réalisé par iSoud."
         ]
       },
       {
-        title: "Packaging et qualite percue",
+        title: "Contrôler le code sur l'emballage imprimé",
         body: [
-          "Un bon packaging ne cache pas un produit faible, mais il aide un bon produit a etre compris plus vite. Pour une marque, l'emballage doit raconter la categorie, le scenario d'usage, la promesse principale et les preuves de conformite."
+          "GS1 recommande de vérifier notamment les zones libres autour du code, le contraste, la taille et l'emplacement. Un code lisible dans le PDF peut être altéré par l'impression, un pli ou une finition. Vérifiez le spécimen imprimé ; une simple lecture par téléphone ne remplace pas une vérification formelle si votre distributeur l'exige.",
+          "Pour une commande passée sur Alibaba, conservez les versions et exigences convenues dans le dossier de la commande, y compris le packaging et les références d'échantillons. La protection applicable doit être vérifiée sur la commande concernée ; ce guide ne garantit aucune prise en charge."
+        ],
+        featureLinks: [
+          ["https://support.gs1.org/support/solutions/articles/43000734141-what-should-i-check-to-ensure-good-quality-barcodes-", "GS1 : qualité des codes imprimés", "Points de contrôle publiés par GS1 ; référence générale, sans certification iSoud."],
+          ["https://seller.alibaba.com/id/trade-on-alibaba", "Alibaba : documenter les exigences de commande", "Référence sur les spécifications, le packaging et les validations convenues."]
+        ]
+      },
+      {
+        title: "Demander les options de packaging à Lisa Li",
+        body: [
+          "Vous pouvez commencer avec votre nom, votre e-mail et une courte description : modèle, pays de vente, quantité estimée et éléments à personnaliser. Les autres champs du formulaire sont facultatifs ; il est disponible en français et en anglais, avec une réponse prévue sous 24 heures.",
+          "Le formulaire propose la préparation d'un e-mail lorsque l'envoi web est indisponible. Vous pouvez également contacter iSoud directement sur Alibaba. Demandez quelles pièces du packaging peuvent être personnalisées et quel échantillon est nécessaire avant votre approbation."
+        ],
+        featureLinks: [
+          ["/fr/contact/#inquiry", "Discuter de mon emballage avec Lisa Li", "Préparer une demande avec la référence produit et les fichiers disponibles."],
+          [alibabaUrl, "Boutique officielle iSoud sur Alibaba", "Envoyer une demande produit ou packaging sur la plateforme."]
         ]
       }
     ],
     faq: [
-      ["iSoud peut-elle faire un packaging avec logo ?", "Oui. Les options incluent logo, boite, manuel, carte, insert et visuels selon projet."],
-      ["Le packaging cadeau est-il adapte aux ecouteurs ?", "Oui. Les ecouteurs sont frequemment utilises pour cadeaux d'entreprise, promotions et programmes distributeurs."],
-      ["Quels fichiers envoyer pour un packaging ?", "Logo vectoriel, couleurs, textes, langues, code-barres, certifications disponibles et reference de style."]
+      ["Un BAT PDF suffit-il pour approuver le packaging ?", "Il permet d'approuver les fichiers et leur disposition. Il ne valide pas à lui seul la teinte imprimée, la matière ou l'ajustement du produit dans l'insert."],
+      ["Peut-on demander uniquement un packaging personnalisé ?", "Présentez la référence et votre besoin à Lisa Li. Les options, quantités et conditions doivent être confirmées pour l'emballage et le produit concernés."],
+      ["Quel échantillon vérifier pour un projet Air31 ?", "Un ensemble correspondant à la fiche produit retenue et au contenu prévu. Identifiez les éléments définitifs et ceux encore provisoires avant d'approuver."],
+      ["Quand considérer la boîte comme approuvée ?", "Lorsque la version est identifiée, les points concernés ont été examinés et la personne responsable a enregistré sa décision, les réserves et les éléments encore ouverts."]
     ]
   },
   {
@@ -1181,7 +1241,7 @@ const generatedArticlePages = loadGeneratedArticlePages();
 articlePages.unshift(...generatedArticlePages);
 
 const newsPage = pages.find((page) => page.path === "fr/actualites/");
-newsPage.dateModified = "2026-10-06";
+newsPage.dateModified = "2026-10-13";
 const newsSection = newsPage?.sections.find((section) => section.articleList);
 if (newsSection && generatedArticlePages.length) {
   newsSection.articleList = [
@@ -1192,7 +1252,7 @@ if (newsSection && generatedArticlePages.length) {
 
 pages.push({
   path: "fr/rss/",
-  dateModified: "2026-10-06",
+  dateModified: "2026-10-13",
   lang: "en",
   title: "iSoud RSS Article Index | Enterprise News Links",
   description:
