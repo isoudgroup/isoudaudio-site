@@ -430,5 +430,90 @@
         "bytes": 149236
       }
     ]
+  },
+  "S-OH-003": {
+    "name": "isoud-s-oh-003-burgundy-over-ear-headphones",
+    "width": 1254,
+    "height": 1254,
+    "sizes": [
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-oh-003-burgundy-over-ear-headphones-640.webp",
+        "width": 640,
+        "bytes": 30672
+      },
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-oh-003-burgundy-over-ear-headphones-1254.webp",
+        "width": 1254,
+        "bytes": 99770
+      }
+    ]
+  },
+  "S-CH-001": {
+    "name": "isoud-s-ch-001-boom-microphone-communication-headset",
+    "width": 1254,
+    "height": 1254,
+    "sizes": [
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ch-001-boom-microphone-communication-headset-640.webp",
+        "width": 640,
+        "bytes": 30448
+      },
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ch-001-boom-microphone-communication-headset-1254.webp",
+        "width": 1254,
+        "bytes": 97234
+      }
+    ]
+  },
+  "S-CH-001-lime": {
+    "name": "isoud-s-ch-001-yellow-green-communication-headset",
+    "width": 1254,
+    "height": 1254,
+    "sizes": [
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ch-001-yellow-green-communication-headset-640.webp",
+        "width": 640,
+        "bytes": 35698
+      },
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ch-001-yellow-green-communication-headset-1254.webp",
+        "width": 1254,
+        "bytes": 111222
+      }
+    ]
+  },
+  "S-IE-001": {
+    "name": "isoud-s-ie-001-digital-display-wireless-earbuds",
+    "width": 1254,
+    "height": 1254,
+    "sizes": [
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ie-001-digital-display-wireless-earbuds-640.webp",
+        "width": 640,
+        "bytes": 36178
+      },
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-ie-001-digital-display-wireless-earbuds-1254.webp",
+        "width": 1254,
+        "bytes": 88672
+      }
+    ]
+  },
+  "S-EM-001": {
+    "name": "isoud-s-em-001-electronic-earmuff-platform",
+    "width": 1254,
+    "height": 1254,
+    "sizes": [
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-em-001-electronic-earmuff-platform-640.webp",
+        "width": 640,
+        "bytes": 39650
+      },
+      {
+        "file": "/assets/images/catalog-20261024/isoud-s-em-001-electronic-earmuff-platform-1254.webp",
+        "width": 1254,
+        "bytes": 157148
+      }
+    ]
   }
 }

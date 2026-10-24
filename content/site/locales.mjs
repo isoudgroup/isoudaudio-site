@@ -37,3 +37,7 @@ const unavailableMessages={
  zh:'网页直接投递暂不可用。请打开邮件应用发送已填写的需求，或通过阿里店铺联系 Lisa。目前尚未发送任何信息。'
 };
 for(const [l,c]of Object.entries(copy)) c.unavailable=unavailableMessages[l];
+
+// Additional catalogue categories, preserving existing category indices.
+const specialistCategories={"en":["Communication","Electronic earmuffs"],"fr":["Communication","Casques électroniques"],"es":["Comunicación","Orejeras electrónicas"],"pt":["Comunicação","Abafadores eletrônicos"],"ru":["Связь","Электронные наушники"],"ar":["الاتصال","واقيات أذن إلكترونية"],"zh":["通信耳罩","电子耳罩"]};
+for(const [l,c] of Object.entries(copy))c.categories.push(...specialistCategories[l]);

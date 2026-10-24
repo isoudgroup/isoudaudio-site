@@ -1,4 +1,4 @@
-// Stable public codes; sourceModel and assetKey are internal provenance. Preserve slugs for existing links.
+// Stable public codes; sourceModel and assetKey are internal provenance.
 export const products = [
   {
     "model": "S-OH-001",
@@ -216,5 +216,716 @@ export const products = [
     "featured": false,
     "sourceModel": "M129",
     "assetKey": "M129"
+  },
+  {
+    "model": "S-OH-003",
+    "sourceModel": "Burgundy over-ear / source model not provided",
+    "assetKey": "S-OH-003",
+    "slug": "s-oh-003-burgundy-over-ear-headphones",
+    "category": 0,
+    "featured": false,
+    "titles": {
+      "en": "Burgundy over-ear headphones",
+      "fr": "Casque circum-aural bordeaux",
+      "es": "Auriculares de diadema burdeos",
+      "pt": "Fone circum-aural bordô",
+      "ru": "Полноразмерные наушники бордо",
+      "ar": "سماعات حول الأذن بلون عنابي",
+      "zh": "勃艮第红头戴式耳机"
+    },
+    "description": {
+      "en": "A color-led over-ear platform with cushioned earcups and wireless or 3.5 mm AUX listening. The supplied sheet lists a 40 mm dynamic driver, 200 mAh battery and 12-hour playback reference. Develop color, finish and packaging around your brand.",
+      "fr": "Une plateforme circum-aurale colorée avec coussinets, écoute sans fil ou AUX 3,5 mm. La fiche indique un transducteur dynamique de 40 mm, une batterie de 200 mAh et 12 h d’autonomie de référence.",
+      "es": "Plataforma de diadema con almohadillas, conexión inalámbrica o AUX de 3,5 mm. La ficha indica transductor dinámico de 40 mm, batería de 200 mAh y autonomía de referencia de 12 h.",
+      "pt": "Plataforma circum-aural com almofadas, conexão sem fio ou AUX de 3,5 mm. A ficha informa driver dinâmico de 40 mm, bateria de 200 mAh e autonomia de referência de 12 h.",
+      "ru": "Полноразмерная платформа с мягкими амбушюрами и беспроводным подключением либо AUX 3,5 мм. В листе указаны динамик 40 мм, аккумулятор 200 мА·ч и ориентир автономности 12 ч.",
+      "ar": "منصة حول الأذن بوسائد مريحة واتصال لاسلكي أو AUX ‏3.5 مم. تذكر الورقة مشغلًا ديناميكيًا 40 مم وبطارية 200 ملّي أمبير ساعة ومدة تشغيل مرجعية 12 ساعة.",
+      "zh": "以配色为特色的头戴式平台，支持无线与 3.5 mm AUX 聆听。所提供资料标注 40 mm 动圈、200 mAh 电池及约 12 小时续航，可进一步讨论配色、工艺和包装。"
+    },
+    "specs": {
+      "en": [
+        [
+          "Driver",
+          "40 mm"
+        ],
+        [
+          "Battery",
+          "200 mAh"
+        ],
+        [
+          "Listed playback time",
+          "12 h"
+        ],
+        [
+          "Listed charging time",
+          "2 h"
+        ],
+        [
+          "Connections",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "Frequency range",
+          "20–20,000 Hz"
+        ],
+        [
+          "Impedance",
+          "32 Ω ±10%"
+        ],
+        [
+          "Reference colors",
+          "Burgundy / white / black / blue"
+        ]
+      ],
+      "fr": [
+        [
+          "Transducteur",
+          "40 mm"
+        ],
+        [
+          "Batterie",
+          "200 mAh"
+        ],
+        [
+          "Autonomie annoncée",
+          "12 h"
+        ],
+        [
+          "Temps de charge annoncé",
+          "2 h"
+        ],
+        [
+          "Connexions",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "Plage de fréquences",
+          "20–20,000 Hz"
+        ],
+        [
+          "Impédance",
+          "32 Ω ±10%"
+        ],
+        [
+          "Couleurs de référence",
+          "Bordeaux / blanc / noir / bleu"
+        ]
+      ],
+      "es": [
+        [
+          "Transductor",
+          "40 mm"
+        ],
+        [
+          "Batería",
+          "200 mAh"
+        ],
+        [
+          "Autonomía indicada",
+          "12 h"
+        ],
+        [
+          "Carga indicada",
+          "2 h"
+        ],
+        [
+          "Conexiones",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "Rango de frecuencia",
+          "20–20,000 Hz"
+        ],
+        [
+          "Impedancia",
+          "32 Ω ±10%"
+        ],
+        [
+          "Colores de referencia",
+          "Burdeos / blanco / negro / azul"
+        ]
+      ],
+      "pt": [
+        [
+          "Driver",
+          "40 mm"
+        ],
+        [
+          "Bateria",
+          "200 mAh"
+        ],
+        [
+          "Autonomia informada",
+          "12 h"
+        ],
+        [
+          "Carga informada",
+          "2 h"
+        ],
+        [
+          "Conexões",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "Faixa de frequência",
+          "20–20,000 Hz"
+        ],
+        [
+          "Impedância",
+          "32 Ω ±10%"
+        ],
+        [
+          "Cores de referência",
+          "Bordô / branco / preto / azul"
+        ]
+      ],
+      "ru": [
+        [
+          "Динамик",
+          "40 mm"
+        ],
+        [
+          "Аккумулятор",
+          "200 mAh"
+        ],
+        [
+          "Заявленное время работы",
+          "12 h"
+        ],
+        [
+          "Заявленное время зарядки",
+          "2 h"
+        ],
+        [
+          "Подключение",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "Диапазон частот",
+          "20–20,000 Hz"
+        ],
+        [
+          "Импеданс",
+          "32 Ω ±10%"
+        ],
+        [
+          "Референсные цвета",
+          "Бордо / белый / чёрный / синий"
+        ]
+      ],
+      "ar": [
+        [
+          "المشغل",
+          "40 mm"
+        ],
+        [
+          "البطارية",
+          "200 mAh"
+        ],
+        [
+          "مدة التشغيل المذكورة",
+          "12 h"
+        ],
+        [
+          "وقت الشحن المذكور",
+          "2 h"
+        ],
+        [
+          "الاتصالات",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "نطاق التردد",
+          "20–20,000 Hz"
+        ],
+        [
+          "المعاوقة",
+          "32 Ω ±10%"
+        ],
+        [
+          "الألوان المرجعية",
+          "عنابي / أبيض / أسود / أزرق"
+        ]
+      ],
+      "zh": [
+        [
+          "发声单元",
+          "40 mm"
+        ],
+        [
+          "电池",
+          "200 mAh"
+        ],
+        [
+          "资料标注续航",
+          "12 h"
+        ],
+        [
+          "资料标注充电时间",
+          "2 h"
+        ],
+        [
+          "连接方式",
+          "Wireless 5.4 / AUX 3.5 mm"
+        ],
+        [
+          "频率范围",
+          "20–20,000 Hz"
+        ],
+        [
+          "阻抗",
+          "32 Ω ±10%"
+        ],
+        [
+          "参考颜色",
+          "勃艮第红 / 云岩白 / 暗夜黑 / 深海蓝"
+        ]
+      ]
+    },
+    "specNotice": {
+      "en": "Reference information from the supplied product sheet or images, not an independent test report. Confirm the final sample, configuration and test conditions before ordering.",
+      "fr": "Informations issues de la fiche ou des images fournies, sans rapport d’essai indépendant. Confirmez l’échantillon, la configuration et les conditions de test avant commande.",
+      "es": "Información de la ficha o imágenes aportadas, sin ensayo independiente. Confirma muestra, configuración y condiciones de prueba antes del pedido.",
+      "pt": "Informações da ficha ou imagens fornecidas, sem ensaio independente. Confirme amostra, configuração e condições de teste antes do pedido.",
+      "ru": "Данные из предоставленных материалов, без независимого протокола испытаний. До заказа подтвердите образец, комплектацию и условия тестирования.",
+      "ar": "معلومات من ورقة المنتج أو الصور المقدمة، وليست تقرير اختبار مستقلًا. أكد العينة والتكوين وشروط الاختبار قبل الطلب.",
+      "zh": "信息整理自提供的产品资料或图片，并非独立测试报告。下单前请确认最终样品、配置和测试条件。"
+    }
+  },
+  {
+    "model": "S-CH-001",
+    "sourceModel": "AVIF communication headset family / model unconfirmed",
+    "assetKey": "S-CH-001",
+    "slug": "s-ch-001-boom-microphone-communication-headset",
+    "category": 5,
+    "featured": false,
+    "gallery": [
+      "S-CH-001-lime"
+    ],
+    "titles": {
+      "en": "Communication headset with boom microphone",
+      "fr": "Casque de communication avec micro-perche",
+      "es": "Auricular de comunicación con micrófono de brazo",
+      "pt": "Headset de comunicação com microfone de haste",
+      "ru": "Гарнитура со штанговым микрофоном",
+      "ar": "سماعة اتصال بميكروفون ذراعي",
+      "zh": "带杆式麦克风的通信耳罩"
+    },
+    "description": {
+      "en": "A communication-headset reference with padded headband, wire-supported earcups and boom microphone. Black and yellow-green references are shown as one visual family; confirm their exact model relationship, connector, power supply and system compatibility before selecting a version.",
+      "fr": "Référence de communication avec arceau rembourré, supports métalliques et micro-perche. Les visuels noir et jaune-vert forment une famille visuelle ; confirmez modèles, connecteur, alimentation et compatibilité.",
+      "es": "Referencia con diadema acolchada, soportes metálicos y micrófono de brazo. Las imágenes negra y amarillo-verde se agrupan visualmente; confirma modelos, conector, alimentación y compatibilidad.",
+      "pt": "Referência com arco acolchoado, suportes metálicos e microfone de haste. As imagens preta e amarelo-verde formam uma família visual; confirme modelos, conector, alimentação e compatibilidade.",
+      "ru": "Референс гарнитуры с мягким оголовьем, металлическими подвесами и штанговым микрофоном. Чёрная и жёлто-зелёная версии объединены по внешнему виду; модель, разъём, питание и совместимость требуют подтверждения.",
+      "ar": "مرجع سماعة اتصال بعصابة مبطنة وحوامل معدنية وميكروفون ذراعي. جُمعت الصور السوداء والصفراء الخضراء كعائلة بصرية؛ أكد الطراز والموصل والطاقة والتوافق.",
+      "zh": "带软包头梁、金属支架与杆式麦克风的通信耳罩参考。黑色及黄绿色图片按同一外观系列展示；两者具体型号关系、接口、供电和系统兼容性需按版本确认。"
+    },
+    "specs": {
+      "en": [
+        [
+          "Microphone",
+          "Boom microphone shown"
+        ],
+        [
+          "Construction",
+          "Padded headband; metal wire supports"
+        ],
+        [
+          "Reference colors",
+          "Black / yellow-green reference"
+        ]
+      ],
+      "fr": [
+        [
+          "Microphone",
+          "Micro-perche visible"
+        ],
+        [
+          "Construction",
+          "Arceau rembourré ; supports métalliques"
+        ],
+        [
+          "Couleurs de référence",
+          "Noir / jaune-vert"
+        ]
+      ],
+      "es": [
+        [
+          "Micrófono",
+          "Micrófono de brazo visible"
+        ],
+        [
+          "Construcción",
+          "Diadema acolchada; soportes metálicos"
+        ],
+        [
+          "Colores de referencia",
+          "Negro / amarillo-verde"
+        ]
+      ],
+      "pt": [
+        [
+          "Microfone",
+          "Microfone de haste visível"
+        ],
+        [
+          "Construção",
+          "Arco acolchoado; suportes metálicos"
+        ],
+        [
+          "Cores de referência",
+          "Preto / amarelo-verde"
+        ]
+      ],
+      "ru": [
+        [
+          "Микрофон",
+          "Видимый штанговый микрофон"
+        ],
+        [
+          "Конструкция",
+          "Мягкое оголовье; металлические подвесы"
+        ],
+        [
+          "Референсные цвета",
+          "Чёрный / жёлто-зелёный"
+        ]
+      ],
+      "ar": [
+        [
+          "الميكروفون",
+          "ميكروفون ذراعي ظاهر"
+        ],
+        [
+          "البنية",
+          "عصابة مبطنة؛ حوامل معدنية"
+        ],
+        [
+          "الألوان المرجعية",
+          "أسود / أصفر مخضر"
+        ]
+      ],
+      "zh": [
+        [
+          "麦克风",
+          "图片可见杆式麦克风"
+        ],
+        [
+          "结构",
+          "软包头梁；金属支架"
+        ],
+        [
+          "参考颜色",
+          "黑色 / 黄绿色参考"
+        ]
+      ]
+    },
+    "specNotice": {
+      "en": "Visual reference only. Connector, power, compatibility and any hearing-protection rating require model-specific documentation and samples. No protection certification is asserted.",
+      "fr": "Référence visuelle uniquement. Connecteur, alimentation, compatibilité et protection auditive nécessitent documents et échantillons propres au modèle. Aucune certification de protection n’est affirmée.",
+      "es": "Referencia visual. Conector, alimentación, compatibilidad y protección auditiva requieren documentación y muestras del modelo. No se afirma certificación de protección.",
+      "pt": "Referência visual. Conector, alimentação, compatibilidade e proteção auditiva exigem documentos e amostras do modelo. Não há afirmação de certificação de proteção.",
+      "ru": "Только визуальный референс. Разъём, питание, совместимость и защита слуха требуют документов и образцов конкретной модели. Сертификация защиты не заявляется.",
+      "ar": "مرجع بصري فقط. تتطلب الموصلات والطاقة والتوافق وأي تصنيف لحماية السمع وثائق وعينات خاصة بالطراز. لا يُدّعى اعتماد للحماية.",
+      "zh": "仅作为外观参考。接口、供电、兼容性及任何听力防护等级均需该型号的资料与样品确认，当前不作防护认证声明。"
+    }
+  },
+  {
+    "model": "S-IE-001",
+    "sourceModel": "Digital-display TWS / source model not provided",
+    "assetKey": "S-IE-001",
+    "slug": "s-ie-001-digital-display-wireless-earbuds",
+    "category": 3,
+    "featured": false,
+    "titles": {
+      "en": "Wireless earbuds with a digital-display case",
+      "fr": "Écouteurs avec boîtier à affichage numérique",
+      "es": "Auriculares con estuche de pantalla digital",
+      "pt": "Fones com estojo de visor digital",
+      "ru": "Наушники с цифровым дисплеем футляра",
+      "ar": "سماعات بعلبة ذات شاشة رقمية",
+      "zh": "数显充电仓无线入耳式耳机"
+    },
+    "description": {
+      "en": "Compact in-ear earbuds with cyan-ring touch surfaces and a translucent-lid charging case. The supplied graphic lists wireless 5.3, 30 mAh per earbud and a 300 mAh USB-C case. Review the final electronics and charging display on samples.",
+      "fr": "Écouteurs compacts à surface tactile cerclée de cyan et boîtier à couvercle translucide. Le visuel indique connexion sans fil 5.3, 30 mAh par écouteur et boîtier USB-C de 300 mAh. Confirmez sur échantillons.",
+      "es": "Auriculares compactos con superficies táctiles de aro cian y estuche translúcido. La imagen indica conexión inalámbrica 5.3, 30 mAh por auricular y estuche USB-C de 300 mAh. Confirma con muestras.",
+      "pt": "Fones compactos com superfícies de toque com aro ciano e estojo translúcido. A imagem informa conexão sem fio 5.3, 30 mAh por fone e estojo USB-C de 300 mAh. Confirme em amostras.",
+      "ru": "Компактные внутриканальные наушники с голубыми ободками сенсорных панелей и полупрозрачной крышкой футляра. В материале указаны связь 5.3, 30 мА·ч на наушник и футляр USB-C 300 мА·ч. Подтвердите на образцах.",
+      "ar": "سماعات داخل الأذن بسطوح لمس محاطة بلون سماوي وعلبة بغطاء شبه شفاف. تذكر الصورة اتصالًا لاسلكيًا 5.3 وبطارية 30 ملّي أمبير ساعة لكل سماعة وعلبة USB-C بسعة 300. أكد بالعينة.",
+      "zh": "紧凑入耳式耳机，采用青色环触控面与半透明仓盖。所提供参数图标注无线 5.3、单耳 30 mAh、300 mAh Type-C 充电仓，电子配置与显示效果以样品确认。"
+    },
+    "specs": {
+      "en": [
+        [
+          "Connections",
+          "Wireless 5.3"
+        ],
+        [
+          "Battery",
+          "30 mAh per earbud"
+        ],
+        [
+          "Charging case",
+          "300 mAh / USB-C"
+        ],
+        [
+          "Controls",
+          "Touch"
+        ]
+      ],
+      "fr": [
+        [
+          "Connexions",
+          "Wireless 5.3"
+        ],
+        [
+          "Batterie",
+          "30 mAh par écouteur"
+        ],
+        [
+          "Boîtier de charge",
+          "300 mAh / USB-C"
+        ],
+        [
+          "Commandes",
+          "Tactiles"
+        ]
+      ],
+      "es": [
+        [
+          "Conexiones",
+          "Wireless 5.3"
+        ],
+        [
+          "Batería",
+          "30 mAh por auricular"
+        ],
+        [
+          "Estuche de carga",
+          "300 mAh / USB-C"
+        ],
+        [
+          "Controles",
+          "Táctiles"
+        ]
+      ],
+      "pt": [
+        [
+          "Conexões",
+          "Wireless 5.3"
+        ],
+        [
+          "Bateria",
+          "30 mAh por fone"
+        ],
+        [
+          "Estojo de carga",
+          "300 mAh / USB-C"
+        ],
+        [
+          "Controles",
+          "Toque"
+        ]
+      ],
+      "ru": [
+        [
+          "Подключение",
+          "Wireless 5.3"
+        ],
+        [
+          "Аккумулятор",
+          "30 мА·ч на наушник"
+        ],
+        [
+          "Зарядный футляр",
+          "300 mAh / USB-C"
+        ],
+        [
+          "Управление",
+          "Сенсорное"
+        ]
+      ],
+      "ar": [
+        [
+          "الاتصالات",
+          "Wireless 5.3"
+        ],
+        [
+          "البطارية",
+          "30 ملّي أمبير ساعة لكل سماعة"
+        ],
+        [
+          "علبة الشحن",
+          "300 mAh / USB-C"
+        ],
+        [
+          "التحكم",
+          "لمس"
+        ]
+      ],
+      "zh": [
+        [
+          "连接方式",
+          "Wireless 5.3"
+        ],
+        [
+          "电池",
+          "单耳 30 mAh"
+        ],
+        [
+          "充电仓",
+          "300 mAh / USB-C"
+        ],
+        [
+          "操作方式",
+          "触控"
+        ]
+      ]
+    },
+    "specNotice": {
+      "en": "Values are transcribed from the supplied graphic and require sample confirmation. ENC call reduction and splash-resistance claims require supporting test evidence; they are not guaranteed here.",
+      "fr": "Valeurs transcrites du visuel, à confirmer sur échantillon. La réduction ENC en appel et la résistance aux éclaboussures nécessitent des essais ; elles ne sont pas garanties ici.",
+      "es": "Valores de la imagen, pendientes de muestra. ENC en llamadas y resistencia a salpicaduras requieren pruebas; no se garantizan aquí.",
+      "pt": "Valores da imagem, sujeitos à amostra. ENC em chamadas e resistência a respingos exigem testes; não são garantidos aqui.",
+      "ru": "Значения перенесены из изображения и требуют подтверждения образцом. ENC при звонках и защита от брызг нуждаются в испытаниях и здесь не гарантируются.",
+      "ar": "القيم من الصورة وتحتاج إلى تأكيد بالعينة. تقليل ضوضاء المكالمات ENC ومقاومة الرذاذ يتطلبان أدلة اختبار، ولا يُضمنان هنا.",
+      "zh": "数值转录自提供的参数图，需样品确认。ENC 通话降噪及防泼溅声明需要对应测试依据，此处不作性能保证。"
+    }
+  },
+  {
+    "model": "S-EM-001",
+    "sourceModel": "M30",
+    "assetKey": "S-EM-001",
+    "slug": "s-em-001-electronic-earmuff-platform",
+    "category": 6,
+    "featured": false,
+    "titles": {
+      "en": "Electronic earmuff development platform",
+      "fr": "Plateforme de casque antibruit électronique",
+      "es": "Plataforma de orejeras electrónicas",
+      "pt": "Plataforma de abafador eletrônico",
+      "ru": "Платформа электронных наушников",
+      "ar": "منصة تطوير واقيات أذن إلكترونية",
+      "zh": "电子耳罩开发参考平台"
+    },
+    "description": {
+      "en": "A black electronic-earmuff reference with padded headband, deep cushions, wire suspension and a side rotary control. Discuss fit, electronics, branding and the documentation required for your intended market before defining the project.",
+      "fr": "Référence de casque électronique noir avec arceau rembourré, coussinets profonds, supports métalliques et commande rotative. Discutez confort, électronique, marquage et documentation du marché visé.",
+      "es": "Referencia de orejeras negras con diadema acolchada, almohadillas profundas, soportes metálicos y control giratorio. Define ajuste, electrónica, marca y documentación del mercado objetivo.",
+      "pt": "Referência de abafador preto com arco acolchoado, almofadas profundas, suportes metálicos e controle giratório. Discuta ajuste, eletrônica, marca e documentação do mercado.",
+      "ru": "Референс чёрных электронных наушников с мягким оголовьем, глубокими амбушюрами, проволочными подвесами и поворотным регулятором. Обсудите посадку, электронику, оформление и документы для целевого рынка.",
+      "ar": "مرجع واقيات أذن إلكترونية سوداء بعصابة مبطنة ووسائد عميقة وحوامل سلكية وتحكم دوار. ناقش الملاءمة والإلكترونيات والعلامة والوثائق المطلوبة للسوق المستهدف.",
+      "zh": "黑色电子耳罩参考，带软包头梁、深耳垫、金属支架及侧面旋钮。可讨论佩戴、电子配置、品牌呈现及目标市场所需资料后再定义项目。"
+    },
+    "specs": {
+      "en": [
+        [
+          "Listed shell material",
+          "ABS"
+        ],
+        [
+          "Reference colors",
+          "Black"
+        ],
+        [
+          "Controls",
+          "Side rotary control shown"
+        ]
+      ],
+      "fr": [
+        [
+          "Matériau de coque indiqué",
+          "ABS"
+        ],
+        [
+          "Couleurs de référence",
+          "Noir"
+        ],
+        [
+          "Commandes",
+          "Commande rotative latérale visible"
+        ]
+      ],
+      "es": [
+        [
+          "Material indicado",
+          "ABS"
+        ],
+        [
+          "Colores de referencia",
+          "Negro"
+        ],
+        [
+          "Controles",
+          "Control giratorio lateral visible"
+        ]
+      ],
+      "pt": [
+        [
+          "Material informado",
+          "ABS"
+        ],
+        [
+          "Cores de referência",
+          "Preto"
+        ],
+        [
+          "Controles",
+          "Controle giratório lateral visível"
+        ]
+      ],
+      "ru": [
+        [
+          "Заявленный материал корпуса",
+          "ABS"
+        ],
+        [
+          "Референсные цвета",
+          "Чёрный"
+        ],
+        [
+          "Управление",
+          "Видимый боковой поворотный регулятор"
+        ]
+      ],
+      "ar": [
+        [
+          "مادة الغلاف المذكورة",
+          "ABS"
+        ],
+        [
+          "الألوان المرجعية",
+          "أسود"
+        ],
+        [
+          "التحكم",
+          "تحكم دوار جانبي ظاهر"
+        ]
+      ],
+      "zh": [
+        [
+          "资料标注外壳材质",
+          "ABS"
+        ],
+        [
+          "参考颜色",
+          "黑色"
+        ],
+        [
+          "操作方式",
+          "图片可见侧面旋钮"
+        ]
+      ]
+    },
+    "specNotice": {
+      "en": "The supplied graphic is a reference, not a test report. Attenuation, electronic pickup operation and suitability for hearing protection require model-specific verification. Driver size and protection ratings are not published as confirmed specifications.",
+      "fr": "Le visuel fourni n’est pas un rapport d’essai. Atténuation, fonctionnement électronique et aptitude à la protection auditive nécessitent une vérification du modèle. Aucun diamètre de transducteur ni indice de protection n’est confirmé.",
+      "es": "La imagen no es un informe de ensayo. Atenuación, funcionamiento electrónico y uso como protección auditiva requieren verificación del modelo. No se confirman tamaño del transductor ni índices de protección.",
+      "pt": "A imagem não é um relatório de ensaio. Atenuação, funcionamento eletrônico e uso para proteção auditiva exigem verificação do modelo. Diâmetro do driver e índices de proteção não são confirmados.",
+      "ru": "Изображение не является протоколом испытаний. Ослабление шума, электронный тракт и пригодность для защиты слуха требуют проверки модели. Размер динамика и показатели защиты не подтверждены.",
+      "ar": "الصورة ليست تقرير اختبار. يتطلب تخفيف الضوضاء وتشغيل الالتقاط الإلكتروني وملاءمة حماية السمع تحققًا خاصًا بالطراز. لا يُنشر حجم المشغل أو تصنيف الحماية كمواصفات مؤكدة.",
+      "zh": "所提供图片不是测试报告。降噪衰减、电子拾音功能及听力防护适用性均需型号级核实，不将驱动尺寸和防护等级作为已确认参数发布。"
+    }
   }
 ];
