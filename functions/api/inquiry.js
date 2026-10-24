@@ -1,5 +1,6 @@
 const RECIPIENT = "lisa_li@rawisoud.com";
 const SENDER = "inquiry@isoudaudio.com";
+const MAX_REQUEST_BYTES = 4 * 1024 * 1024;
 const MAX_ATTACHMENT_BYTES = 3 * 1024 * 1024;
 const ALLOWED_ATTACHMENT_TYPES = new Set([
   "image/jpeg",
@@ -41,7 +42,9 @@ function sameOrigin(request) {
   const origin = request.headers.get("Origin");
   if (!origin) return false;
   try {
-    const hostname = new URL(origin).hostname;
+    const parsed = new URL(origin);
+    if (parsed.protocol !== "https:" || parsed.port || parsed.username || parsed.password) return false;
+    const hostname = parsed.hostname;
     return hostname === "isoudaudio.com" ||
       hostname === "www.isoudaudio.com" ||
       hostname === "isoudaudio-site.pages.dev" ||
@@ -72,7 +75,7 @@ function fieldRows(fields) {
 }
 
 export async function onRequestGet(context) {
-  return json({ available: Boolean(context.env.INQUIRY_EMAIL) });
+  return json({ available: typeof context.env.INQUIRY_EMAIL?.send === "function" });
 }
 
 export async function onRequestPost(context) {
@@ -84,7 +87,26 @@ export async function onRequestPost(context) {
 
   let form;
   try {
-    form = await request.formData();
+    // Bound chunked bodies too, before multipart parsing allocates file buffers.
+    if (Number(request.headers.get("Content-Length")) > MAX_REQUEST_BYTES) {
+      return json({ success: false, error: "Inquiry is too large" }, 413);
+    }
+    const reader = request.body?.getReader();
+    if (!reader) return json({ success: false, error: "Empty inquiry" }, 400);
+    const chunks = [];
+    let size = 0;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > MAX_REQUEST_BYTES) {
+        await reader.cancel();
+        return json({ success: false, error: "Inquiry is too large" }, 413);
+      }
+      chunks.push(value);
+    }
+    const body = new Blob(chunks, { type: request.headers.get("Content-Type") });
+    form = await new Response(body).formData();
   } catch {
     return json({ success: false, error: "The inquiry form could not be read" }, 400);
   }
@@ -105,9 +127,17 @@ export async function onRequestPost(context) {
     "Country / region": clean(form.get("country"), 100),
     "Product category": clean(form.get("product"), 120),
     "Estimated quantity": clean(form.get("quantity"), 80),
-    Customization: valueList(form, "customization").join(", ")
+    Customization: valueList(form, "customization").join(", "),
+    "Entry page": clean(form.get("sourcePath"), 240),
+    "Inquiry page": clean(form.get("inquiryPath"), 240),
+    "Referring host": clean(form.get("referrerHost"), 160),
+    "Campaign source": clean(form.get("utm_source"), 120),
+    "Campaign medium": clean(form.get("utm_medium"), 120),
+    "Campaign name": clean(form.get("utm_campaign"), 160),
+    "Campaign content": clean(form.get("utm_content"), 120),
+    "Campaign term": clean(form.get("utm_term"), 120)
   };
-  const subject = clean(form.get("subject"), 140) || "OEM/ODM earbuds project inquiry";
+  const subject = clean(form.get("subject"), 140).replace(/[\r\n]/g, " ") || "Headphone OEM/ODM project inquiry";
   const message = clean(form.get("message"), 4000);
 
   if (!fields.Name || !fields["Work email"]) {
@@ -128,7 +158,7 @@ export async function onRequestPost(context) {
     });
   }
 
-  if (!env.INQUIRY_EMAIL) {
+  if (typeof env.INQUIRY_EMAIL?.send !== "function") {
     return json({ success: false, fallback: "mailto", error: "Web email binding is not configured" }, 503);
   }
 
@@ -163,9 +193,9 @@ export async function onRequestPost(context) {
       html,
       attachments
     });
-    return json({ success: true, messageId: result.messageId });
+    return json({ success: true, messageId: result?.messageId });
   } catch (error) {
-    console.error("Inquiry email failed", error?.code, error?.message);
+    console.error("Inquiry email failed"); // Never log buyer details or provider messages.
     return json({ success: false, fallback: "mailto", error: "Email delivery is temporarily unavailable" }, 502);
   }
 }

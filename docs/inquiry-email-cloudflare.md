@@ -1,36 +1,33 @@
-# iSoud inquiry form email setup
+# Inquiry delivery: current contract and release gate
 
-The website uses one inquiry route:
+Updated 2026-10-24 for the local redesign. This document supersedes the older French-only contact and automatic-mailto instructions.
 
-- Project buttons: `https://isoudaudio.com/fr/contact/#inquiry`
-- Direct email fallback: `mailto:lisa_li@rawisoud.com`
-- Form endpoint: `POST /api/inquiry`
-- Cloudflare Pages binding name: `INQUIRY_EMAIL`
-- Fixed recipient: `lisa_li@rawisoud.com`
-- Sender: `inquiry@isoudaudio.com`
-- Maximum attachment: 3 MB
+- English contact: `/contact/`; six additional languages have their own translated contact page.
+- Product CTA: `/contact/?product=MODEL`, with the corresponding language prefix.
+- Endpoint: `POST /api/inquiry`, multipart form data.
+- Fixed recipient: `lisa_li@rawisoud.com`. Sender in the current adapter contract: `inquiry@isoudaudio.com`.
+- The browser never automatically opens or sends an email. An explicit email link opens the visitor's application with the brief; this is not a submitted web inquiry.
+- The local review server never sends mail. It returns `available:false` for the API status endpoint and 503 for POST.
 
-## Current behavior
+## Unresolved production integration
 
-The Pages Function is already implemented. When `INQUIRY_EMAIL` is available, it sends the structured inquiry and optional business-card attachment to Lisa Li. When the binding is unavailable, the browser opens a prefilled email and preserves the form details in the email body.
+The endpoint expects `env.INQUIRY_EMAIL.send(message)` to resolve on service acceptance and reject on failure. It sends a structured object with `to`, `from`, `replyTo`, `subject`, `text`, `html` and optional attachments. A configured variable or `available:true` does not prove an adapter is compatible or that Lisa received a message.
 
-## One-time Cloudflare setup
+The [current Cloudflare Email Sending Workers API](https://developers.cloudflare.com/email-service/api/send-emails/workers-api/) documents this structured message shape. This does not prove the present Pages project exposes the binding, or that this account's sender, destination, subscription and runtime are ready. A generic Service binding alone does not establish this RPC contract.
 
-1. Sign in to Cloudflare and open **Compute & AI > Email Service**.
-2. Onboard `isoudaudio.com` for outbound email and verify `inquiry@isoudaudio.com` as an allowed sender.
-3. Add the exact SPF and DKIM records shown by Cloudflare.
-4. Keep the existing Aliyun enterprise-mail MX records. Do not replace `mx1.qiye.aliyun.com`, `mx2.qiye.aliyun.com`, or `mx3.qiye.aliyun.com`.
-5. Keep only one SPF record. Merge Cloudflare's required sender mechanism with the existing `include:spf.qiye.aliyun.com` record instead of publishing two separate `v=spf1` records.
-6. Open **Workers & Pages > isoudaudio-site > Settings > Bindings** and add a Send Email binding named `INQUIRY_EMAIL`.
-7. Restrict the destination to `lisa_li@rawisoud.com` and the sender to `inquiry@isoudaudio.com` when the controls are available.
-8. Redeploy the latest Pages deployment so the binding becomes available to the Function.
-9. Check `GET https://isoudaudio.com/api/inquiry`; the expected response is `{"available":true}`.
-10. Submit one controlled test inquiry without an attachment, then one with a small business-card image. Confirm receipt in Lisa Li's inbox and test replying to the buyer address.
+The user's existing Aliyun-mailbox route remains the previously selected option. See [inquiry-email-aliyun.md](inquiry-email-aliyun.md) for the prior checks. No mail plan, MX records, DNS, credentials or provider were changed during this redesign audit. An actual compatible adapter and environment validation remain to be completed.
 
-## Safety rules
+## Verified locally
 
-- Never place an API token or mailbox password in the repository.
-- Do not change the public recipient without updating both the form copy and `functions/api/inquiry.js`.
-- Do not raise the attachment limit beyond 3 MB; Cloudflare's total email-size limit includes base64 overhead and message content.
-- Keep the same-origin check and honeypot field enabled.
-- Do not add a second contact page. All site project CTAs must continue to point to `/fr/contact/#inquiry`.
+Only name and valid email are required. The handler validates HTTPS origins, form timing and the honeypot, caps the whole request at 4 MiB before multipart parsing, limits an attachment to 3 MiB, escapes HTML, fixes the recipient, and avoids logging buyer details. Eleven isolated tests use fake adapters and do not send real mail.
+
+The visible redesign form currently has no attachment upload field; backend attachment support does not imply that the UI offers uploads. First-party session storage retains only entry path, referring host and validated campaign tags. Form entries are never stored there. The seven privacy pages disclose this behavior.
+
+## Before launch
+
+1. Validate the selected adapter in the actual Cloudflare environment and verify the sender account/domain.
+2. When authorized, submit one clearly marked test inquiry and verify service acceptance, Lisa's actual receipt and Reply-To separately.
+3. Verify failure behavior and retained entries in production; verify any attachment flow only if an upload field is added.
+4. Review account-level abuse/rate controls. Client timing and a honeypot are not a complete anti-abuse service.
+
+No live test message was sent during this audit.
