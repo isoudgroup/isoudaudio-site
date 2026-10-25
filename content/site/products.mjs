@@ -1,3 +1,4 @@
+import {catalogProducts} from './catalog-products.mjs';
 // Stable public codes; sourceModel and assetKey are internal provenance.
 export const products = [
   {
@@ -929,3 +930,5 @@ export const products = [
     }
   }
 ];
+
+products.push(...catalogProducts);

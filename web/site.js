@@ -145,17 +145,25 @@
       const scope = (controlled && document.getElementById(controlled)) || group.closest('section') || group.parentElement;
       const cards = [...scope.querySelectorAll('[data-category]')];
       const empty = scope.querySelector('[data-filter-empty], #product-empty, #no-platforms');
+      const search = scope.querySelector('[data-product-search]');
+      const counter = scope.querySelector('[data-product-count]');
+      let selected;
       const filter = (button) => {
+        selected = button;
+        const query = (search?.value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
         const value = button.dataset.filter;
         let count = 0;
         buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
         cards.forEach((card) => {
           const categories = (card.dataset.category || '').split(/[\s,]+/);
-          const visible = !value || value === 'all' || value === '*' || categories.includes(value);
+          const inCategory = !value || value === 'all' || value === '*' || categories.includes(value);
+          const model = (card.dataset.model || card.textContent || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const visible = inCategory && (!query || model.includes(query));
           card.hidden = !visible;
           if (visible) count += 1;
         });
         if (empty) empty.hidden = count > 0;
+        if (counter) counter.textContent = count + ' ' + counter.dataset.countLabel;
         queueParallax();
       };
       buttons.forEach((button) => {
@@ -164,6 +172,7 @@
       });
       const active = buttons.find((button) => button.getAttribute('aria-pressed') === 'true') || buttons[0];
       if (active) filter(active);
+      search?.addEventListener('input', () => filter(selected || active));
     });
 
     const dialog = document.getElementById('factory-film');
